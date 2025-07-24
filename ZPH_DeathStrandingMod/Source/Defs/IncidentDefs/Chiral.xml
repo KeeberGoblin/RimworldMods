@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- ==================== CHIRAL NETWORK EVENTS ==================== -->
+  
+  <!-- Chiral Network Connection -->
+  <IncidentDef>
+    <defName>ChiralNetworkConnection</defName>
+    <label>chiral network connection</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_ChiralNetworkConnection</workerClass>
+    <baseChance>0.8</baseChance>
+    <minRefireDays>7</minRefireDays>
+    <letterText>The colony has successfully established a connection to the chiral network! This supernatural communication system now provides access to advanced technologies and information sharing.\n\nThe network connection enables faster research, improved coordination, and access to specialized equipment blueprints.</letterText>
+    <letterLabel>network connected</letterLabel>
+    <letterDef>PositiveEvent</letterDef>
+  </IncidentDef>
+
+  <!-- Chiral Network Expansion -->
+  <IncidentDef>
+    <defName>ChiralNetworkExpansion</defName>
+    <label>chiral network expansion</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_ChiralNetworkExpansion</workerClass>
+    <baseChance>0.6</baseChance>
+    <minRefireDays>14</minRefireDays>
+    <letterText>The chiral network coverage in this area has expanded significantly. New nodes have come online, strengthening the supernatural communication grid.\n\nThis expansion improves connection stability and unlocks access to additional network services and resources.</letterText>
+    <letterLabel>network expanded</letterLabel>
+    <letterDef>PositiveEvent</letterDef>
+  </IncidentDef>
+
+  <!-- Chiral Data Package -->
+  <IncidentDef>
+    <defName>ChiralDataPackage</defName>
+    <label>chiral data package received</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_ChiralDataPackage</workerClass>
+    <baseChance>0.7</baseChance>
+    <minRefireDays>5</minRefireDays>
+    <letterText>A data package has been received through the chiral network. This compressed information contains valuable research data, blueprints, or cultural content.\n\nAnalyzing the package may unlock new technologies, provide research bonuses, or offer recreational benefits for colonists.</letterText>
+    <letterLabel>data package received</letterLabel>
+    <letterDef>PositiveEvent</letterDef>
+  </IncidentDef>
+
+  <!-- Chiral Network Overload -->
+  <IncidentDef>
+    <defName>ChiralNetworkOverload</defName>
+    <label>chiral network overload</label>
+    <category>ThreatSmall</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_ChiralNetworkOverload</workerClass>
+    <baseChance>0.4</baseChance>
+    <minRefireDays>3</minRefireDays>
+    <letterText>The local chiral network is experiencing overload conditions. Excessive data traffic is causing system instabilities and equipment malfunctions.\n\nAdvanced technology may function erratically until the network load stabilizes. Consider reducing non-essential network usage.</letterText>
+    <letterLabel>network overload</letterLabel>
+    <letterDef>ThreatSmall</letterDef>
+    <pointsScaleable>true</pointsScaleable>
+    <minThreatPoints>150</minThreatPoints>
+  </IncidentDef>
+
+  <!-- Chiral Printer Delivery -->
+  <IncidentDef>
+    <defName>ChiralPrinterDelivery</defName>
+    <label>chiral printer delivery</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_ChiralPrinterDelivery</workerClass>
+    <baseChance>0.5</baseChance>
+    <minRefireDays>10</minRefireDays>
+    <letterText>A chiral printer has been delivered to the colony through the network! This advanced fabrication device can create complex items using chiral matter as raw material.\n\nThe printer expands manufacturing capabilities significantly and allows for the creation of specialized equipment previously unavailable.</letterText>
+    <letterLabel>chiral printer delivered</letterLabel>
+    <letterDef>PositiveEvent</letterDef>
+  </IncidentDef>
+
+  <!-- Chiral Network Virus -->
+  <IncidentDef>
+    <defName>ChiralNetworkVirus</defName>
+    <label>chiral network virus</label>
+    <category>ThreatSmall</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_ChiralNetworkVirus</workerClass>
+    <baseChance>0.3</baseChance>
+    <minRefireDays>8</minRefireDays>
+    <letterText>A malicious program has infected the local chiral network connection. This supernatural virus is corrupting data transmissions and causing equipment malfunctions.\n\nNetwork-connected devices may behave unpredictably until the infection is purged. Consider isolating critical systems from the network.</letterText>
+    <letterLabel>network virus detected</letterLabel>
+    <letterDef>ThreatSmall</letterDef>
+    <pointsScaleable>true</pointsScaleable>
+    <minThreatPoints>200</minThreatPoints>
+  </IncidentDef>
+
+  <!-- Chiral Research Breakthrough -->
+  <IncidentDef>
+    <defName>ChiralResearchBreakthrough</defName>
+    <label>chiral research breakthrough</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_ChiralResearchBreakthrough</workerClass>
+    <baseChance>0.4</baseChance>
+    <minRefireDays>21</minRefireDays>
+    <letterText>Researchers have achieved a major breakthrough in chiral technology! Data shared through the network has led to significant advances in understanding supernatural phenomena.\n\nThis breakthrough unlocks new research projects and provides bonuses to future supernatural technology development.</letterText>
+    <letterLabel>research breakthrough</letterLabel>
+    <letterDef>PositiveEvent</letterDef>
+  </IncidentDef>
+
+  <!-- Chiral Network Ghost -->
+  <IncidentDef>
+    <defName>ChiralNetworkGhost</defName>
+    <label>chiral network ghost</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_ChiralNetworkGhost</workerClass>
+    <baseChance>0.3</baseChance>
+    <minRefireDays>6</minRefireDays>
+    <letterText>Strange signals are being detected on the chiral network. These phantom transmissions appear to be echoes of deceased individuals somehow preserved in the supernatural communication grid.\n\nWhile not harmful, these ghost signals can be disturbing to colonists and may interfere with normal network operations.</letterText>
+    <letterLabel>network ghost signals</letterLabel>
+    <letterDef>NegativeEvent</letterDef>
+  </IncidentDef>
+
+  <!-- Chiral Network Sacrifice -->
+  <IncidentDef>
+    <defName>ChiralNetworkSacrifice</defName>
+    <label>chiral network sacrifice</label>
+    <category>ThreatSmall</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_ChiralNetworkSacrifice</workerClass>
+    <baseChance>0.2</baseChance>
+    <minRefireDays>15</minRefireDays>
+    <letterText>The chiral network is demanding a sacrifice to maintain optimal function. The supernatural system requires biological matter to fuel its dimensional operations.\n\nRefusing the sacrifice may result in network disconnection, while complying will strengthen the connection but requires a colonist to join the network permanently.</letterText>
+    <letterLabel>network demands sacrifice</letterLabel>
+    <letterDef>ThreatSmall</letterDef>
+    <pointsScaleable>true</pointsScaleable>
+    <minThreatPoints>500</minThreatPoints>
+  </IncidentDef>
+
+  <!-- Chiral Network Discovery -->
+  <IncidentDef>
+    <defName>ChiralNetworkDiscovery</defName>
+    <label>chiral network discovery</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_ChiralNetworkDiscovery</workerClass>
+    <baseChance>0.6</baseChance>
+    <minRefireDays>12</minRefireDays>
+    <letterText>Network analysis has uncovered hidden archives within the chiral system. These data repositories contain information from before the Death Stranding event.\n\nAccessing these archives may provide valuable historical knowledge, lost technologies, or clues about preventing future catastrophic events.</letterText>
+    <letterLabel>hidden archives found</letterLabel>
+    <letterDef>PositiveEvent</letterDef>
+  </IncidentDef>
+
+  <!-- Chiral Network Amplification -->
+  <IncidentDef>
+    <defName>ChiralNetworkAmplification</defName>
+    <label>chiral network amplification</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_ChiralNetworkAmplification</workerClass>
+    <baseChance>0.5</baseChance>
+    <minRefireDays>9</minRefireDays>
+    <letterText>The local chiral network signal has been amplified by unknown sources. Network performance and range have increased dramatically.\n\nThis amplification enables access to more distant network nodes and unlocks advanced capabilities previously unavailable to the colony.</letterText>
+    <letterLabel>network amplified</letterLabel>
+    <letterDef>PositiveEvent</letterDef>
+  </IncidentDef>
+
+  <!-- Chiral Network Isolation -->
+  <IncidentDef>
+    <defName>ChiralNetworkIsolation</defName>
+    <label>chiral network isolation</label>
+    <category>ThreatSmall</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_ChiralNetworkIsolation</workerClass>
+    <baseChance>0.4</baseChance>
+    <minRefireDays>4</minRefireDays>
+    <letterText>The colony has been cut off from the chiral network! Dimensional interference is blocking all supernatural communication channels.\n\nThis isolation prevents access to network resources and advanced technologies. The cause must be identified and resolved to restore connectivity.</letterText>
+    <letterLabel>network isolation</letterLabel>
+    <letterDef>ThreatSmall</letterDef>
+    <pointsScaleable>true</pointsScaleable>
+    <minThreatPoints>250</minThreatPoints>
+  </IncidentDef>
+
+  <!-- Chiral Network Prophet -->
+  <IncidentDef>
+    <defName>ChiralNetworkProphet</defName>
+    <label>chiral network prophet</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_ChiralNetworkProphet</workerClass>
+    <baseChance>0.2</baseChance>
+    <minRefireDays>30</minRefireDays>
+    <letterText>A mysterious individual claiming to be a network prophet has contacted the colony through the chiral system. They speak of future events and hidden truths about the Death Stranding.\n\nTheir prophecies may provide valuable warnings about upcoming threats, though their reliability and intentions remain unclear.</letterText>
+    <letterLabel>network prophet contact</letterLabel>
+    <letterDef>NeutralEvent</letterDef>
+  </IncidentDef>
+
+  <!-- Chiral Network Evolution -->
+  <IncidentDef>
+    <defName>ChiralNetworkEvolution</defName>
+    <label>chiral network evolution</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_ChiralNetworkEvolution</workerClass>
+    <baseChance>0.1</baseChance>
+    <minRefireDays>60</minRefireDays>
+    <letterText>The chiral network has begun evolving beyond its original parameters. The supernatural system is developing new capabilities and consciousness-like behaviors.\n\nThis evolution could herald a new age of technological advancement, but also raises questions about the network's ultimate goals and humanity's role in its development.</letterText>
+    <letterLabel>network evolution detected</letterLabel>
+    <letterDef>NeutralEvent</letterDef>
+  </IncidentDef>
+
+</Defs>

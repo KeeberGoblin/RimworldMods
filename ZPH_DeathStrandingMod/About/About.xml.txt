@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <packageId>ZPH.DeathStranding.Mod</packageId>
+  <name>Death Stranding</name>
+  <author>ZPH</author>
+  <supportedVersions>
+    <li>1.5</li>
+    <li>1.6</li>
+  </supportedVersions>
+  <description>Experience the otherworldly horror of Death Stranding in RimWorld. Face supernatural timefall storms that age everything they touch, encounter Beach Things from another dimension, and build chiral networks to reconnect isolated settlements.
+
+Features:
+• Timefall weather system with temporal aging effects
+• BT manifestation events and possession mechanics
+• Progressive DOOMS abilities and supernatural conditions
+• Chiral technology research tree
+• Death Stranding character storytellers (Sam, Higgs, Cliff, Die-Hardman)
+• Multiple scenario starts from Lost Porter to Voidout Refugees
+• 50+ unique incidents and events
+• Custom mental states and supernatural afflictions
+• Immersive sound effects and atmospheric audio
+
+Survive the Beach dimension, prevent voidout catastrophes, and forge connections in a world where the line between life and death has been forever blurred.</description>
+  <modVersion>1.0.0</modVersion>
+  <url>https://github.com/yourusername/DeathStrandingMod</url>
+  <loadAfter>
+    <li>Ludeon.RimWorld</li>
+    <li>Ludeon.RimWorld.Royalty</li>
+    <li>Ludeon.RimWorld.Ideology</li>
+    <li>Ludeon.RimWorld.Biotech</li>
+    <li>Ludeon.RimWorld.Anomaly</li>
+  </loadAfter>
+</ModMetaData>

@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- ==================== DEATH STRANDING SCENARIOS ==================== -->
+  
+  <!-- Lost Porter -->
+  <ScenarioDef>
+    <defName>LostPorter</defName>
+    <label>Lost Porter</label>
+    <description>Your equipment has failed in the wasteland, leaving you stranded far from any settlement. With only basic supplies and degraded gear, you must establish a new outpost while avoiding the supernatural dangers that lurk in the post-apocalyptic landscape.\n\nSimilar to naked brutality, but with a Death Stranding twist - you start with some porter equipment that's on the verge of breaking down.</description>
+    <scenario>
+      <summary>A single porter stranded with failing equipment.</summary>
+      <playerFaction>
+        <def>PlayerFaction</def>
+        <factionDef>PlayerColony</factionDef>
+      </playerFaction>
+      <parts>
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigPage_ConfigureStartingPawns</def>
+          <pawnCount>1</pawnCount>
+          <pawnChoiceCount>8</pawnChoiceCount>
+        </li>
+        <li Class="DeathStrandingMod.ScenPart_ForcedTrait">
+          <def>ForcedTrait</def>
+          <trait>DOOMS</trait>
+          <degree>1</degree>
+          <chance>0.6</chance>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>DeathStrandingMod_ChiralProcessor</thingDef>
+          <count>3</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>ComponentAdvanced</thingDef>
+          <count>20</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Steel</thingDef>
+          <count>300</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Plasteel</thingDef>
+          <count>100</count>
+        </li>
+        <li Class="DeathStrandingMod.ScenPart_DimensionalInterference">
+          <interferenceLevel>High</interferenceLevel>
+          <equipmentMalfunctionChance>0.3</equipmentMalfunctionChance>
+        </li>
+        <li Class="DeathStrandingMod.ScenPart_NetworkObjectives">
+          <connectionQuota>5</connectionQuota>
+          <dataTransmissionGoals>true</dataTransmissionGoals>
+        </li>
+      </parts>
+    </scenario>
+  </ScenarioDef>
+
+</Defs>_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>DeathStrandingMod_PorterBackpack</thingDef>
+          <qualityRange>Poor~Normal</qualityRange>
+          <stuff>Synthread</stuff>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>DeathStrandingMod_PorterBoots</thingDef>
+          <qualityRange>Poor~Normal</qualityRange>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MealSurvivalPack</thingDef>
+          <count>5</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Medicine</thingDef>
+          <count>3</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>ComponentIndustrial</thingDef>
+          <count>2</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Steel</thingDef>
+          <count>50</count>
+        </li>
+        <li Class="DeathStrandingMod.ScenPart_StartingEquipmentCondition">
+          <conditionRange>0.2~0.4</conditionRange>
+        </li>
+        <li Class="DeathStrandingMod.ScenPart_NearbyBTTerritory">
+          <distance>500~1000</distance>
+          <btCount>3~6</btCount>
+        </li>
+      </parts>
+    </scenario>
+  </ScenarioDef>
+
+  <!-- Bridges Outpost -->
+  <ScenarioDef>
+    <defName>BridgesOutpost</defName>
+    <label>Bridges Outpost</label>
+    <description>You're part of a Bridges expedition tasked with establishing a forward outpost in dangerous territory. Your mission is to create a safe haven that can serve as a waypoint for other porters traveling through the wasteland.\n\nStart with a small team, basic shelter supplies, and communication equipment, but face increased supernatural activity.</description>
+    <scenario>
+      <summary>A Bridges team establishing an outpost in hostile territory.</summary>
+      <playerFaction>
+        <def>PlayerFaction</def>
+        <factionDef>PlayerColony</factionDef>
+      </playerFaction>
+      <parts>
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigPage_ConfigureStartingPawns</def>
+          <pawnCount>3</pawnCount>
+          <pawnChoiceCount>8</pawnChoiceCount>
+        </li>
+        <li Class="DeathStrandingMod.ScenPart_BridgesBackground">
+          <requiredBackgrounds>
+            <li>Porter</li>
+            <li>Engineer</li>
+            <li>Researcher</li>
+          </requiredBackgrounds>
+        </li>
+        <li Class="DeathStrandingMod.ScenPart_ForcedTrait">
+          <def>ForcedTrait</def>
+          <trait>DOOMS</trait>
+          <degree>0</degree>
+          <chance>0.33</chance>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>DeathStrandingMod_ChiralCommunicator</thingDef>
+          <count>1</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>DeathStrandingMod_TimefallShelter</thingDef>
+          <count>1</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MealSurvivalPack</thingDef>
+          <count>20</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Medicine</thingDef>
+          <count>10</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Steel</thingDef>
+          <count>200</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>ComponentIndustrial</thingDef>
+          <count>15</count>
+        </li>
+        <li Class="DeathStrandingMod.ScenPart_IncreasedSupernaturalActivity">
+          <activityMultiplier>1.5</activityMultiplier>
+        </li>
+      </parts>
+    </scenario>
+  </ScenarioDef>
+
+  <!-- Timefall Survivors -->
+  <ScenarioDef>
+    <defName>TimefallSurvivors</defName>
+    <label>Timefall Survivors</label>
+    <description>Your settlement was caught in a massive timefall storm that aged most of your colonists and destroyed your infrastructure. The survivors must rebuild while dealing with accelerated aging and the trauma of temporal displacement.\n\nA challenging scenario where colonists start with age-related health issues but have some advanced salvaged technology.</description>
+    <scenario>
+      <summary>Survivors of a devastating timefall storm.</summary>
+      <playerFaction>
+        <def>PlayerFaction</def>
+        <factionDef>PlayerColony</factionDef>
+      </playerFaction>
+      <parts>
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigPage_ConfigureStartingPawns</def>
+          <pawnCount>5</pawnCount>
+          <pawnChoiceCount>8</pawnChoiceCount>
+        </li>
+        <li Class="DeathStrandingMod.ScenPart_TimefallAging">
+          <ageIncrease>15~25</ageIncrease>
+          <healthImpacts>true</healthImpacts>
+        </li>
+        <li Class="DeathStrandingMod.ScenPart_TimefallTrauma">
+          <traumaChance>0.8</traumaChance>
+          <chaphobiaChance>0.6</chaphobiaChance>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>DeathStrandingMod_ChiralCrystal</thingDef>
+          <count>50</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>DeathStrandingMod_SalvagedTech</thingDef>
+          <count>5</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MealSurvivalPack</thingDef>
+          <count>15</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Medicine</thingDef>
+          <count>20</count>
+        </li>
+        <li Class="DeathStrandingMod.ScenPart_ResidualTimefall">
+          <timefallFrequency>1.3</timefallFrequency>
+          <duration>30</duration>
+        </li>
+      </parts>
+    </scenario>
+  </ScenarioDef>
+
+  <!-- DOOMS Awakening -->
+  <ScenarioDef>
+    <defName>DOOMSAwakening</defName>
+    <label>DOOMS Awakening</label>
+    <description>A research facility studying DOOMS carriers has been overrun by supernatural phenomena. The surviving subjects must escape and establish a new settlement while learning to control their dangerous abilities.\n\nAll colonists have DOOMS abilities but attract more supernatural attention.</description>
+    <scenario>
+      <summary>DOOMS carriers escaping a compromised research facility.</summary>
+      <playerFaction>
+        <def>PlayerFaction</def>
+        <factionDef>PlayerColony</factionDef>
+      </playerFaction>
+      <parts>
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigPage_ConfigureStartingPawns</def>
+          <pawnCount>4</pawnCount>
+          <pawnChoiceCount>8</pawnChoiceCount>
+        </li>
+        <li Class="DeathStrandingMod.ScenPart_ForcedTrait">
+          <def>ForcedTrait</def>
+          <trait>DOOMS</trait>
+          <degree>1</degree>
+          <chance>1.0</chance>
+        </li>
+        <li Class="DeathStrandingMod.ScenPart_ForcedTrait">
+          <def>ForcedTrait</def>
+          <trait>DOOMS</trait>
+          <degree>2</degree>
+          <chance>0.5</chance>
+        </li>
+        <li Class="DeathStrandingMod.ScenPart_SupernaturalKnowledge">
+          <researchBonus>2000</researchBonus>
+          <technologies>
+            <li>DeathStrandingMod_BasicChiralTech</li>
+            <li>DeathStrandingMod_BTDetection</li>
+          </technologies>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>DeathStrandingMod_ResearchData</thingDef>
+          <count>10</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>DeathStrandingMod_BTDetector</thingDef>
+          <count>2</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MealSurvivalPack</thingDef>
+          <count>12</count>
+        </li>
+        <li Class="DeathStrandingMod.ScenPart_IncreasedBTActivity">
+          <btAttractionMultiplier>2.0</btAttractionMultiplier>
+          <manifestationChance>0.4</manifestationChance>
+        </li>
+      </parts>
+    </scenario>
+  </ScenarioDef>
+
+  <!-- Voidout Refugees -->
+  <ScenarioDef>
+    <defName>VoidoutRefugees</defName>
+    <label>Voidout Refugees</label>
+    <description>Your previous settlement was completely annihilated in a voidout explosion. As traumatized refugees, you must start over with nothing but the clothes on your back and the terrible knowledge of what supernatural forces can unleash.\n\nUltimate difficulty - start with nothing but severe psychological trauma and increased voidout risk.</description>
+    <scenario>
+      <summary>Refugees from a devastating voidout event.</summary>
+      <playerFaction>
+        <def>PlayerFaction</def>
+        <factionDef>PlayerColony</factionDef>
+      </playerFaction>
+      <parts>
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigPage_ConfigureStartingPawns</def>
+          <pawnCount>2</pawnCount>
+          <pawnChoiceCount>8</pawnChoiceCount>
+        </li>
+        <li Class="DeathStrandingMod.ScenPart_VoidoutTrauma">
+          <traumaSeverity>0.8</traumaSeverity>
+          <mentalBreakThreshold>0.4</mentalBreakThreshold>
+          <permanentMoodDebuff>-20</permanentMoodDebuff>
+        </li>
+        <li Class="DeathStrandingMod.ScenPart_NearbyVoidoutCrater">
+          <distance>200~500</distance>
+          <craterSize>Large</craterSize>
+          <residualEffects>true</residualEffects>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MealSurvivalPack</thingDef>
+          <count>2</count>
+        </li>
+        <li Class="DeathStrandingMod.ScenPart_IncreasedVoidoutRisk">
+          <riskMultiplier>1.8</riskMultiplier>
+          <dimensionalInstability>true</dimensionalInstability>
+        </li>
+        <li Class="DeathStrandingMod.ScenPart_SupernaturalKnowledge">
+          <researchBonus>1000</researchBonus>
+          <traumaticKnowledge>true</traumaticKnowledge>
+        </li>
+      </parts>
+    </scenario>
+  </ScenarioDef>
+
+  <!-- Chiral Network Node -->
+  <ScenarioDef>
+    <defName>ChiralNetworkNode</defName>
+    <label>Chiral Network Node</label>
+    <description>You've been tasked with establishing a new chiral network node to expand communication coverage. Starting with advanced technology but in a location with high supernatural interference.\n\nTech-focused scenario with network building objectives and dimensional challenges.</description>
+    <scenario>
+      <summary>Technicians establishing a chiral network node.</summary>
+      <playerFaction>
+        <def>PlayerFaction</def>
+        <factionDef>PlayerColony</factionDef>
+      </playerFaction>
+      <parts>
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigPage_ConfigureStartingPawns</def>
+          <pawnCount>3</pawnCount>
+          <pawnChoiceCount>8</pawnChoiceCount>
+        </li>
+        <li Class="DeathStrandingMod.ScenPart_TechBackground">
+          <requiredSkills>
+            <li>Intellectual</li>
+            <li>Crafting</li>
+          </requiredSkills>
+          <minSkillLevel>8</minSkillLevel>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>DeathStrandingMod_ChiralNetworkNode</thingDef>
+          <count>1</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>DeathStrandingMod_ChiralCommunicator</thingDef>
+          <count>2</count>
+        </li>
+        <li Class="ScenPart_StartingThing

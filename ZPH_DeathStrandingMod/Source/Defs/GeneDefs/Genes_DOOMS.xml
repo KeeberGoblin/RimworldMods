@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- ==================== DOOMS GENE CATEGORY ==================== -->
+  
+  <GeneCategoryDef>
+    <defName>DOOMS</defName>
+    <label>DOOMS</label>
+    <displayPriorityInXenotype>50</displayPriorityInXenotype>
+  </GeneCategoryDef>
+
+  <!-- ==================== DOOMS LEVEL 1 GENE ==================== -->
+  
+  <GeneDef>
+    <defName>DOOMS_Level1</defName>
+    <label>DOOMS level 1</label>
+    <labelShortAdj>DOOMS-1</labelShortAdj>
+    <description>This person carries the most basic form of DOOMS (Death Stranding Observation and Measurement System). They have a slight sensitivity to supernatural phenomena and can occasionally sense when Beach Things are nearby. This level provides minimal supernatural awareness but little practical benefit.</description>
+    <iconPath>UI/Icons/Genes/Gene_DOOMSLevel1</iconPath>
+    <displayCategory>DOOMS</displayCategory>
+    <displayOrderInCategory>1</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>sensing</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>touched</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+    <statOffsets>
+      <PsychicSensitivity>0.1</PsychicSensitivity>
+    </statOffsets>
+    <capMods>
+      <li>
+        <capacity>Consciousness</capacity>
+        <offset>-0.05</offset>
+      </li>
+    </capMods>
+    <conditionalStatAffecters>
+      <li Class="DeathStrandingMod.ConditionalStatAffector_NearBT">
+        <statDef>MentalBreakThreshold</statDef>
+        <offset>0.1</offset>
+        <range>15.9</range>
+      </li>
+    </conditionalStatAffecters>
+    <modExtensions>
+      <li Class="DeathStrandingMod.DOOMSGeneExtension">
+        <doomsLevel>1</doomsLevel>
+        <btDetectionRange>8.9</btDetectionRange>
+        <btDetectionChance>0.3</btDetectionChance>
+        <realityStabilization>0.05</realityStabilization>
+        <chaphobiaSeverity>0.1</chaphobiaSeverity>
+      </li>
+    </modExtensions>
+    <exclusionTags>
+      <li>DOOMS</li>
+    </exclusionTags>
+  </GeneDef>
+
+  <!-- ==================== DOOMS LEVEL 2 GENE ==================== -->
+  
+  <GeneDef>
+    <defName>DOOMS_Level2</defName>
+    <label>DOOMS level 2</label>
+    <labelShortAdj>DOOMS-2</labelShortAdj>
+    <description>A moderate level of DOOMS that grants enhanced supernatural perception. This person can more reliably detect Beach Things and may experience prophetic dreams or visions. They begin to show signs of chaphobia (fear of rain) as their connection to the Beach dimension strengthens.</description>
+    <iconPath>UI/Icons/Genes/Gene_DOOMSLevel2</iconPath>
+    <displayCategory>DOOMS</displayCategory>
+    <displayOrderInCategory>2</displayOrderInCategory>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>-2</biostatMet>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>sensing</symbol></li>
+        <li><symbol>aware</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>touched</symbol></li>
+        <li><symbol>gifted</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+    <statOffsets>
+      <PsychicSensitivity>0.2</PsychicSensitivity>
+      <MentalBreakThreshold>0.05</MentalBreakThreshold>
+    </statOffsets>
+    <capMods>
+      <li>
+        <capacity>Consciousness</capacity>
+        <offset>-0.05</offset>
+      </li>
+    </capMods>
+    <conditionalStatAffecters>
+      <li Class="DeathStrandingMod.ConditionalStatAffector_NearBT">
+        <statDef>MentalBreakThreshold</statDef>
+        <offset>0.15</offset>
+        <range>20.9</range>
+      </li>
+      <li Class="DeathStrandingMod.ConditionalStatAffector_Raining">
+        <statDef>MoveSpeed</statDef>
+        <offset>-0.1</offset>
+      </li>
+    </conditionalStatAffecters>
+    <modExtensions>
+      <li Class="DeathStrandingMod.DOOMSGeneExtension">
+        <doomsLevel>2</doomsLevel>
+        <btDetectionRange>12.9</btDetectionRange>
+        <btDetectionChance>0.5</btDetectionChance>
+        <realityStabilization>0.1</realityStabilization>
+        <chaphobiaSeverity>0.2</chaphobiaSeverity>
+        <visionChance>0.1</visionChance>
+      </li>
+    </modExtensions>
+    <exclusionTags>
+      <li>DOOMS</li>
+    </exclusionTags>
+  </GeneDef>
+
+  <!-- ==================== DOOMS LEVEL 3 GENE ==================== -->
+  
+  <GeneDef>
+    <defName>DOOMS_Level3</defName>
+    <label>DOOMS level 3</label>
+    <labelShortAdj>DOOMS-3</labelShortAdj>
+    <description>A significant level of DOOMS that provides reliable supernatural detection and minor precognitive abilities. This person can consistently sense Beach Things and may experience detailed visions of future events. They develop moderate chaphobia and begin to show physical symptoms of their dimensional connection.</description>
+    <iconPath>UI/Icons/Genes/Gene_DOOMSLevel3</iconPath>
+    <displayCategory>DOOMS</displayCategory>
+    <displayOrderInCategory>3</displayOrderInCategory>
+    <biostatCpx>3</biostatCpx>
+    <biostatMet>-3</biostatMet>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>sensing</symbol></li>
+        <li><symbol>aware</symbol></li>
+        <li><symbol>seeing</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>touched</symbol></li>
+        <li><symbol>gifted</symbol></li>
+        <li><symbol>seer</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+    <statOffsets>
+      <PsychicSensitivity>0.3</PsychicSensitivity>
+      <MentalBreakThreshold>0.1</MentalBreakThreshold>
+    </statOffsets>
+    <capMods>
+      <li>
+        <capacity>Consciousness</capacity>
+        <offset>-0.1</offset>
+      </li>
+    </capMods>
+    <conditionalStatAffecters>
+      <li Class="DeathStrandingMod.ConditionalStatAffector_NearBT">
+        <statDef>MentalBreakThreshold</statDef>
+        <offset>0.2</offset>
+        <range>25.9</range>
+      </li>
+      <li Class="DeathStrandingMod.ConditionalStatAffector_Raining">
+        <statDef>MoveSpeed</statDef>
+        <offset>-0.15</offset>
+      </li>
+      <li Class="DeathStrandingMod.ConditionalStatAffector_Raining">
+        <statDef>MentalBreakThreshold</statDef>
+        <offset>0.1</offset>
+      </li>
+    </conditionalStatAffecters>
+    <modExtensions>
+      <li Class="DeathStrandingMod.DOOMSGeneExtension">
+        <doomsLevel>3</doomsLevel>
+        <btDetectionRange>18.9</btDetectionRange>
+        <btDetectionChance>0.7</btDetectionChance>
+        <realityStabilization>0.15</realityStabilization>
+        <chaphobiaSeverity>0.3</chaphobiaSeverity>
+        <visionChance>0.2</visionChance>
+        <canSenseVoidouts>true</canSenseVoidouts>
+      </li>
+    </modExtensions>
+    <exclusionTags>
+      <li>DOOMS</li>
+    </exclusionTags>
+  </GeneDef>
+
+  <!-- ==================== DOOMS LEVEL 4 GENE ==================== -->
+  
+  <GeneDef>
+    <defName>DOOMS_Level4</defName>
+    <label>DOOMS level 4</label>
+    <labelShortAdj>DOOMS-4</labelShortAdj>
+    <description>A high level of DOOMS that grants strong supernatural abilities and reliable precognition. This person can detect Beach Things from great distances and receives clear visions of future threats. They suffer from significant chaphobia and may experience physical pain during rain or supernatural events.</description>
+    <iconPath>UI/Icons/Genes/Gene_DOOMSLevel4</iconPath>
+    <displayCategory>DOOMS</displayCategory>
+    <displayOrderInCategory>4</displayOrderInCategory>
+    <biostatCpx>4</biostatCpx>
+    <biostatMet>-4</biostatMet>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>sensing</symbol></li>
+        <li><symbol>aware</symbol></li>
+        <li><symbol>seeing</symbol></li>
+        <li><symbol>knowing</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>touched</symbol></li>
+        <li><symbol>gifted</symbol></li>
+        <li><symbol>seer</symbol></li>
+        <li><symbol>oracle</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+    <statOffsets>
+      <PsychicSensitivity>0.4</PsychicSensitivity>
+      <MentalBreakThreshold>0.15</MentalBreakThreshold>
+    </statOffsets>
+    <capMods>
+      <li>
+        <capacity>Consciousness</capacity>
+        <offset>-0.1</offset>
+      </li>
+    </capMods>
+    <conditionalStatAffecters>
+      <li Class="DeathStrandingMod.ConditionalStatAffector_NearBT">
+        <statDef>MentalBreakThreshold</statDef>
+        <offset>0.25</offset>
+        <range>30.9</range>
+      </li>
+      <li Class="DeathStrandingMod.ConditionalStatAffector_Raining">
+        <statDef>MoveSpeed</statDef>
+        <offset>-0.2</offset>
+      </li>
+      <li Class="DeathStrandingMod.ConditionalStatAffector_Raining">
+        <statDef>MentalBreakThreshold</statDef>
+        <offset>0.15</offset>
+      </li>
+    </conditionalStatAffecters>
+    <modExtensions>
+      <li Class="DeathStrandingMod.DOOMSGeneExtension">
+        <doomsLevel>4</doomsLevel>
+        <btDetectionRange>25.9</btDetectionRange>
+        <btDetectionChance>0.85</btDetectionChance>
+        <realityStabilization>0.2</realityStabilization>
+        <chaphobiaSeverity>0.4</chaphobiaSeverity>
+        <visionChance>0.3</visionChance>
+        <canSenseVoidouts>true</canSenseVoidouts>
+        <canDetectBeachStorms>true</canDetectBeachStorms>
+      </li>
+    </modExtensions>
+    <exclusionTags>
+      <li>DOOMS</li>
+    </exclusionTags>
+  </GeneDef>
+
+  <!-- ==================== DOOMS LEVEL 5 GENE ==================== -->
+  
+  <GeneDef>
+    <defName>DOOMS_Level5</defName>
+    <label>DOOMS level 5</label>
+    <labelShortAdj>DOOMS-5</labelShortAdj>
+    <description>An advanced level of DOOMS that grants powerful supernatural abilities and consistent precognitive visions. This person can detect Beach Things across vast distances and receives detailed prophetic visions. They suffer from severe chaphobia and experience significant physical and mental strain from their abilities.</description>
+    <iconPath>UI/Icons/Genes/Gene_DOOMSLevel5</iconPath>
+    <displayCategory>DOOMS</displayCategory>
+    <displayOrderInCategory>5</displayOrderInCategory>
+    <biostatCpx>5</biostatCpx>
+    <biostatMet>-5</biostatMet>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>sensing</symbol></li>
+        <li><symbol>aware</symbol></li>
+        <li><symbol>seeing</symbol></li>
+        <li><symbol>knowing</symbol></li>
+        <li><symbol>prophetic</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>touched</symbol></li>
+        <li><symbol>gifted</symbol></li>
+        <li><symbol>seer</symbol></li>
+        <li><symbol>oracle</symbol></li>
+        <li><symbol>prophet</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+    <statOffsets>
+      <PsychicSensitivity>0.5</PsychicSensitivity>
+      <MentalBreakThreshold>0.2</MentalBreakThreshold>
+    </statOffsets>
+    <capMods>
+      <li>
+        <capacity>Consciousness</capacity>
+        <offset>-0.15</offset>
+      </li>
+    </capMods>
+    <conditionalStatAffecters>
+      <li Class="DeathStrandingMod.ConditionalStatAffector_NearBT">
+        <statDef>MentalBreakThreshold</statDef>
+        <offset>0.3</offset>
+        <range>35.9</range>
+      </li>
+      <li Class="DeathStrandingMod.ConditionalStatAffector_Raining">
+        <statDef>MoveSpeed</statDef>
+        <offset>-0.25</offset>
+      </li>
+      <li Class="DeathStrandingMod.ConditionalStatAffector_Raining">
+        <statDef>MentalBreakThreshold</statDef>
+        <offset>0.2</offset>
+      </li>
+    </conditionalStatAffecters>
+    <abilities>
+      <li>DOOMSSense_Level5</li>
+    </abilities>
+    <modExtensions>
+      <li Class="DeathStrandingMod.DOOMSGeneExtension">
+        <doomsLevel>5</doomsLevel>
+        <btDetectionRange>35.9</btDetectionRange>
+        <btDetectionChance>0.95</btDetectionChance>
+        <realityStabilization>0.25</realityStabilization>
+        <chaphobiaSeverity>0.5</chaphobiaSeverity>
+        <visionChance>0.4</visionChance>
+        <canSenseVoidouts>true</canSenseVoidouts>
+        <canDetectBeachStorms>true</canDetectBeachStorms>
+        <canPreventVoidouts>true</canPreventVoidouts>
+      </li>
+    </modExtensions>
+    <exclusionTags>
+      <li>DOOMS</li>
+    </exclusionTags>
+  </GeneDef>
+
+  <!-- ==================== DOOMS LEVEL 6 GENE ==================== -->
+  
+  <GeneDef>
+    <defName>DOOMS_Level6</defName>
+    <label>DOOMS level 6</label>
+    <labelShortAdj>DOOMS-6</labelShortAdj>
+    <description>A very high level of DOOMS that provides exceptional supernatural abilities and near-constant precognitive awareness. This person exists partially between dimensions, able to perceive threats and events across vast distances. They suffer from extreme chaphobia and significant physical deterioration from their otherworldly connection.</description>
+    <iconPath>UI/Icons/Genes/Gene_DOOMSLevel6</iconPath>
+    <displayCategory>DOOMS</displayCategory>
+    <displayOrderInCategory>6</displayOrderInCategory>
+    <biostatCpx>6</biostatCpx>
+    <biostatMet>-6</biostatMet>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>sensing</symbol></li>
+        <li><symbol>aware</symbol></li>
+        <li><symbol>seeing</symbol></li>
+        <li><symbol>knowing</symbol></li>
+        <li><symbol>prophetic</symbol></li>
+        <li><symbol>transcendent</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>touched</symbol></li>
+        <li><symbol>gifted</symbol></li>
+        <li><symbol>seer</symbol></li>
+        <li><symbol>oracle</symbol></li>
+        <li><symbol>prophet</symbol></li>
+        <li><symbol>bridge</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+    <statOffsets>
+      <PsychicSensitivity>0.6</PsychicSensitivity>
+      <MentalBreakThreshold>0.25</MentalBreakThreshold>
+    </statOffsets>
+    <capMods>
+      <li>
+        <capacity>Consciousness</capacity>
+        <offset>-0.2</offset>
+      </li>
+      <li>
+        <capacity>Moving</capacity>
+        <offset>-0.1</offset>
+      </li>
+    </capMods>
+    <conditionalStatAffecters>
+      <li Class="DeathStrandingMod.ConditionalStatAffector_NearBT">
+        <statDef>MentalBreakThreshold</statDef>
+        <offset>0.35</offset>
+        <range>40.9</range>
+      </li>
+      <li Class="DeathStrandingMod.ConditionalStatAffector_Raining">
+        <statDef>MoveSpeed</statDef>
+        <offset>-0.3</offset>
+      </li>
+      <li Class="DeathStrandingMod.ConditionalStatAffector_Raining">
+        <statDef>MentalBreakThreshold</statDef>
+        <offset>0.25</offset>
+      </li>
+    </conditionalStatAffecters>
+    <abilities>
+      <li>DOOMSSense_Level5</li>
+    </abilities>
+    <modExtensions>
+      <li Class="DeathStrandingMod.DOOMSGeneExtension">
+        <doomsLevel>6</doomsLevel>
+        <btDetectionRange>45.9</btDetectionRange>
+        <btDetectionChance>1.0</btDetectionChance>
+        <realityStabilization>0.3</realityStabilization>
+        <chaphobiaSeverity>0.6</chaphobiaSeverity>
+        <visionChance>0.5</visionChance>
+        <canSenseVoidouts>true</canSenseVoidouts>
+        <canDetectBeachStorms>true</canDetectBeachStorms>
+        <canPreventVoidouts>true</canPreventVoidouts>
+        <canSenseBeachDimension>true</canSenseBeachDimension>
+      </li>
+    </modExtensions>
+    <exclusionTags>
+      <li>DOOMS</li>
+    </exclusionTags>
+  </GeneDef>
+
+  <!-- ==================== DOOMS LEVEL 7 GENE ==================== -->
+  
+  <GeneDef>
+    <defName>DOOMS_Level7</defName>
+    <label>DOOMS level 7</label>
+    <labelShortAdj>DOOMS-7</labelShortAdj>
+    <description>An extreme level of DOOMS that grants near-godlike supernatural perception and precognitive abilities. This person can perceive events across dimensions and through time, but exists in constant torment from their overwhelming connection to the Beach. They suffer from debilitating chaphobia and severe physical deterioration.</description>
+    <iconPath>UI/Icons/Genes/Gene_DOOMSLevel7</iconPath>
+    <displayCategory>DOOMS</displayCategory>
+    <displayOrderInCategory>7</displayOrderInCategory>
+    <biostatCpx>7</biostatCpx>
+    <biostatMet>-7</biostatMet>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>sensing</symbol></li>
+        <li><symbol>aware</symbol></li>
+        <li><symbol>seeing</symbol></li>
+        <li><symbol>knowing</symbol></li>
+        <li><symbol>prophetic</symbol></li>
+        <li><symbol>transcendent</symbol></li>
+        <li><symbol>dimensional</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>touched</symbol></li>
+        <li><symbol>gifted</symbol></li>
+        <li><symbol>seer</symbol></li>
+        <li><symbol>oracle</symbol></li>
+        <li><symbol>prophet</symbol></li>
+        <li><symbol>bridge</symbol></li>
+        <li><symbol>conduit</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+    <statOffsets>
+      <PsychicSensitivity>0.7</PsychicSensitivity>
+      <MentalBreakThreshold>0.3</MentalBreakThreshold>
+    </statOffsets>
+    <capMods>
+      <li>
+        <capacity>Consciousness</capacity>
+        <offset>-0.25</offset>
+      </li>
+      <li>
+        <capacity>Moving</capacity>
+        <offset>-0.15</offset>
+      </li>
+      <li>
+        <capacity>Manipulation</capacity>
+        <offset>-0.1</offset>
+      </li>
+    </capMods>
+    <conditionalStatAffecters>
+      <li Class="DeathStrandingMod.ConditionalStatAffector_NearBT">
+        <statDef>MentalBreakThreshold</statDef>
+        <offset>0.4</offset>
+        <range>50.9</range>
+      </li>
+      <li Class="DeathStrandingMod.ConditionalStatAffector_Raining">
+        <statDef>MoveSpeed</statDef>
+        <offset>-0.4</offset>
+      </li>
+      <li Class="DeathStrandingMod.ConditionalStatAffector_Raining">
+        <statDef>MentalBreakThreshold</statDef>
+        <offset>0.3</offset>
+      </li>
+    </conditionalStatAffecters>
+    <abilities>
+      <li>DOOMSSense_Level5</li>
+      <li>DOOMSSense_Level7</li>
+    </abilities>
+    <modExtensions>
+      <li Class="DeathStrandingMod.DOOMSGeneExtension">
+        <doomsLevel>7</doomsLevel>
+        <btDetectionRange>60.9</btDetectionRange>
+        <btDetectionChance>1.0</btDetectionChance>
+        <realityStabilization>0.4</realityStabilization>
+        <chaphobiaSeverity>0.8</chaphobiaSeverity>
+        <visionChance>0.7</visionChance>
+        <canSenseVoidouts>true</canSenseVoidouts>
+        <canDetectBeachStorms>true</canDetectBeachStorms>
+        <canPreventVoidouts>true</canPreventVoidouts>
+        <canSenseBeachDimension>true</canSenseBeachDimension>
+        <canControlBTs>true</canControlBTs>
+      </li>
+    </modExtensions>
+    <exclusionTags>
+      <li>DOOMS</li>
+    </exclusionTags>
+  </GeneDef>
+
+  <!-- ==================== DOOMS LEVEL 8 GENE (HIGGS LEVEL) ==================== -->
+  
+  <GeneDef>
+    <defName>DOOMS_Level8</defName>
+    <label>DOOMS level 8</label>
+    <labelShortAdj>DOOMS-8</labelShortAdj>
+    <description>The ultimate level of DOOMS, similar to that possessed by Higgs. This person has transcended normal human limitations and exists as a bridge between dimensions. They can manipulate Beach Things, control dimensional rifts, and perceive all of reality simultaneously. However, they exist in constant agony and are barely human anymore.</description>
+    <iconPath>UI/Icons/Genes/Gene_DOOMSLevel8</iconPath>
+    <displayCategory>DOOMS</displayCategory>
+    <displayOrderInCategory>8</displayOrderInCategory>
+    <biostatCpx>8</biostatCpx>
+    <biostatMet>-8</biostatMet>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>sensing</symbol></li>
+        <li><symbol>aware</symbol></li>
+        <li><symbol>seeing</symbol></li>
+        <li><symbol>knowing</symbol></li>
+        <li><symbol>prophetic</symbol></li>
+        <li><symbol>transcendent</symbol></li>
+        <li><symbol>dimensional</symbol></li>
+        <li><symbol>godlike</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>touched</symbol></li>
+        <li><symbol>gifted</symbol></li>
+        <li><symbol>seer</symbol></li>
+        <li><symbol>oracle</symbol></li>
+        <li><symbol>prophet</symbol></li>
+        <li><symbol>bridge</symbol></li>
+        <li><symbol>conduit</symbol></li>
+        <li><symbol>entity</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+    <statOffsets>
+      <PsychicSensitivity>1.0</PsychicSensitivity>
+      <MentalBreakThreshold>0.4</MentalBreakThreshold>
+    </statOffsets>
+    <capMods>
+      <li>
+        <capacity>Consciousness</capacity>
+        <offset>-0.3</offset>
+      </li>
+      <li>
+        <capacity>Moving</capacity>
+        <offset>-0.2</offset>
+      </li>
+      <li>
+        <capacity>Manipulation</capacity>
+        <offset>-0.15</offset>
+      </li>
+    </capMods>
+    <conditionalStatAffecters>
+      <li Class="DeathStrandingMod.ConditionalStatAffector_NearBT">
+        <statDef>MentalBreakThreshold</statDef>
+        <offset>0.5</offset>
+        <range>75.9</range>
+      </li>
+      <li Class="DeathStrandingMod.ConditionalStatAffector_Raining">
+        <statDef>MoveSpeed</statDef>
+        <offset>-0.5</offset>
+      </li>
+      <li Class="DeathStrandingMod.ConditionalStatAffector_Raining">
+        <statDef>MentalBreakThreshold</statDef>
+        <offset>0.4</offset>
+      </li>
+    </conditionalStatAffecters>
+    <abilities>
+      <li>DOOMSSense_Level5</li>
+      <li>DOOMSSense_Level7</li>
+      <li>DOOMSControl_Level8</li>
+    </abilities>
+    <modExtensions>
+      <li Class="DeathStrandingMod.DOOMSGeneExtension">
+        <doomsLevel>8</doomsLevel>
+        <btDetectionRange>100.9</btDetectionRange>
+        <btDetectionChance>1.0</btDetectionChance>
+        <realityStabilization>0.5</realityStabilization>
+        <chaphobiaSeverity>1.0</chaphobiaSeverity>
+        <visionChance>0.9</visionChance>
+        <canSenseVoidouts>true</canSenseVoidouts>
+        <canDetectBeachStorms>true</canDetectBeachStorms>
+        <canPreventVoidouts>true</canPreventVoidouts>
+        <canSenseBeachDimension>true</canSenseBeachDimension>
+        <canControlBTs>true</canControlBTs>
+        <canCreateVoidouts>true</canCreateVoidouts>
+        <canManipulateReality>true</canManipulateReality>
+      </li>
+    </modExtensions>
+    <exclusionTags>
+      <li>DOOMS</li>
+    </exclusionTags>
+  </GeneDef>
+
+</Defs>

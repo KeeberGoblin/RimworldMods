@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- ==================== BEACH-RELATED MENTAL STATES ==================== -->
+  
+  <!-- Beach Drift -->
+  <MentalStateDef>
+    <defName>BeachDrift</defName>
+    <stateClass>DeathStrandingMod.MentalState_BeachDrift</stateClass>
+    <label>Beach drift</label>
+    <beginLetter>{0} is drifting between dimensions. [PAWN_pronoun] seems disconnected from reality, existing partially in the Beach dimension.</beginLetter>
+    <beginLetterLabel>Beach drift</beginLetterLabel>
+    <baseInspectLine>Beach drift (disconnected from reality)</baseInspectLine>
+    <category>Misc</category>
+    <minTicksBeforeRecovery>30000</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>150000</maxTicksBeforeRecovery>
+    <recoveryMessage>{0} has returned to normal reality.</recoveryMessage>
+    <blockNormalThoughts>false</blockNormalThoughts>
+    <mentalBreakGives>false</mentalBreakGives>
+    <allowBeatfire>false</allowBeatfire>
+    <allowTargetingBeasts>false</allowTargetingBeasts>
+    <tale>DeathStrandingMod_BeachDrift</tale>
+  </MentalStateDef>
+
+  <!-- BT Possession -->
+  <MentalStateDef>
+    <defName>BTPossession</defName>
+    <stateClass>DeathStrandingMod.MentalState_BTPossession</stateClass>
+    <label>BT possession</label>
+    <beginLetter>{0} has been possessed by a Beach Thing! [PAWN_pronoun] is no longer in control of [PAWN_possessive] actions.</beginLetter>
+    <beginLetterLabel>BT possession</beginLetterLabel>
+    <letterDef>ThreatBig</letterDef>
+    <baseInspectLine>BT possession (controlled by supernatural entity)</baseInspectLine>
+    <category>Misc</category>
+    <minTicksBeforeRecovery>60000</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>300000</maxTicksBeforeRecovery>
+    <recoveryMessage>{0} has broken free from the BT's control.</recoveryMessage>
+    <blockNormalThoughts>true</blockNormalThoughts>
+    <mentalBreakGives>false</mentalBreakGives>
+    <allowBeatfire>true</allowBeatfire>
+    <allowTargetingBeasts>true</allowTargetingBeasts>
+    <isExtreme>true</isExtreme>
+    <tale>DeathStrandingMod_BTPossession</tale>
+  </MentalStateDef>
+
+  <!-- Temporal Displacement -->
+  <MentalStateDef>
+    <defName>TemporalDisplacement</defName>
+    <stateClass>DeathStrandingMod.MentalState_TemporalDisplacement</stateClass>
+    <label>temporal displacement</label>
+    <beginLetter>{0} is experiencing temporal displacement. [PAWN_pronoun] seems confused about when [PAWN_pronoun] is, acting as if from a different time period.</beginLetter>
+    <beginLetterLabel>temporal displacement</beginLetterLabel>
+    <baseInspectLine>Temporal displacement (confused about time)</baseInspectLine>
+    <category>Misc</category>
+    <minTicksBeforeRecovery>20000</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>100000</maxTicksBeforeRecovery>
+    <recoveryMessage>{0} has regained temporal orientation.</recoveryMessage>
+    <blockNormalThoughts>false</blockNormalThoughts>
+    <mentalBreakGives>false</mentalBreakGives>
+    <allowBeatfire>false</allowBeatfire>
+    <allowTargetingBeasts>false</allowTargetingBeasts>
+    <tale>DeathStrandingMod_TemporalDisplacement</tale>
+  </MentalStateDef>
+
+  <!-- DOOMS Vision Trance -->
+  <MentalStateDef>
+    <defName>DOOMSVisionTrance</defName>
+    <stateClass>DeathStrandingMod.MentalState_DOOMSVisionTrance</stateClass>
+    <label>DOOMS vision trance</label>
+    <beginLetter>{0} is experiencing intense DOOMS visions. [PAWN_pronoun] stands motionless, perceiving events across time and space.</beginLetter>
+    <beginLetterLabel>DOOMS vision trance</beginLetterLabel>
+    <baseInspectLine>DOOMS vision trance (receiving supernatural visions)</baseInspectLine>
+    <category>Misc</category>
+    <minTicksBeforeRecovery>5000</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>30000</maxTicksBeforeRecovery>
+    <recoveryMessage>{0} has emerged from the vision trance.</recoveryMessage>
+    <blockNormalThoughts>false</blockNormalThoughts>
+    <mentalBreakGives>false</mentalBreakGives>
+    <allowBeatfire>false</allowBeatfire>
+    <allowTargetingBeasts>false</allowTargetingBeasts>
+    <tale>DeathStrandingMod_DOOMSVision</tale>
+  </MentalStateDef>
+
+  <!-- Chiral Contamination Madness -->
+  <MentalStateDef>
+    <defName>ChiralContaminationMadness</defName>
+    <stateClass>DeathStrandingMod.MentalState_ChiralMadness</stateClass>
+    <label>chiral contamination madness</label>
+    <beginLetter>{0} has succumbed to chiral contamination madness! The supernatural energy has overwhelmed [PAWN_possessive] nervous system.</beginLetter>
+    <beginLetterLabel>chiral madness</beginLetterLabel>
+    <letterDef>NegativeEvent</letterDef>
+    <baseInspectLine>Chiral contamination madness (supernatural energy overload)</baseInspectLine>
+    <category>Misc</category>
+    <minTicksBeforeRecovery>40000</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>200000</maxTicksBeforeRecovery>
+    <recoveryMessage>{0} has recovered from the chiral contamination madness.</recoveryMessage>
+    <blockNormalThoughts>true</blockNormalThoughts>
+    <mentalBreakGives>false</mentalBreakGives>
+    <allowBeatfire>true</allowBeatfire>
+    <allowTargetingBeasts>false</allowTargetingBeasts>
+    <isExtreme>false</isExtreme>
+    <tale>DeathStrandingMod_ChiralMadness</tale>
+  </MentalStateDef>
+
+  <!-- Dimensional Echo -->
+  <MentalStateDef>
+    <defName>DimensionalEcho</defName>
+    <stateClass>DeathStrandingMod.MentalState_DimensionalEcho</stateClass>
+    <label>dimensional echo</label>
+    <beginLetter>{0} is experiencing dimensional echoes. [PAWN_pronoun] seems to be responding to people and events that aren't there.</beginLetter>
+    <beginLetterLabel>dimensional echo</beginLetterLabel>
+    <baseInspectLine>Dimensional echo (perceiving other realities)</baseInspectLine>
+    <category>Misc</category>
+    <minTicksBeforeRecovery>15000</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>80000</maxTicksBeforeRecovery>
+    <recoveryMessage>{0} is no longer experiencing dimensional echoes.</recoveryMessage>
+    <blockNormalThoughts>false</blockNormalThoughts>
+    <mentalBreakGives>false</mentalBreakGives>
+    <allowBeatfire>false</allowBeatfire>
+    <allowTargetingBeasts>false</allowTargetingBeasts>
+    <tale>DeathStrandingMod_DimensionalEcho</tale>
+  </MentalStateDef>
+
+  <!-- Void Terror -->
+  <MentalStateDef>
+    <defName>VoidTerror</defName>
+    <stateClass>DeathStrandingMod.MentalState_VoidTerror</stateClass>
+    <label>void terror</label>
+    <beginLetter>{0} is overwhelmed by existential terror! The proximity to voidout events has triggered an extreme fear response.</beginLetter>
+    <beginLetterLabel>void terror</beginLetterLabel>
+    <letterDef>NegativeEvent</letterDef>
+    <baseInspectLine>Void terror (overwhelming fear of annihilation)</baseInspectLine>
+    <category>Misc</category>
+    <minTicksBeforeRecovery>25000</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>120000</maxTicksBeforeRecovery>
+    <recoveryMessage>{0} has overcome the void terror.</recoveryMessage>
+    <blockNormalThoughts>true</blockNormalThoughts>
+    <mentalBreakGives>false</mentalBreakGives>
+    <allowBeatfire>false</allowBeatfire>
+    <allowTargetingBeasts>false</allowTargetingBeasts>
+    <isExtreme>false</isExtreme>
+    <tale>DeathStrandingMod_VoidTerror</tale>
+  </MentalStateDef>
+
+  <!-- Phantom Communication -->
+  <MentalStateDef>
+    <defName>PhantomCommunication</defName>
+    <stateClass>DeathStrandingMod.MentalState_PhantomCommunication</stateClass>
+    <label>phantom communication</label>
+    <beginLetter>{0} is communicating with phantoms. [PAWN_pronoun] appears to be having conversations with invisible entities.</beginLetter>
+    <beginLetterLabel>phantom communication</beginLetterLabel>
+    <baseInspectLine>Phantom communication (talking to unseen entities)</baseInspectLine>
+    <category>Misc</category>
+    <minTicksBeforeRecovery>10000</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>60000</maxTicksBeforeRecovery>
+    <recoveryMessage>{0} is no longer communicating with phantoms.</recoveryMessage>
+    <blockNormalThoughts>false</blockNormalThoughts>
+    <mentalBreakGives>false</mentalBreakGives>
+    <allowBeatfire>false</allowBeatfire>
+    <allowTargetingBeasts>false</allowTargetingBeasts>
+    <tale>DeathStrandingMod_PhantomCommunication</tale>
+  </MentalStateDef>
+
+  <!-- Chiral Network Overload -->
+  <MentalStateDef>
+    <defName>ChiralNetworkOverload</defName>
+    <stateClass>DeathStrandingMod.MentalState_NetworkOverload</stateClass>
+    <label>chiral network overload</label>
+    <beginLetter>{0} is experiencing chiral network overload! Too much information is flooding through [PAWN_possessive] supernatural connection.</beginLetter>
+    <beginLetterLabel>network overload</beginLetterLabel>
+    <baseInspectLine>Chiral network overload (information flooding)</baseInspectLine>
+    <category>Misc</category>
+    <minTicksBeforeRecovery>8000</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>40000</maxTicksBeforeRecovery>
+    <recoveryMessage>{0} has recovered from the network overload.</recoveryMessage>
+    <blockNormalThoughts>false</blockNormalThoughts>
+    <mentalBreakGives>false</mentalBreakGives>
+    <allowBeatfire>false</allowBeatfire>
+    <allowTargetingBeasts>false</allowTargetingBeasts>
+    <tale>DeathStrandingMod_NetworkOverload</tale>
+  </MentalStateDef>
+
+  <!-- Reality Dissociation -->
+  <MentalStateDef>
+    <defName>RealityDissociation</defName>
+    <stateClass>DeathStrandingMod.MentalState_RealityDissociation</stateClass>
+    <label>reality dissociation</label>
+    <beginLetter>{0} is dissociating from reality. [PAWN_pronoun] seems uncertain about what is real and what is supernatural manifestation.</beginLetter>
+    <beginLetterLabel>reality dissociation</beginLetterLabel>
+    <baseInspectLine>Reality dissociation (uncertain about reality)</baseInspectLine>
+    <category>Misc</category>
+    <minTicksBeforeRecovery>18000</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>90000</maxTicksBeforeRecovery>
+    <recoveryMessage>{0} has regained a stable sense of reality.</recoveryMessage>
+    <blockNormalThoughts>false</blockNormalThoughts>
+    <mentalBreakGives>false</mentalBreakGives>
+    <allowBeatfire>false</allowBeatfire>
+    <allowTargetingBeasts>false</allowTargetingBeasts>
+    <tale>DeathStrandingMod_RealityDissociation</tale>
+  </MentalStateDef>
+
+  <!-- Beach Connection -->
+  <MentalStateDef>
+    <defName>BeachConnection</defName>
+    <stateClass>DeathStrandingMod.MentalState_BeachConnection</stateClass>
+    <label>Beach connection</label>
+    <beginLetter>{0} has established a connection to the Beach. [PAWN_pronoun] is receiving knowledge from the otherworldly dimension.</beginLetter>
+    <beginLetterLabel>Beach connection</beginLetterLabel>
+    <baseInspectLine>Beach connection (receiving otherworldly knowledge)</baseInspectLine>
+    <category>Misc</category>
+    <minTicksBeforeRecovery>12000</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>50000</maxTicksBeforeRecovery>
+    <recoveryMessage>{0} has disconnected from the Beach.</recoveryMessage>
+    <blockNormalThoughts>false</blockNormalThoughts>
+    <mentalBreakGives>false</mentalBreakGives>
+    <allowBeatfire>false</allowBeatfire>
+    <allowTargetingBeasts>false</allowTargetingBeasts>
+    <tale>DeathStrandingMod_BeachConnection</tale>
+  </MentalStateDef>
+
+  <!-- Timefall Panic -->
+  <MentalStateDef>
+    <defName>TimefallPanic</defName>
+    <stateClass>DeathStrandingMod.MentalState_TimefallPanic</stateClass>
+    <label>timefall panic</label>
+    <beginLetter>{0} is panicking about timefall exposure! The fear of accelerated aging has triggered an extreme anxiety response.</beginLetter>
+    <beginLetterLabel>timefall panic</beginLetterLabel>
+    <baseInspectLine>Timefall panic (terrified of temporal aging)</baseInspectLine>
+    <category>Misc</category>
+    <minTicksBeforeRecovery>15000</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>75000</maxTicksBeforeRecovery>
+    <recoveryMessage>{0} has calmed down from the timefall panic.</recoveryMessage>
+    <blockNormalThoughts>false</blockNormalThoughts>
+    <mentalBreakGives>false</mentalBreakGives>
+    <allowBeatfire>false</allowBeatfire>
+    <allowTargetingBeasts>false</allowTargetingBeasts>
+    <tale>DeathStrandingMod_TimefallPanic</tale>
+  </MentalStateDef>
+
+</Defs>

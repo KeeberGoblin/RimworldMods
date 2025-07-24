@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- ==================== CHIRAL NETWORK NODE ==================== -->
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>ChiralNetworkNode</defName>
+    <label>chiral network node</label>
+    <description>A sophisticated transmitter that creates a localized chiral field, providing protection against Beach dimensional threats. When active, it connects to other nodes to form a protective network that can repel BTs and stabilize reality in the surrounding area.</description>
+    <thingClass>DeathStrandingMod.Buildings.Building_ChiralNetworkNode</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Security/BTDetector</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(1,1)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/Security/BTDetector_MenuIcon</uiIconPath>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <blockWind>false</blockWind>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <fillPercent>0.3</fillPercent>
+    <blockLight>false</blockLight>
+    <canOverlapZones>false</canOverlapZones>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>4000</WorkToBuild>
+      <Mass>25</Mass>
+      <Flammability>0.7</Flammability>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <size>(1,1)</size>
+    <costList>
+      <Steel>50</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <ChiralCrystal>8</ChiralCrystal>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>150</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="DeathStrandingMod.Components.CompProperties_BTDetector">
+        <detectionRadius>35.9</detectionRadius>
+        <powerConsumption>150</powerConsumption>
+        <alertDelay>300</alertDelay>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(255,100,100,0)</glowColor>
+      </li>
+    </comps>
+    <specialDisplayRadius>35.9</specialDisplayRadius>
+    <placeWorkers>
+      <li>DeathStrandingMod.PlaceWorkers.PlaceWorker_ShowBTDetectionRadius</li>
+    </placeWorkers>
+    <designationCategory>Security</designationCategory>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>BTDetection</li>
+    </researchPrerequisites>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+  </ThingDef>
+
+  <!-- ==================== CHIRAL BARRIER ==================== -->
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>ChiralBarrier</defName>
+    <label>chiral barrier</label>
+    <description>A defensive barrier that projects a localized chiral field, making it extremely difficult for BTs to pass through. While not completely impervious, it significantly slows and weakens supernatural entities attempting to cross it.</description>
+    <thingClass>DeathStrandingMod.Buildings.Building_ChiralBarrier</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Security/ChiralBarrier</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <linkType>CornerFiller</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+    <uiIconPath>Things/Building/Security/ChiralBarrier_MenuIcon</uiIconPath>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <blockWind>true</blockWind>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <fillPercent>1</fillPercent>
+    <coversFloor>true</coversFloor>
+    <blockLight>true</blockLight>
+    <canOverlapZones>false</canOverlapZones>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <statBases>
+      <MaxHitPoints>400</MaxHitPoints>
+      <WorkToBuild>3000</WorkToBuild>
+      <Mass>40</Mass>
+      <Flammability>0.2</Flammability>
+    </statBases>
+    <tickerType>Rare</tickerType>
+    <size>(1,1)</size>
+    <costList>
+      <Steel>25</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <ChiralAlloy>5</ChiralAlloy>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>75</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="DeathStrandingMod.Components.CompProperties_ChiralBarrier">
+        <barrierStrength>0.8</barrierStrength>
+        <powerConsumption>75</powerConsumption>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>1</glowRadius>
+        <glowColor>(150,200,255,0)</glowColor>
+      </li>
+    </comps>
+    <designationCategory>Security</designationCategory>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>ChiralBarriers</li>
+    </researchPrerequisites>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+  </ThingDef>
+
+  <!-- ==================== TIMEFALL SHELTER ==================== -->
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>TimefallShelter</defName>
+    <label>timefall shelter</label>
+    <description>A specialized shelter designed to protect against timefall precipitation. The structure uses advanced materials and geometric design to deflect temporal rain and provide safe haven during timefall storms.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Security/TimefallShelter</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(4,4)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/Security/TimefallShelter_MenuIcon</uiIconPath>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <blockWind>true</blockWind>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <fillPercent>0.5</fillPercent>
+    <blockLight>true</blockLight>
+    <canOverlapZones>false</canOverlapZones>
+    <statBases>
+      <MaxHitPoints>600</MaxHitPoints>
+      <WorkToBuild>12000</WorkToBuild>
+      <Mass>200</Mass>
+      <Flammability>0.4</Flammability>
+    </statBases>
+    <size>(4,4)</size>
+    <costList>
+      <Steel>150</Steel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+      <ChiralAlloy>10</ChiralAlloy>
+      <Plasteel>25</Plasteel>
+    </costList>
+    <comps>
+      <li Class="DeathStrandingMod.Components.CompProperties_TimefallProtection">
+        <protectionRadius>6.9</protectionRadius>
+        <protectionEffectiveness>0.95</protectionEffectiveness>
+      </li>
+    </comps>
+    <specialDisplayRadius>6.9</specialDisplayRadius>
+    <placeWorkers>
+      <li>DeathStrandingMod.PlaceWorkers.PlaceWorker_ShowTimefallProtectionRadius</li>
+    </placeWorkers>
+    <designationCategory>Security</designationCategory>
+    <constructionSkillPrerequisite>7</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>TimefallProtection</li>
+    </researchPrerequisites>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+  </ThingDef>
+
+  <!-- ==================== PORTER BEACON ==================== -->
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>PorterBeacon</defName>
+    <label>porter beacon</label>
+    <description>A navigation beacon that provides guidance for porter expeditions. The beacon transmits location data and route information to help porters navigate safely through dangerous territories. Can be linked to the chiral network for enhanced communication.</description>
+    <thingClass>DeathStrandingMod.Buildings.Building_PorterBeacon</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Security/PorterBeacon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(1,1)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/Security/PorterBeacon_MenuIcon</uiIconPath>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <blockWind>false</blockWind>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <fillPercent>0.2</fillPercent>
+    <blockLight>false</blockLight>
+    <canOverlapZones>false</canOverlapZones>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>2000</WorkToBuild>
+      <Mass>15</Mass>
+      <Flammability>0.6</Flammability>
+    </statBases>
+    <tickerType>Rare</tickerType>
+    <size>(1,1)</size>
+    <costList>
+      <Steel>30</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <ChiralCrystal>3</ChiralCrystal>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>50</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="DeathStrandingMod.Components.CompProperties_PorterBeacon">
+        <beaconRange>100.9</beaconRange>
+        <powerConsumption>50</powerConsumption>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(255,255,100,0)</glowColor>
+      </li>
+    </comps>
+    <specialDisplayRadius>100.9</specialDisplayRadius>
+    <placeWorkers>
+      <li>DeathStrandingMod.PlaceWorkers.PlaceWorker_ShowPorterBeaconRadius</li>
+    </placeWorkers>
+    <designationCategory>Security</designationCategory>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>PorterTechnology</li>
+    </researchPrerequisites>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+  </ThingDef>
+
+  <!-- ==================== REALITY ANCHOR ==================== -->
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>RealityAnchor</defName>
+    <label>reality anchor</label>
+    <description>An advanced device that stabilizes local reality by creating a fixed reference point in dimensional space. This helps prevent reality distortion episodes and provides mental stability to colonists in the surrounding area.</description>
+    <thingClass>DeathStrandingMod.Buildings.Building_RealityAnchor</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Security/RealityAnchor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(2,2)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/Security/RealityAnchor_MenuIcon</uiIconPath>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <blockWind>true</blockWind>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <fillPercent>0.4</fillPercent>
+    <blockLight>true</blockLight>
+    <canOverlapZones>false</canOverlapZones>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <WorkToBuild>10000</WorkToBuild>
+      <Mass>80</Mass>
+      <Flammability>0.3</Flammability>
+    </statBases>
+    <tickerType>Rare</tickerType>
+    <size>(2,2)</size>
+    <costList>
+      <Steel>80</Steel>
+      <ComponentSpacer>4</ComponentSpacer>
+      <ChiralAlloy>15</ChiralAlloy>
+      <BeachMatter>3</BeachMatter>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>300</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="DeathStrandingMod.Components.CompProperties_RealityStabilizer">
+        <stabilizationRadius>20.9</stabilizationRadius>
+        <stabilizationStrength>0.7</stabilizationStrength>
+        <powerConsumption>300</powerConsumption>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(200,150,255,0)</glowColor>
+      </li>
+    </comps>
+    <specialDisplayRadius>20.9</specialDisplayRadius>
+    <placeWorkers>
+      <li>DeathStrandingMod.PlaceWorkers.PlaceWorker_ShowRealityStabilizationRadius</li>
+    </placeWorkers>
+    <designationCategory>Security</designationCategory>
+    <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>RealityManipulation</li>
+    </researchPrerequisites>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+  </ThingDef>
+
+  <!-- ==================== CHIRAL PRINTER ==================== -->
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>ChiralPrinter</defName>
+    <label>chiral printer</label>
+    <description>An advanced 3D printer that can fabricate objects using chiral matter. This device can create complex structures that exist partially in normal space and the Beach dimension, allowing for the production of specialized chiral equipment and components.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Production/ChiralPrinter</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3,2)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/Production/ChiralPrinter_MenuIcon</uiIconPath>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <blockWind>true</blockWind>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <fillPercent>0.5</fillPercent>
+    <blockLight>true</blockLight>
+    <canOverlapZones>false</canOverlapZones>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <WorkToBuild>15000</WorkToBuild>
+      <Mass>100</Mass>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <size>(3,2)</size>
+    <costList>
+      <Steel>150</Steel>
+      <ComponentIndustrial>12</ComponentIndustrial>
+      <ComponentSpacer>6</ComponentSpacer>
+      <ChiralAlloy>20</ChiralAlloy>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>500</basePowerConsumption>
+        <shortCircuitInRain>true</shortCircuitInRain>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>ToolCabinet</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+    </building>
+    <designationCategory>Production</designationCategory>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>ChiralPrinting</li>
+    </researchPrerequisites>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+  </ThingDef>
+
+</Defs>>Things/Building/Security/ChiralNetworkNode</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(2,2)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/Security/ChiralNetworkNode_MenuIcon</uiIconPath>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <blockWind>true</blockWind>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <fillPercent>0.4</fillPercent>
+    <blockLight>true</blockLight>
+    <canOverlapZones>false</canOverlapZones>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <WorkToBuild>8000</WorkToBuild>
+      <Mass>75</Mass>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <tickerType>Rare</tickerType>
+    <size>(2,2)</size>
+    <costList>
+      <Steel>100</Steel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+      <ChiralAlloy>12</ChiralAlloy>
+      <ChiralCrystal>15</ChiralCrystal>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>400</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="DeathStrandingMod.Components.CompProperties_ChiralProtection">
+        <protectionRadius>25.9</protectionRadius>
+        <powerConsumption>400</powerConsumption>
+        <chiralCrystalConsumption>1</chiralCrystalConsumption>
+        <consumptionInterval>120000</consumptionInterval>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>4</glowRadius>
+        <glowColor>(158,203,255,0)</glowColor>
+      </li>
+    </comps>
+    <specialDisplayRadius>25.9</specialDisplayRadius>
+    <placeWorkers>
+      <li>DeathStrandingMod.PlaceWorkers.PlaceWorker_ShowChiralProtectionRadius</li>
+    </placeWorkers>
+    <designationCategory>Security</designationCategory>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>ChiralNetworking</li>
+    </researchPrerequisites>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+  </ThingDef>
+
+  <!-- ==================== CHIRAL RELAY TOWER ==================== -->
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>ChiralRelayTower</defName>
+    <label>chiral relay tower</label>
+    <description>A tall transmission tower that extends the range of chiral network connections. It can link distant network nodes together and amplify their protective effects. The tower creates a visible beacon that can be seen from great distances.</description>
+    <thingClass>DeathStrandingMod.Buildings.Building_ChiralRelay</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Security/ChiralRelayTower</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3,3)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/Security/ChiralRelayTower_MenuIcon</uiIconPath>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <blockWind>true</blockWind>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <fillPercent>0.2</fillPercent>
+    <blockLight>true</blockLight>
+    <canOverlapZones>false</canOverlapZones>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <WorkToBuild>15000</WorkToBuild>
+      <Mass>150</Mass>
+      <Flammability>0.3</Flammability>
+    </statBases>
+    <tickerType>Rare</tickerType>
+    <size>(3,3)</size>
+    <costList>
+      <Steel>200</Steel>
+      <ComponentIndustrial>15</ComponentIndustrial>
+      <ComponentSpacer>3</ComponentSpacer>
+      <ChiralAlloy>25</ChiralAlloy>
+      <QuantumEntanglementDevice>2</QuantumEntanglementDevice>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>800</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="DeathStrandingMod.Components.CompProperties_ChiralRelay">
+        <relayRange>50.9</relayRange>
+        <amplificationBonus>1.5</amplificationBonus>
+        <powerConsumption>800</powerConsumption>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>8</glowRadius>
+        <glowColor>(100,200,255,0)</glowColor>
+      </li>
+    </comps>
+    <specialDisplayRadius>50.9</specialDisplayRadius>
+    <placeWorkers>
+      <li>DeathStrandingMod.PlaceWorkers.PlaceWorker_ShowChiralRelayRadius</li>
+    </placeWorkers>
+    <designationCategory>Security</designationCategory>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>ChiralNetworking</li>
+      <li>QuantumEntanglement</li>
+    </researchPrerequisites>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+  </ThingDef>
+
+  <!-- ==================== BT DETECTOR ==================== -->
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>BTDetector</defName>
+    <label>BT detector</label>
+    <description>A sensitive device that can detect Beach Things (BTs) in the surrounding area. When BTs are detected, it sends alerts to connected colonists and highlights the threat location. Essential early warning system for supernatural threats.</description>
+    <thingClass>DeathStrandingMod.Buildings.Building_BTDetector</thingClass>
+    <graphicData>
+      <texPath

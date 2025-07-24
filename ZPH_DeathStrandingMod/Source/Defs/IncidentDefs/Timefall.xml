@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- ==================== TIMEFALL INCIDENT EVENTS ==================== -->
+  
+  <!-- Timefall Storm Approaching -->
+  <IncidentDef>
+    <defName>TimefallStormApproaching</defName>
+    <label>timefall storm approaching</label>
+    <category>ThreatBig</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_TimefallStormApproaching</workerClass>
+    <baseChance>0.6</baseChance>
+    <minRefireDays>2</minRefireDays>
+    <letterText>A severe timefall storm is approaching the area. This supernatural weather system will cause extreme temporal aging effects for anyone caught in the rain.\n\nAll colonists should seek immediate shelter. The storm's intensity could age exposed individuals by years in a matter of minutes. Ensure timefall shelters are functional and properly supplied.</letterText>
+    <letterLabel>timefall storm approaching</letterLabel>
+    <letterDef>ThreatBig</letterDef>
+    <pointsScaleable>true</pointsScaleable>
+    <minThreatPoints>300</minThreatPoints>
+  </IncidentDef>
+
+  <!-- Timefall Warning -->
+  <IncidentDef>
+    <defName>TimefallWarning</defName>
+    <label>timefall warning</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_TimefallWarning</workerClass>
+    <baseChance>1.2</baseChance>
+    <minRefireDays>1</minRefireDays>
+    <letterText>A DOOMS carrier has sensed an approaching timefall event. The temporal precipitation will begin within the hour.\n\nThis advance warning allows time to complete outdoor tasks and ensure all colonists have access to adequate shelter. Timefall exposure causes rapid aging and cellular damage.</letterText>
+    <letterLabel>timefall warning</letterLabel>
+    <letterDef>NeutralEvent</letterDef>
+  </IncidentDef>
+
+  <!-- Sudden Timefall -->
+  <IncidentDef>
+    <defName>SuddenTimefall</defName>
+    <label>sudden timefall</label>
+    <category>ThreatSmall</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_SuddenTimefall</workerClass>
+    <baseChance>0.8</baseChance>
+    <minRefireDays>1</minRefireDays>
+    <letterText>Timefall has begun without warning! This temporal rain appeared suddenly, catching colonists off guard.\n\nAny colonists currently outdoors are at immediate risk of accelerated aging. Get everyone to shelter immediately.</letterText>
+    <letterLabel>sudden timefall</letterLabel>
+    <letterDef>ThreatSmall</letterDef>
+    <pointsScaleable>true</pointsScaleable>
+    <minThreatPoints>150</minThreatPoints>
+  </IncidentDef>
+
+  <!-- Timefall Intensification -->
+  <IncidentDef>
+    <defName>TimefallIntensification</defName>
+    <label>timefall intensifying</label>
+    <category>ThreatSmall</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_TimefallIntensification</workerClass>
+    <baseChance>0.4</baseChance>
+    <minRefireDays>0.2</minRefireDays>
+    <letterText>The timefall is intensifying! The temporal distortions are becoming more severe, increasing the aging rate for anyone exposed.\n\nIf any colonists are still outside, they need to reach shelter immediately. The enhanced temporal effects are extremely dangerous.</letterText>
+    <letterLabel>timefall intensifying</letterLabel>
+    <letterDef>ThreatSmall</letterDef>
+    <allowedBiomes>
+      <li>DeathStrandingMod_Beach</li>
+      <li>DeathStrandingMod_Wasteland</li>
+    </allowedBiomes>
+  </IncidentDef>
+
+  <!-- Timefall Exposure Incident -->
+  <IncidentDef>
+    <defName>TimefallExposureIncident</defName>
+    <label>timefall exposure</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_TimefallExposure</workerClass>
+    <baseChance>0.3</baseChance>
+    <minRefireDays>0.5</minRefireDays>
+    <letterText>{PAWN_nameDef} has been exposed to timefall for an extended period. The temporal rain has caused visible aging effects and cellular damage.\n\nImmediate medical attention is recommended to treat the exposure symptoms and prevent further deterioration.</letterText>
+    <letterLabel>timefall exposure</letterLabel>
+    <letterDef>NegativeEvent</letterDef>
+  </IncidentDef>
+
+  <!-- Chiral Crystal Formation -->
+  <IncidentDef>
+    <defName>ChiralCrystalFormation</defName>
+    <label>chiral crystal formation</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_ChiralCrystalFormation</workerClass>
+    <baseChance>0.7</baseChance>
+    <minRefireDays>3</minRefireDays>
+    <letterText>The recent timefall has left behind crystallized temporal energy in the form of chiral crystals. These valuable formations have appeared where the timefall was most concentrated.\n\nThese crystals can be harvested for various technological applications, but handle them carefully as they still contain residual temporal energy.</letterText>
+    <letterLabel>chiral crystals formed</letterLabel>
+    <letterDef>PositiveEvent</letterDef>
+  </IncidentDef>
+
+  <!-- Temporal Aging Crisis -->
+  <IncidentDef>
+    <defName>TemporalAgingCrisis</defName>
+    <label>temporal aging crisis</label>
+    <category>ThreatBig</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_TemporalAgingCrisis</workerClass>
+    <baseChance>0.2</baseChance>
+    <minRefireDays>7</minRefireDays>
+    <letterText>Multiple colonists have suffered severe temporal aging from recent timefall exposure. Their biological ages have increased dramatically, affecting their health and capabilities.\n\nImmediate medical intervention is required. Consider developing better timefall protection protocols to prevent future incidents.</letterText>
+    <letterLabel>temporal aging crisis</letterLabel>
+    <letterDef>ThreatBig</letterDef>
+    <pointsScaleable>true</pointsScaleable>
+    <minThreatPoints>400</minThreatPoints>
+  </IncidentDef>
+
+  <!-- Timefall Equipment Corrosion -->
+  <IncidentDef>
+    <defName>TimefallEquipmentCorrosion</defName>
+    <label>equipment temporal corrosion</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_TimefallEquipmentCorrosion</workerClass>
+    <baseChance>0.5</baseChance>
+    <minRefireDays>2</minRefireDays>
+    <letterText>Equipment left exposed to timefall has suffered temporal corrosion. The accelerated aging has degraded metal components and damaged sensitive electronics.\n\nInspect all outdoor equipment and structures for damage. Some items may need immediate repair or replacement.</letterText>
+    <letterLabel>equipment corroded</letterLabel>
+    <letterDef>NegativeEvent</letterDef>
+  </IncidentDef>
+
+  <!-- Timefall Shelter Breach -->
+  <IncidentDef>
+    <defName>TimefallShelterBreach</defName>
+    <label>shelter breach during timefall</label>
+    <category>ThreatSmall</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_TimefallShelterBreach</workerClass>
+    <baseChance>0.3</baseChance>
+    <minRefireDays>2</minRefireDays>
+    <letterText>A timefall shelter has been compromised! Structural damage has created openings that are allowing temporal rain to enter the supposedly safe area.\n\nColonists inside are now at risk of timefall exposure. Emergency repairs are needed immediately to restore the shelter's integrity.</letterText>
+    <letterLabel>shelter breach</letterLabel>
+    <letterDef>ThreatSmall</letterDef>
+    <pointsScaleable>true</pointsScaleable>
+    <minThreatPoints>200</minThreatPoints>
+  </IncidentDef>
+
+  <!-- Timefall Aftermath -->
+  <IncidentDef>
+    <defName>TimefallAftermath</defName>
+    <label>timefall aftermath</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_TimefallAftermath</workerClass>
+    <baseChance>0.8</baseChance>
+    <minRefireDays>1</minRefireDays>
+    <letterText>The timefall has ended, leaving behind a landscape changed by temporal effects. Some areas show accelerated growth while others appear withered and aged.\n\nThe aftermath provides opportunities to harvest chiral crystals and study temporal phenomena, but also reveals the full extent of damage caused by the supernatural rain.</letterText>
+    <letterLabel>timefall aftermath</letterLabel>
+    <letterDef>NeutralEvent</letterDef>
+  </IncidentDef>
+
+  <!-- Chronic Timefall Exposure -->
+  <IncidentDef>
+    <defName>ChronicTimefallExposure</defName>
+    <label>chronic timefall exposure</label>
+    <category>ThreatSmall</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_ChronicTimefallExposure</workerClass>
+    <baseChance>0.4</baseChance>
+    <minRefireDays>5</minRefireDays>
+    <letterText>{PAWN_nameDef} is showing signs of chronic timefall exposure. Repeated contact with temporal rain has caused cumulative aging effects and cellular damage.\n\nThis condition requires specialized medical treatment and may have long-term health implications. Consider rotating duties to limit individual exposure.</letterText>
+    <letterLabel>chronic exposure</letterLabel>
+    <letterDef>NegativeEvent</letterDef>
+  </IncidentDef>
+
+</Defs>

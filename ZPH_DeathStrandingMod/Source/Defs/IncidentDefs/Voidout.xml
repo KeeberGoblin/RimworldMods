@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- ==================== VOIDOUT CATASTROPHE EVENTS ==================== -->
+  
+  <!-- Voidout Warning -->
+  <IncidentDef>
+    <defName>VoidoutWarning</defName>
+    <label>voidout warning</label>
+    <category>ThreatBig</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_VoidoutWarning</workerClass>
+    <baseChance>0.3</baseChance>
+    <minRefireDays>7</minRefireDays>
+    <letterText>DOOMS carriers are detecting massive dimensional instability in the area. The supernatural energy readings suggest a voidout event may be imminent.\n\nA voidout would completely annihilate everything in a large radius. Immediate evacuation protocols should be considered if the readings continue to intensify.</letterText>
+    <letterLabel>voidout warning</letterLabel>
+    <letterDef>ThreatBig</letterDef>
+    <pointsScaleable>true</pointsScaleable>
+    <minThreatPoints>2000</minThreatPoints>
+  </IncidentDef>
+
+  <!-- Distant Voidout -->
+  <IncidentDef>
+    <defName>DistantVoidout</defName>
+    <label>distant voidout</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_DistantVoidout</workerClass>
+    <baseChance>0.5</baseChance>
+    <minRefireDays>14</minRefireDays>
+    <letterText>A massive explosion has been observed on the horizon. The characteristic energy signature indicates a voidout has occurred at a distant location.\n\nWhile the colony is safe from immediate effects, this event serves as a stark reminder of the catastrophic power that supernatural phenomena can unleash.</letterText>
+    <letterLabel>distant voidout observed</letterLabel>
+    <letterDef>NeutralEvent</letterDef>
+  </IncidentDef>
+
+  <!-- Voidout Crater Discovery -->
+  <IncidentDef>
+    <defName>VoidoutCraterDiscovery</defName>
+    <label>voidout crater discovered</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_VoidoutCraterDiscovery</workerClass>
+    <baseChance>0.4</baseChance>
+    <minRefireDays>21</minRefireDays>
+    <letterText>Scouts have discovered a massive crater from an ancient voidout event. The perfectly circular devastation zone shows no signs of recovery even after what appears to be years.\n\nThe crater serves as a sobering reminder of voidout destructive power. Valuable chiral crystals may have formed around the crater's edge.</letterText>
+    <letterLabel>voidout crater found</letterLabel>
+    <letterDef>NeutralEvent</letterDef>
+  </IncidentDef>
+
+  <!-- Pre-Voidout Phenomena -->
+  <IncidentDef>
+    <defName>PreVoidoutPhenomena</defName>
+    <label>pre-voidout phenomena</label>
+    <category>ThreatSmall</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_PreVoidoutPhenomena</workerClass>
+    <baseChance>0.6</baseChance>
+    <minRefireDays>5</minRefireDays>
+    <letterText>Strange phenomena are occurring throughout the area. Reality distortions, temporal anomalies, and dimensional rifts are appearing randomly.\n\nThese effects often precede voidout events. The colony should prepare for potential evacuation if the phenomena continue to intensify.</letterText>
+    <letterLabel>reality distortions</letterLabel>
+    <letterDef>ThreatSmall</letterDef>
+    <pointsScaleable>true</pointsScaleable>
+    <minThreatPoints>400</minThreatPoints>
+  </IncidentDef>
+
+  <!-- Voidout Survivor -->
+  <IncidentDef>
+    <defName>VoidoutSurvivor</defName>
+    <label>voidout survivor</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_VoidoutSurvivor</workerClass>
+    <baseChance>0.2</baseChance>
+    <minRefireDays>30</minRefireDays>
+    <letterText>A traumatized survivor has arrived at the colony. They claim to be the sole survivor of a voidout that destroyed their entire settlement.\n\nThe survivor suffers from severe psychological trauma and may have valuable information about voidout warning signs and survival techniques.</letterText>
+    <letterLabel>voidout survivor arrives</letterLabel>
+    <letterDef>NeutralEvent</letterDef>
+  </IncidentDef>
+
+  <!-- Dimensional Cascade -->
+  <IncidentDef>
+    <defName>DimensionalCascade</defName>
+    <label>dimensional cascade</label>
+    <category>ThreatBig</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_DimensionalCascade</workerClass>
+    <baseChance>0.1</baseChance>
+    <minRefireDays>45</minRefireDays>
+    <letterText>A dimensional cascade reaction has begun! Multiple reality rifts are opening simultaneously, creating a chain reaction that could culminate in a massive voidout.\n\nThis represents an existential threat to the entire region. Emergency evacuation should be initiated immediately while escape routes remain viable.</letterText>
+    <letterLabel>dimensional cascade</letterLabel>
+    <letterDef>ThreatBig</letterDef>
+    <pointsScaleable>true</pointsScaleable>
+    <minThreatPoints>5000</minThreatPoints>
+  </IncidentDef>
+
+  <!-- Voidout Aftershock -->
+  <IncidentDef>
+    <defName>VoidoutAftershock</defName>
+    <label>voidout aftershock</label>
+    <category>ThreatSmall</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_VoidoutAftershock</workerClass>
+    <baseChance>0.7</baseChance>
+    <minRefireDays>2</minRefireDays>
+    <letterText>Dimensional aftershocks from a distant voidout are affecting the area. These secondary effects are causing reality distortions and supernatural phenomena.\n\nWhile not as dangerous as a direct voidout, these aftershocks can still cause equipment malfunctions and psychological stress among colonists.</letterText>
+    <letterLabel>voidout aftershock</letterLabel>
+    <letterDef>ThreatSmall</letterDef>
+    <pointsScaleable>true</pointsScaleable>
+    <minThreatPoints>200</minThreatPoints>
+  </IncidentDef>
+
+  <!-- Voidout False Alarm -->
+  <IncidentDef>
+    <defName>VoidoutFalseAlarm</defName>
+    <label>voidout false alarm</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_VoidoutFalseAlarm</workerClass>
+    <baseChance>0.4</baseChance>
+    <minRefireDays>3</minRefireDays>
+    <letterText>The dimensional instability readings that suggested an imminent voidout have stabilized. The threat has passed, but the incident highlights the unpredictable nature of supernatural phenomena.\n\nWhile relief is warranted, this false alarm should serve as practice for actual emergency protocols.</letterText>
+    <letterLabel>false alarm resolved</letterLabel>
+    <letterDef>PositiveEvent</letterDef>
+  </IncidentDef>
+
+  <!-- Voidout Countdown -->
+  <IncidentDef>
+    <defName>VoidoutCountdown</defName>
+    <label>voidout countdown</label>
+    <category>ThreatBig</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_VoidoutCountdown</workerClass>
+    <baseChance>0.05</baseChance>
+    <minRefireDays>60</minRefireDays>
+    <letterText>CRITICAL: Dimensional readings indicate a voidout will occur in this area within 24 hours! All colony evacuation protocols must be activated immediately.\n\nThis is not a drill. Total annihilation of the colony is imminent unless immediate evacuation is completed. Abandon all non-essential materials and focus on saving lives.</letterText>
+    <letterLabel>VOIDOUT IMMINENT</letterLabel>
+    <letterDef>ThreatBig</letterDef>
+    <pointsScaleable>true</pointsScaleable>
+    <minThreatPoints>10000</minThreatPoints>
+  </IncidentDef>
+
+  <!-- Voidout Prevention -->
+  <IncidentDef>
+    <defName>VoidoutPrevention</defName>
+    <label>voidout prevented</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_VoidoutPrevention</workerClass>
+    <baseChance>0.3</baseChance>
+    <minRefireDays>10</minRefireDays>
+    <letterText>Through the heroic actions of DOOMS carriers and advanced technology, a developing voidout has been successfully prevented. The dimensional instability has been neutralized.\n\nThis success demonstrates that voidouts can be prevented with proper preparation and supernatural abilities. The colony has been saved from total annihilation.</letterText>
+    <letterLabel>voidout prevented</letterLabel>
+    <letterDef>PositiveEvent</letterDef>
+  </IncidentDef>
+
+  <!-- Chiral Network Disruption -->
+  <IncidentDef>
+    <defName>ChiralNetworkDisruption</defName>
+    <label>chiral network disruption</label>
+    <category>ThreatSmall</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_ChiralNetworkDisruption</workerClass>
+    <baseChance>0.6</baseChance>
+    <minRefireDays>4</minRefireDays>
+    <letterText>The local chiral network has been disrupted by dimensional instabilities. Communication and advanced technology systems are experiencing severe interference.\n\nThis disruption increases the risk of voidout events by preventing early warning systems from functioning properly. Manual monitoring protocols should be implemented immediately.</letterText>
+    <letterLabel>network disrupted</letterLabel>
+    <letterDef>ThreatSmall</letterDef>
+    <pointsScaleable>true</pointsScaleable>
+    <minThreatPoints>300</minThreatPoints>
+  </IncidentDef>
+
+</Defs>

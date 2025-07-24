@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- ==================== TIMEFALL WEATHER DEFINITION ==================== -->
+  
+  <WeatherDef>
+    <defName>Timefall</defName>
+    <label>timefall</label>
+    <description>A supernatural precipitation that accelerates time for anything it touches. This otherworldly rain causes rapid aging and deterioration, making it extremely dangerous to remain exposed. The droplets seem to shimmer with temporal energy.</description>
+    <workerClass>DeathStrandingMod.Weather.WeatherWorker_Timefall</workerClass>
+    <temperatureRange>-10~30</temperatureRange>
+    <windSpeedRange>0.5~1.8</windSpeedRange>
+    <windSpeedFactor>1.5</windSpeedFactor>
+    <accuracyMultiplier>0.7</accuracyMultiplier>
+    <favorability>VeryBad</favorability>
+    <perceivePriority>3</perceivePriority>
+    <rainRate>1.0</rainRate>
+    <moveSpeedMultiplier>0.8</moveSpeedMultiplier>
+    <ambientSounds>
+      <li>Ambient_Rain</li>
+      <li>Ambient_Wind</li>
+    </ambientSounds>
+    <skyColorsDay>
+      <sky>(0.4,0.4,0.5)</sky>
+      <shadow>(0.7,0.7,0.8)</shadow>
+      <overlay>(0.4,0.4,0.5)</overlay>
+      <saturation>0.9</saturation>
+    </skyColorsDay>
+    <skyColorsDusk>
+      <sky>(0.3,0.3,0.4)</sky>
+      <shadow>(0.6,0.6,0.7)</shadow>
+      <overlay>(0.3,0.3,0.4)</overlay>
+      <saturation>0.9</saturation>
+    </skyColorsDusk>
+    <skyColorsNightEdge>
+      <sky>(0.25,0.25,0.35)</sky>
+      <shadow>(0.5,0.5,0.6)</shadow>
+      <overlay>(0.25,0.25,0.35)</overlay>
+      <saturation>0.9</saturation>
+    </skyColorsNightEdge>
+    <skyColorsNightMid>
+      <sky>(0.2,0.2,0.3)</sky>
+      <shadow>(0.4,0.4,0.5)</shadow>
+      <overlay>(0.2,0.2,0.3)</overlay>
+      <saturation>0.9</saturation>
+    </skyColorsNightMid>
+    <overlayClasses>
+      <li>WeatherOverlay_Rain</li>
+      <li>DeathStrandingMod.Weather.WeatherOverlay_TimefallParticles</li>
+      <li>DeathStrandingMod.Weather.WeatherOverlay_TemporalDistortion</li>
+    </overlayClasses>
+    <commonalityRainfallFactor>
+      <points>
+        <li>(0, 0)</li>
+        <li>(1300, 0.3)</li>
+        <li>(4000, 0.8)</li>
+      </points>
+    </commonalityRainfallFactor>
+    <eventMakers>
+      <li>
+        <averageInterval>30000</averageInterval>
+        <eventClass>DeathStrandingMod.Weather.WeatherEvent_TimefallIntensification</eventClass>
+      </li>
+      <li>
+        <averageInterval>60000</averageInterval>
+        <eventClass>DeathStrandingMod.Weather.WeatherEvent_BTManifestation</eventClass>
+      </li>
+      <li>
+        <averageInterval>120000</averageInterval>
+        <eventClass>DeathStrandingMod.Weather.WeatherEvent_RealityDistortion</eventClass>
+      </li>
+      <li>
+        <averageInterval>300000</averageInterval>
+        <eventClass>DeathStrandingMod.Weather.WeatherEvent_VoidoutRisk</eventClass>
+      </li>
+    </eventMakers>
+    <modExtensions>
+      <li Class="DeathStrandingMod.WeatherExtension_Timefall">
+        <timefallIntensity>2.5</timefallIntensity>
+        <agingRate>8.0</agingRate>
+        <exposureDamageRate>0.15</exposureDamageRate>
+        <maxExposureTime>120</maxExposureTime>
+        <shelterRequired>true</shelterRequired>
+        <btManifestationChance>0.7</btManifestationChance>
+        <realityDistortionIntensity>1.2</realityDistortionIntensity>
+        <chiralCrystalFormationChance>0.3</chiralCrystalFormationChance>
+        <voidoutRisk>0.1</voidoutRisk>
+        <temporalLightning>true</temporalLightning>
+      </li>
+    </modExtensions>
+  </WeatherDef>
+
+  <!-- ==================== LIGHT TIMEFALL ==================== -->
+  
+  <WeatherDef>
+    <defName>TimefallLight</defName>
+    <label>light timefall</label>
+    <description>A gentle but still dangerous precipitation of temporal rain. While less intense than a full timefall storm, prolonged exposure will still cause accelerated aging. The droplets fall slowly, almost seeming to hang in the air.</description>
+    <workerClass>DeathStrandingMod.Weather.WeatherWorker_TimefallLight</workerClass>
+    <temperatureRange>-5~35</temperatureRange>
+    <windSpeedRange>0.2~1.0</windSpeedRange>
+    <windSpeedFactor>0.8</windSpeedFactor>
+    <accuracyMultiplier>0.9</accuracyMultiplier>
+    <favorability>Bad</favorability>
+    <perceivePriority>2</perceivePriority>
+    <rainRate>0.4</rainRate>
+    <moveSpeedMultiplier>0.95</moveSpeedMultiplier>
+    <ambientSounds>
+      <li>Ambient_Rain</li>
+    </ambientSounds>
+    <skyColorsDay>
+      <sky>(0.6,0.6,0.7)</sky>
+      <shadow>(0.8,0.8,0.85)</shadow>
+      <overlay>(0.6,0.6,0.7)</overlay>
+      <saturation>0.95</saturation>
+    </skyColorsDay>
+    <skyColorsDusk>
+      <sky>(0.5,0.5,0.6)</sky>
+      <shadow>(0.7,0.7,0.75)</shadow>
+      <overlay>(0.5,0.5,0.6)</overlay>
+      <saturation>0.95</saturation>
+    </skyColorsDusk>
+    <skyColorsNightEdge>
+      <sky>(0.4,0.4,0.5)</sky>
+      <shadow>(0.6,0.6,0.65)</shadow>
+      <overlay>(0.4,0.4,0.5)</overlay>
+      <saturation>0.95</saturation>
+    </skyColorsNightEdge>
+    <skyColorsNightMid>
+      <sky>(0.3,0.3,0.4)</sky>
+      <shadow>(0.5,0.5,0.55)</shadow>
+      <overlay>(0.3,0.3,0.4)</overlay>
+      <saturation>0.95</saturation>
+    </skyColorsNightMid>
+    <overlayClasses>
+      <li>WeatherOverlay_Rain</li>
+      <li>DeathStrandingMod.Weather.WeatherOverlay_TimefallParticles</li>
+    </overlayClasses>
+    <commonalityRainfallFactor>
+      <points>
+        <li>(0, 0)</li>
+        <li>(1300, 1.5)</li>
+        <li>(4000, 2.2)</li>
+      </points>
+    </commonalityRainfallFactor>
+    <eventMakers>
+      <li>
+        <averageInterval>120000</averageInterval>
+        <eventClass>DeathStrandingMod.Weather.WeatherEvent_TimefallIntensification</eventClass>
+      </li>
+      <li>
+        <averageInterval>360000</averageInterval>
+        <eventClass>DeathStrandingMod.Weather.WeatherEvent_BTManifestation</eventClass>
+      </li>
+    </eventMakers>
+    <modExtensions>
+      <li Class="DeathStrandingMod.WeatherExtension_Timefall">
+        <timefallIntensity>0.4</timefallIntensity>
+        <agingRate>1.5</agingRate>
+        <exposureDamageRate>0.02</exposureDamageRate>
+        <maxExposureTime>600</maxExposureTime>
+        <shelterRequired>false</shelterRequired>
+        <btManifestationChance>0.1</btManifestationChance>
+        <realityDistortionIntensity>0.2</realityDistortionIntensity>
+        <chiralCrystalFormationChance>0.05</chiralCrystalFormationChance>
+      </li>
+    </modExtensions>
+  </WeatherDef>
+
+  <!-- ==================== CHIRAL STORM ==================== -->
+  
+  <WeatherDef>
+    <defName>ChiralStorm</defName>
+    <label>chiral storm</label>
+    <description>A supernatural weather phenomenon where the boundary between dimensions becomes thin. Raw chiral energy crackles through the air, and reality seems to shimmer and bend. This storm can cause spontaneous manifestations and dimensional rifts.</description>
+    <workerClass>DeathStrandingMod.Weather.WeatherWorker_ChiralStorm</workerClass>
+    <temperatureRange>-20~40</temperatureRange>
+    <windSpeedRange>2.0~4.0</windSpeedRange>
+    <windSpeedFactor>3.0</windSpeedFactor>
+    <accuracyMultiplier>0.3</accuracyMultiplier>
+    <favorability>VeryBad</favorability>
+    <perceivePriority>5</perceivePriority>
+    <rainRate>0</rainRate>
+    <moveSpeedMultiplier>0.7</moveSpeedMultiplier>
+    <ambientSounds>
+      <li>Ambient_Wind</li>
+      <li>Ambient_Thunder</li>
+    </ambientSounds>
+    <skyColorsDay>
+      <sky>(0.3,0.5,0.8)</sky>
+      <shadow>(0.6,0.7,0.9)</shadow>
+      <overlay>(0.3,0.5,0.8)</overlay>
+      <saturation>1.2</saturation>
+    </skyColorsDay>
+    <skyColorsDusk>
+      <sky>(0.25,0.4,0.7)</sky>
+      <shadow>(0.5,0.6,0.8)</shadow>
+      <overlay>(0.25,0.4,0.7)</overlay>
+      <saturation>1.2</saturation>
+    </skyColorsDusk>
+    <skyColorsNightEdge>
+      <sky>(0.2,0.35,0.6)</sky>
+      <shadow>(0.4,0.5,0.7)</shadow>
+      <overlay>(0.2,0.35,0.6)</overlay>
+      <saturation>1.2</saturation>
+    </skyColorsNightEdge>
+    <skyColorsNightMid>
+      <sky>(0.15,0.3,0.5)</sky>
+      <shadow>(0.3,0.4,0.6)</shadow>
+      <overlay>(0.15,0.3,0.5)</overlay>
+      <saturation>1.2</saturation>
+    </skyColorsNightMid>
+    <overlayClasses>
+      <li>DeathStrandingMod.Weather.WeatherOverlay_ChiralEnergy</li>
+      <li>DeathStrandingMod.Weather.WeatherOverlay_DimensionalRifts</li>
+    </overlayClasses>
+    <commonalityRainfallFactor>
+      <points>
+        <li>(0, 0.1)</li>
+        <li>(1300, 0.3)</li>
+        <li>(4000, 0.5)</li>
+      </points>
+    </commonalityRainfallFactor>
+    <eventMakers>
+      <li>
+        <averageInterval>45000</averageInterval>
+        <eventClass>DeathStrandingMod.Weather.WeatherEvent_ChiralLightning</eventClass>
+      </li>
+      <li>
+        <averageInterval>90000</averageInterval>
+        <eventClass>DeathStrandingMod.Weather.WeatherEvent_DimensionalRift</eventClass>
+      </li>
+      <li>
+        <averageInterval>120000</averageInterval>
+        <eventClass>DeathStrandingMod.Weather.WeatherEvent_BTManifestation</eventClass>
+      </li>
+      <li>
+        <averageInterval>180000</averageInterval>
+        <eventClass>DeathStrandingMod.Weather.WeatherEvent_ChiralAnomalies</eventClass>
+      </li>
+    </eventMakers>
+    <modExtensions>
+      <li Class="DeathStrandingMod.WeatherExtension_ChiralStorm">
+        <chiralIntensity>2.0</chiralIntensity>
+        <energyLightningChance>0.8</energyLightningChance>
+        <dimensionalRiftChance>0.4</dimensionalRiftChance>
+        <btManifestationChance>0.6</btManifestationChance>
+        <psychicSensitivityMultiplier>2.5</psychicSensitivityMultiplier>
+        <chiralCrystalFormationChance>0.4</chiralCrystalFormationChance>
+        <realityDistortionIntensity>1.5</realityDistortionIntensity>
+        <equipmentMalfunctionChance>0.3</equipmentMalfunctionChance>
+      </li>
+    </modExtensions>
+  </WeatherDef>
+
+  <!-- ==================== BEACH FOG ==================== -->
+  
+  <WeatherDef>
+    <defName>BeachFog</defName>
+    <label>Beach fog</label>
+    <description>A thick, otherworldly fog that seems to seep through from the Beach dimension. Visibility is severely limited, and the fog carries whispers from beyond. Those caught in it report seeing shadows and figures that shouldn't exist.</description>
+    <workerClass>DeathStrandingMod.Weather.WeatherWorker_BeachFog</workerClass>
+    <temperatureRange>5~25</temperatureRange>
+    <windSpeedRange>0.1~0.5</windSpeedRange>
+    <windSpeedFactor>0.3</windSpeedFactor>
+    <accuracyMultiplier>0.5</accuracyMultiplier>
+    <favorability>Bad</favorability>
+    <perceivePriority>3</perceivePriority>
+    <rainRate>0</rainRate>
+    <moveSpeedMultiplier>0.8</moveSpeedMultiplier>
+    <ambientSounds>
+      <li>Ambient_Wind</li>
+    </ambientSounds>
+    <skyColorsDay>
+      <sky>(0.7,0.7,0.8)</sky>
+      <shadow>(0.6,0.6,0.7)</shadow>
+      <overlay>(0.7,0.7,0.8)</overlay>
+      <saturation>0.6</saturation>
+    </skyColorsDay>
+    <skyColorsDusk>
+      <sky>(0.6,0.6,0.7)</sky>
+      <shadow>(0.5,0.5,0.6)</shadow>
+      <overlay>(0.6,0.6,0.7)</overlay>
+      <saturation>0.6</saturation>
+    </skyColorsDusk>
+    <skyColorsNightEdge>
+      <sky>(0.5,0.5,0.6)</sky>
+      <shadow>(0.4,0.4,0.5)</shadow>
+      <overlay>(0.5,0.5,0.6)</overlay>
+      <saturation>0.6</saturation>
+    </skyColorsNightEdge>
+    <skyColorsNightMid>
+      <sky>(0.4,0.4,0.5)</sky>
+      <shadow>(0.3,0.3,0.4)</shadow>
+      <overlay>(0.4,0.4,0.5)</overlay>
+      <saturation>0.6</saturation>
+    </skyColorsNightMid>
+    <overlayClasses>
+      <li>WeatherOverlay_Fog</li>
+      <li>DeathStrandingMod.Weather.WeatherOverlay_BeachWhispers</li>
+      <li>DeathStrandingMod.Weather.WeatherOverlay_PhantomShadows</li>
+    </overlayClasses>
+    <commonalityRainfallFactor>
+      <points>
+        <li>(0, 0.8)</li>
+        <li>(1300, 1.2)</li>
+        <li>(4000, 1.0)</li>
+      </points>
+    </commonalityRainfallFactor>
+    <eventMakers>
+      <li>
+        <averageInterval>180000</averageInterval>
+        <eventClass>DeathStrandingMod.Weather.WeatherEvent_PhantomSighting</eventClass>
+      </li>
+      <li>
+        <averageInterval>240000</averageInterval>
+        <eventClass>DeathStrandingMod.Weather.WeatherEvent_BTManifestation</eventClass>
+      </li>
+      <li>
+        <averageInterval>300000</averageInterval>
+        <eventClass>DeathStrandingMod.Weather.WeatherEvent_DimensionalEcho</eventClass>
+      </li>
+    </eventMakers>
+    <modExtensions>
+      <li Class="DeathStrandingMod.WeatherExtension_BeachFog">
+        <visibilityReduction>0.6</visibilityReduction>
+        <phantomChance>0.3</phantomChance>
+        <whisperChance>0.5</whisperChance>
+        <btManifestationChance>0.2</btManifestationChance>
+        <psychicDisruptionIntensity>0.8</psychicDisruptionIntensity>
+        <dimensionalThinning>0.7</dimensionalThinning>
+        <realityDistortionIntensity>0.4</realityDistortionIntensity>
+      </li>
+    </modExtensions>
+  </WeatherDef>
+
+  <!-- ==================== CLEAR SKIES (POST-TIMEFALL) ==================== -->
+  
+  <WeatherDef>
+    <defName>ClearPostTimefall</defName>
+    <label>clear skies</label>
+    <description>Clear skies following a timefall event. The air feels charged with residual temporal energy, and chiral crystals may be found where the timefall touched the ground. Despite the clear weather, an otherworldly atmosphere remains.</description>
+    <workerClass>DeathStrandingMod.Weather.WeatherWorker_ClearPostTimefall</workerClass>
+    <temperatureRange>-10~40</temperatureRange>
+    <windSpeedRange>0.3~1.2</windSpeedRange>
+    <windSpeedFactor>1.0</windSpeedFactor>
+    <accuracyMultiplier>1.1</accuracyMultiplier>
+    <favorability>Neutral</favorability>
+    <perceivePriority>1</perceivePriority>
+    <rainRate>0</rainRate>
+    <moveSpeedMultiplier>1.0</moveSpeedMultiplier>
+    <ambientSounds>
+      <li>Ambient_Wind</li>
+    </ambientSounds>
+    <skyColorsDay>
+      <sky>(0.7,0.8,1.0)</sky>
+      <shadow>(0.8,0.85,0.95)</shadow>
+      <overlay>(0.7,0.8,1.0)</overlay>
+      <saturation>1.1</saturation>
+    </skyColorsDay>
+    <skyColorsDusk>
+      <sky>(0.8,0.7,0.9)</sky>
+      <shadow>(0.85,0.75,0.95)</shadow>
+      <overlay>(0.8,0.7,0.9)</overlay>
+      <saturation>1.1</saturation>
+    </skyColorsDusk>
+    <skyColorsNightEdge>
+      <sky>(0.3,0.4,0.6)</sky>
+      <shadow>(0.4,0.5,0.7)</shadow>
+      <overlay>(0.3,0.4,0.6)</overlay>
+      <saturation>1.1</saturation>
+    </skyColorsNightEdge>
+    <skyColorsNightMid>
+      <sky>(0.15,0.2,0.35)</sky>
+      <shadow>(0.2,0.25,0.4)</shadow>
+      <overlay>(0.15,0.2,0.35)</overlay>
+      <saturation>1.1</saturation>
+    </skyColorsNightMid>
+    <overlayClasses>
+      <li>DeathStrandingMod.Weather.WeatherOverlay_ChiralShimmer</li>
+    </overlayClasses>
+    <commonalityRainfallFactor>
+      <points>
+        <li>(0, 1.5)</li>
+        <li>(1300, 1.0)</li>
+        <li>(4000, 0.8)</li>
+      </points>
+    </commonalityRainfallFactor>
+    <eventMakers>
+      <li>
+        <averageInterval>480000</averageInterval>
+        <eventClass>DeathStrandingMod.Weather.WeatherEvent_ChiralCrystalFormation</eventClass>
+      </li>
+    </eventMakers>
+    <modExtensions>
+      <li Class="DeathStrandingMod.WeatherExtension_PostTimefall">
+        <residualChiralEnergy>0.3</residualChiralEnergy>
+        <chiralCrystalFormationChance>0.2</chiralCrystalFormationChance>
+        <temporalEchoChance>0.1</temporalEchoChance>
+        <psychicClarityBonus>0.2</psychicClarityBonus>
+        <healingAcceleration>1.2</healingAcceleration>
+      </li>
+    </modExtensions>
+  </WeatherDef>
+
+  <!-- ==================== TIMEFALL STORM ==================== -->
+  
+  <WeatherDef>
+    <defName>TimefallStorm</defName>
+    <label>timefall storm</label>
+    <description>An intense supernatural storm where timefall rain falls in torrents. The temporal distortions are so severe that reality itself seems to warp and bend. This is one of the most dangerous weather phenomena, capable of aging years in minutes.</description>
+    <workerClass>DeathStrandingMod.Weather.WeatherWorker_TimefallStorm</workerClass>
+    <temperatureRange>-15~25</temperatureRange>
+    <windSpeedRange>1.5~3.0</windSpeedRange>
+    <windSpeedFactor>2.5</windSpeedFactor>
+    <accuracyMultiplier>0.4</accuracyMultiplier>
+    <favorability>VeryBad</favorability>
+    <perceivePriority>4</perceivePriority>
+    <rainRate>2.0</rainRate>
+    <moveSpeedMultiplier>0.6</moveSpeedMultiplier>
+    <ambientSounds>
+      <li>Ambient_Rain</li>
+      <li>Ambient_Wind</li>
+      <li>Ambient_Thunder</li>
+    </ambientSounds>
+    <skyColorsDay>
+      <sky>(0.2,0.2,0.3)</sky>
+      <shadow>(0.5,0.5,0.6)</shadow>
+      <overlay>(0.2,0.2,0.3)</overlay>
+      <saturation>0.8</saturation>
+    </skyColorsDay>
+    <skyColorsDusk>
+      <sky>(0.15,0.15,0.25)</sky>
+      <shadow>(0.4,0.4,0.5)</shadow>
+      <overlay>(0.15,0.15,0.25)</overlay>
+      <saturation>0.8</saturation>
+    </skyColorsDusk>
+    <skyColorsNightEdge>
+      <sky>(0.1,0.1,0.2)</sky>
+      <shadow>(0.3,0.3,0.4)</shadow>
+      <overlay>(0.1,0.1,0.2)</overlay>
+      <saturation>0.8</saturation>
+    </skyColorsNightEdge>
+    <skyColorsNightMid>
+      <sky>(0.05,0.05,0.15)</sky>
+      <shadow>(0.2,0.2,0.3)</shadow>
+      <overlay>(0.05,0.05,0.15)</overlay>
+      <saturation>0.8</saturation>
+    </skyColorsNightMid>
+    <overlayClasses>
+      <li>WeatherOverlay_Rain</li>
+      <li>DeathStrandingMod.Weather.WeatherOverlay_TimefallParticles</li>
+      <li>DeathStrandingMod.Weather.WeatherOverlay_TemporalDistortion</li>
+    </overlayClasses>
+    <commonalityRainfallFactor>
+      <points>
+        <li>(0, 0)</li>
+        <li>(1300, 0.3)</li>
+        <li>(4000, 0.8)</li>
+      </points>
+    </commonalityRainfallFactor>
+    <eventMakers>
+      <li>
+        <averageInterval>30000</averageInterval>
+        <eventClass>DeathStrandingMod.Weather.WeatherEvent_TimefallIntensification</eventClass>
+      </li>
+      <li>
+        <averageInterval>60000</averageInterval>
+        <eventClass>DeathStrandingMod.Weather.WeatherEvent_BTManifestation</eventClass>
+      </li>
+      <li>
+        <averageInterval>120000</averageInterval>
+        <eventClass>DeathStrandingMod.Weather.WeatherEvent_RealityDistortion</eventClass>
+      </li>
+      <li>
+        <averageInterval>300000</averageInterval>
+        <eventClass>DeathStrandingMod.Weather.WeatherEvent_VoidoutRisk</eventClass>
+      </li>
+    </eventMakers>
+    <modExtensions>
+      <li Class="DeathStrandingMod.WeatherExtension_Timefall">
+        <timefallIntensity>2.5</timefallIntensity>
+        <agingRate>8.0</agingRate>
+        <exposureDamageRate>0.15</exposureDamageRate>
+        <maxExposureTime>120</maxExposureTime>
+        <shelterRequired>true</shelterRequired>
+        <btManifestationChance>0.7</btManifestationChance>
+        <realityDistortionIntensity>1.2</realityDistortionIntensity>
+        <chiralCrystalFormationChance>0.3</chiralCrystalFormationChance>
+        <voidoutRisk>0.1</voidoutRisk>
+        <temporalLightning>true</temporalLightning>
+      </li>
+    </modExtensions>
+  </WeatherDef>	  
+  
+	    <!-- ==================== WEATHER INCIDENTS ==================== -->
+  
+  <IncidentDef>
+    <defName>TimefallWarning</defName>
+    <label>timefall warning</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.Weather.IncidentWorker_TimefallWarning</workerClass>
+    <baseChance>1.0</baseChance>
+    <minRefireDays>1</minRefireDays>
+    <letterText>A DOOMS carrier has detected an approaching timefall storm. The temporal precipitation will begin in approximately one hour. All colonists should seek immediate shelter to avoid accelerated aging effects.\n\nTimefall exposure causes rapid aging and cellular damage. Ensure all outdoor work is completed quickly and that adequate shelter is available for the duration of the storm.</letterText>
+    <letterLabel>timefall warning</letterLabel>
+    <letterDef>NeutralEvent</letterDef>
+  </IncidentDef>
+
+  <IncidentDef>
+    <defName>TimefallStormApproaching</defName>
+    <label>severe timefall approaching</label>
+    <category>ThreatBig</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.Weather.IncidentWorker_TimefallStormApproaching</workerClass>
+    <baseChance>0.8</baseChance>
+    <minRefireDays>3</minRefireDays>
+    <letterText>A severe timefall storm is approaching the area. This intense temporal weather system will cause extreme aging effects and may trigger supernatural phenomena including BT manifestations.\n\nAll colonists must seek immediate shelter. The storm's intensity could age exposed individuals by years in a matter of minutes. Ensure timefall shelters are functional and stocked with supplies.</letterText>
+    <letterLabel>severe timefall storm approaching</letterLabel>
+    <letterDef>ThreatBig</letterDef>
+  </IncidentDef>
+
+  <IncidentDef>
+    <defName>ChiralStormManifest</defName>
+    <label>chiral storm</label>
+    <category>ThreatBig</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.Weather.IncidentWorker_ChiralStorm</workerClass>
+    <baseChance>0.5</baseChance>
+    <minRefireDays>5</minRefireDays>
+    <letterText>A chiral storm has formed in the area. Raw dimensional energy is crackling through the atmosphere, causing reality distortions and equipment malfunctions. The storm may open dimensional rifts and attract Beach Things.\n\nElectronic equipment may malfunction during the storm. DOOMS carriers will experience heightened sensitivity and may suffer mental strain. Seek shelter and avoid using complex machinery until the storm passes.</letterText>
+    <letterLabel>chiral storm</letterLabel>
+    <letterDef>ThreatBig</letterDef>
+  </IncidentDef>
+
+  <!-- ==================== WEATHER TRANSITION DEFS ==================== -->
+  
+  <WeatherDef>
+    <defName>TimefallEnding</defName>
+    <label>timefall clearing</label>
+    <description>The timefall is beginning to clear, but residual temporal energy still lingers in the atmosphere. Droplets continue to fall sporadically, and the air feels charged with otherworldly power.</description>
+    <workerClass>DeathStrandingMod.Weather.WeatherWorker_TimefallEnding</workerClass>
+    <temperatureRange>-5~30</temperatureRange>
+    <windSpeedRange>0.8~2.0</windSpeedRange>
+    <windSpeedFactor>1.2</windSpeedFactor>
+    <accuracyMultiplier>0.85</accuracyMultiplier>
+    <favorability>Bad</favorability>
+    <perceivePriority>2</perceivePriority>
+    <rainRate>0.3</rainRate>
+    <moveSpeedMultiplier>0.9</moveSpeedMultiplier>
+    <ambientSounds>
+      <li>Ambient_Rain</li>
+      <li>Ambient_Wind</li>
+    </ambientSounds>
+    <skyColorsDay>
+      <sky>(0.5,0.5,0.6)</sky>
+      <shadow>(0.7,0.7,0.8)</shadow>
+      <overlay>(0.5,0.5,0.6)</overlay>
+      <saturation>0.9</saturation>
+    </skyColorsDay>
+    <skyColorsDusk>
+      <sky>(0.4,0.4,0.5)</sky>
+      <shadow>(0.6,0.6,0.7)</shadow>
+      <overlay>(0.4,0.4,0.5)</overlay>
+      <saturation>0.9</saturation>
+    </skyColorsDusk>
+    <skyColorsNightEdge>
+      <sky>(0.3,0.3,0.4)</sky>
+      <shadow>(0.5,0.5,0.6)</shadow>
+      <overlay>(0.3,0.3,0.4)</overlay>
+      <saturation>0.9</saturation>
+    </skyColorsNightEdge>
+    <skyColorsNightMid>
+      <sky>(0.25,0.25,0.35)</sky>
+      <shadow>(0.4,0.4,0.5)</shadow>
+      <overlay>(0.25,0.25,0.35)</overlay>
+      <saturation>0.9</saturation>
+    </skyColorsNightMid>
+    <overlayClasses>
+      <li>WeatherOverlay_Rain</li>
+      <li>DeathStrandingMod.Weather.WeatherOverlay_TimefallParticles</li>
+    </overlayClasses>
+    <commonalityRainfallFactor>
+      <points>
+        <li>(0, 0.2)</li>
+        <li>(1300, 0.4)</li>
+        <li>(4000, 0.3)</li>
+      </points>
+    </commonalityRainfallFactor>
+    <modExtensions>
+      <li Class="DeathStrandingMod.WeatherExtension_Timefall">
+        <timefallIntensity>0.6</timefallIntensity>
+        <agingRate>2.0</agingRate>
+        <exposureDamageRate>0.03</exposureDamageRate>
+        <maxExposureTime>400</maxExposureTime>
+        <shelterRequired>false</shelterRequired>
+        <btManifestationChance>0.15</btManifestationChance>
+        <realityDistortionIntensity>0.3</realityDistortionIntensity>
+        <chiralCrystalFormationChance>0.15</chiralCrystalFormationChance>
+        <isTransitional>true</isTransitional>
+        <transitionsTo>ClearPostTimefall</transitionsTo>
+      </li>
+    </modExtensions>
+  </WeatherDef>
+
+  <!-- ==================== DIMENSIONAL BREACH WEATHER ==================== -->
+  
+  <WeatherDef>
+    <defName>DimensionalBreach</defName>
+    <label>dimensional breach</label>
+    <description>A catastrophic tear in reality has formed, creating a permanent breach between dimensions. The weather itself has become unstable as the Beach dimension bleeds through into normal space. This is an extremely dangerous phenomenon that may persist for days.</description>
+    <workerClass>DeathStrandingMod.Weather.WeatherWorker_DimensionalBreach</workerClass>
+    <temperatureRange>-30~50</temperatureRange>
+    <windSpeedRange>3.0~6.0</windSpeedRange>
+    <windSpeedFactor>4.0</windSpeedFactor>
+    <accuracyMultiplier>0.2</accuracyMultiplier>
+    <favorability>VeryBad</favorability>
+    <perceivePriority>6</perceivePriority>
+    <rainRate>1.5</rainRate>
+    <moveSpeedMultiplier>0.5</moveSpeedMultiplier>
+    <ambientSounds>
+      <li>Ambient_Wind</li>
+      <li>Ambient_Thunder</li>
+    </ambientSounds>
+    <skyColorsDay>
+      <sky>(0.3,0.2,0.4)</sky>
+      <shadow>(0.4,0.3,0.5)</shadow>
+      <overlay>(0.3,0.2,0.4)</overlay>
+      <saturation>1.5</saturation>
+    </skyColorsDay>
+    <skyColorsDusk>
+      <sky>(0.25,0.15,0.35)</sky>
+      <shadow>(0.35,0.25,0.45)</shadow>
+      <overlay>(0.25,0.15,0.35)</overlay>
+      <saturation>1.5</saturation>
+    </skyColorsDusk>
+    <skyColorsNightEdge>
+      <sky>(0.2,0.1,0.3)</sky>
+      <shadow>(0.3,0.2,0.4)</shadow>
+      <overlay>(0.2,0.1,0.3)</overlay>
+      <saturation>1.5</saturation>
+    </skyColorsNightEdge>
+    <skyColorsNightMid>
+      <sky>(0.15,0.05,0.25)</sky>
+      <shadow>(0.25,0.15,0.35)</shadow>
+      <overlay>(0.15,0.05,0.25)</overlay>
+      <saturation>1.5</saturation>
+    </skyColorsNightMid>
+    <overlayClasses>
+      <li>WeatherOverlay_Rain</li>
+      <li>DeathStrandingMod.Weather.WeatherOverlay_TimefallParticles</li>
+      <li>DeathStrandingMod.Weather.WeatherOverlay_ChiralEnergy</li>
+      <li>DeathStrandingMod.Weather.WeatherOverlay_DimensionalRifts</li>
+      <li>DeathStrandingMod.Weather.WeatherOverlay_RealityDistortion</li>
+    </overlayClasses>
+    <commonalityRainfallFactor>
+      <points>
+        <li>(0, 0.05)</li>
+        <li>(1300, 0.1)</li>
+        <li>(4000, 0.2)</li>
+      </points>
+    </commonalityRainfallFactor>
+    <eventMakers>
+      <li>
+        <averageInterval>15000</averageInterval>
+        <eventClass>DeathStrandingMod.Weather.WeatherEvent_DimensionalRift</eventClass>
+      </li>
+      <li>
+        <averageInterval>30000</averageInterval>
+        <eventClass>DeathStrandingMod.Weather.WeatherEvent_BTMassSpawn</eventClass>
+      </li>
+      <li>
+        <averageInterval>45000</averageInterval>
+        <eventClass>DeathStrandingMod.Weather.WeatherEvent_RealityCollapse</eventClass>
+      </li>
+      <li>
+        <averageInterval>60000</averageInterval>
+        <eventClass>DeathStrandingMod.Weather.WeatherEvent_VoidoutCascade</eventClass>
+      </li>
+    </eventMakers>
+    <modExtensions>
+      <li Class="DeathStrandingMod.WeatherExtension_DimensionalBreach">
+        <timefallIntensity>3.0</timefallIntensity>
+        <agingRate>12.0</agingRate>
+        <exposureDamageRate>0.25</exposureDamageRate>
+        <maxExposureTime>60</maxExposureTime>
+        <shelterRequired>true</shelterRequired>
+        <btManifestationChance>0.95</btManifestationChance>
+        <realityDistortionIntensity>2.0</realityDistortionIntensity>
+        <chiralCrystalFormationChance>0.8</chiralCrystalFormationChance>
+        <voidoutRisk>0.4</voidoutRisk>
+        <dimensionalInstability>1.0</dimensionalInstability>
+        <equipmentMalfunctionChance>0.8</equipmentMalfunctionChance>
+        <psychicOverloadChance>0.6</psychicOverloadChance>
+        <causesRealityBreaks>true</causesRealityBreaks>
+        <persistenceHours>48</persistenceHours>
+      </li>
+    </modExtensions>
+  </WeatherDef>
+
+</Defs>

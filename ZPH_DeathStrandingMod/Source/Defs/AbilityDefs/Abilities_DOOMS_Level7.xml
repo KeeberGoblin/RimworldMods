@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- ==================== DOOMS LEVEL 7 ABILITIES ==================== -->
+  
+  <!-- Dimensional Perception -->
+  <AbilityDef>
+    <defName>DOOMSSense_Level7</defName>
+    <label>dimensional perception</label>
+    <description>Perceive across multiple dimensions simultaneously, revealing hidden threats, dimensional rifts, and Beach activity across vast distances. This ability provides unprecedented awareness but causes severe mental strain.</description>
+    <iconPath>UI/Icons/Abilities/DOOMSDimensionalPerception</iconPath>
+    <category>DOOMS</category>
+    <displayOrder>1</displayOrder>
+    <cooldownTicksRange>7200~10800</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>false</targetRequired>
+    <canUseAoeTooltip>false</canUseAoeTooltip>
+    <statBases>
+      <Ability_Duration>300</Ability_Duration>
+      <Ability_Range>150</Ability_Range>
+      <Ability_EffectRadius>150</Ability_EffectRadius>
+    </statBases>
+    <verbProperties>
+      <verbClass>DeathStrandingMod.Abilities.Verb_DOOMSDimensionalPerception</verbClass>
+      <label>dimensional perception</label>
+      <range>0.9</range>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+      <warmupTime>240</warmupTime>
+      <defaultCooldownTime>7200</defaultCooldownTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <soundLanding>PsycastPsychicPulseGlobal</soundLanding>
+      <targetingParameters>
+        <canTargetSelf>true</canTargetSelf>
+      </targetingParameters>
+    </verbProperties>
+    <comps>
+      <li Class="DeathStrandingMod.CompProperties_AbilityDimensionalPerception">
+        <perceptionRadius>150.9</perceptionRadius>
+        <durationTicks>300</durationTicks>
+        <revealsHiddenThreats>true</revealsHiddenThreats>
+        <revealsDimensionalRifts>true</revealsDimensionalRifts>
+        <revealsBeachActivity>true</revealsBeachActivity>
+        <showsTemporalDistortions>true</showsTemporalDistortions>
+        <crossDimensionalVision>true</crossDimensionalVision>
+      </li>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <hediffDef>DOOMSSevereStrain</hediffDef>
+        <target>Caster</target>
+        <duration>7200</duration>
+        <severity>0.8</severity>
+      </li>
+    </comps>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+  </AbilityDef>
+
+  <!-- BT Command -->
+  <AbilityDef>
+    <defName>DOOMSCommand_Level7</defName>
+    <label>BT command</label>
+    <description>Attempt to command and control Beach Things directly. This powerful ability can turn BTs against enemies or force them to retreat, but failure may provoke a violent response.</description>
+    <iconPath>UI/Icons/Abilities/DOOMSCommand</iconPath>
+    <category>DOOMS</category>
+    <displayOrder>2</displayOrder>
+    <cooldownTicksRange>3600~5400</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <canUseAoeTooltip>true</canUseAoeTooltip>
+    <statBases>
+      <Ability_Duration>1200</Ability_Duration>
+      <Ability_Range>30</Ability_Range>
+      <Ability_EffectRadius>5</Ability_EffectRadius>
+    </statBases>
+    <verbProperties>
+      <verbClass>DeathStrandingMod.Abilities.Verb_DOOMSCommand</verbClass>
+      <label>BT command</label>
+      <range>30.9</range>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+      <warmupTime>300</warmupTime>
+      <defaultCooldownTime>3600</defaultCooldownTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <soundLanding>PsycastPsychicPulseGlobal</soundLanding>
+      <targetingParameters>
+        <canTargetPawns>true</canTargetPawns>
+        <mustBeHostile>true</mustBeHostile>
+      </targetingParameters>
+    </verbProperties>
+    <comps>
+      <li Class="DeathStrandingMod.CompProperties_AbilityBTCommand">
+        <commandRadius>5.9</commandRadius>
+        <commandDuration>1200</commandDuration>
+        <successChance>0.6</successChance>
+        <onlyAffectsBTs>true</onlyAffectsBTs>
+        <commandTypes>
+          <li>Retreat</li>
+          <li>AttackTarget</li>
+          <li>Follow</li>
+          <li>Patrol</li>
+        </commandTypes>
+        <backfireChance>0.3</backfireChance>
+        <severeBackfireChance>0.1</severeBackfireChance>
+      </li>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <hediffDef>DOOMSCommandStrain</hediffDef>
+        <target>Caster</target>
+        <duration>7200</duration>
+        <severity>0.6</severity>
+      </li>
+    </comps>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+  </AbilityDef>
+
+  <!-- Temporal Sight -->
+  <AbilityDef>
+    <defName>DOOMSTemporalSight_Level7</defName>
+    <label>temporal sight</label>
+    <description>See across time itself, witnessing past events and future possibilities at the target location. This ability can reveal hidden information and predict enemy movements with startling accuracy.</description>
+    <iconPath>UI/Icons/Abilities/DOOMSTemporalSight</iconPath>
+    <category>DOOMS</category>
+    <displayOrder>3</displayOrder>
+    <cooldownTicksRange>10800~14400</cooldownTicksRange>
+    <aiCanUse>false</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <canUseAoeTooltip>false</canUseAoeTooltip>
+    <statBases>
+      <Ability_Duration>600</Ability_Duration>
+      <Ability_Range>100</Ability_Range>
+    </statBases>
+    <verbProperties>
+      <verbClass>DeathStrandingMod.Abilities.Verb_DOOMSTemporalSight</verbClass>
+      <label>temporal sight</label>
+      <range>100.9</range>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+      <warmupTime>360</warmupTime>
+      <defaultCooldownTime>10800</defaultCooldownTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <soundLanding>PsycastPsychicPulseGlobal</soundLanding>
+      <targetingParameters>
+        <canTargetLocations>true</canTargetLocations>
+      </targetingParameters>
+    </verbProperties>
+    <comps>
+      <li Class="DeathStrandingMod.CompProperties_AbilityTemporalSight">
+        <sightRadius>10.9</sightRadius>
+        <pastVisionDays>30</pastVisionDays>
+        <futureVisionDays>7</futureVisionDays>
+        <revealsSecrets>true</revealsSecrets>
+        <predictsMovements>true</predictsMovements>
+        <showsEventHistory>true</showsEventHistory>
+        <temporalAccuracy>0.9</temporalAccuracy>
+      </li>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <hediffDef>DOOMSTemporalStrain</hediffDef>
+        <target>Caster</target>
+        <duration>14400</duration>
+        <severity>1.0</severity>
+      </li>
+    </comps>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+  </AbilityDef>
+
+  <!-- Reality Distortion -->
+  <AbilityDef>
+    <defName>DOOMSDistortion_Level7</defName>
+    <label>reality distortion</label>
+    <description>Deliberately distort reality in a target area, creating dimensional anomalies that can confuse enemies, hide allies, or create temporary barriers between dimensions.</description>
+    <iconPath>UI/Icons/Abilities/DOOMSDistortion</iconPath>
+    <category>DOOMS</category>
+    <displayOrder>4</displayOrder>
+    <cooldownTicksRange>5400~7200</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <canUseAoeTooltip>true</canUseAoeTooltip>
+    <statBases>
+      <Ability_Duration>1800</Ability_Duration>
+      <Ability_Range>40</Ability_Range>
+      <Ability_EffectRadius>8</Ability_EffectRadius>
+    </statBases>
+    <verbProperties>
+      <verbClass>DeathStrandingMod.Abilities.Verb_DOOMSDistortion</verbClass>
+      <label>reality distortion</label>
+      <range>40.9</range>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+      <warmupTime>180</warmupTime>
+      <defaultCooldownTime>5400</defaultCooldownTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <soundLanding>PsycastPsychicPulseGlobal</soundLanding>
+      <targetingParameters>
+        <canTargetLocations>true</canTargetLocations>
+      </targetingParameters>
+    </verbProperties>
+    <comps>
+      <li Class="DeathStrandingMod.CompProperties_AbilityRealityDistortion">
+        <distortionRadius>8.9</distortionRadius>
+        <distortionDuration>1800</distortionDuration>
+        <distortionStrength>0.8</distortionStrength>
+        <effectTypes>
+          <li>VisualObscurement</li>
+          <li>MovementDisruption</li>
+          <li>CommunicationJamming</li>
+          <li>DimensionalBarrier</li>
+        </effectTypes>
+        <affectsEnemies>true</affectsEnemies>
+        <protectsAllies>true</protectsAllies>
+      </li>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <hediffDef>DOOMSRealityStrain</hediffDef>
+        <target>Caster</target>
+        <duration>5400</duration>
+        <severity>0.7</severity>
+      </li>
+    </comps>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+  </AbilityDef>
+
+  <!-- Beach Communion -->
+  <AbilityDef>
+    <defName>DOOMSCommunion_Level7</defName>
+    <label>Beach communion</label>
+    <description>Establish a temporary connection with the Beach dimension, gaining profound insights and supernatural knowledge. This ability can reveal hidden information but risks pulling the user deeper into dimensional madness.</description>
+    <iconPath>UI/Icons/Abilities/DOOMSCommunion</iconPath>
+    <category>DOOMS</category>
+    <displayOrder>5</displayOrder>
+    <cooldownTicksRange>14400~21600</cooldownTicksRange>
+    <aiCanUse>false</aiCanUse>
+    <targetRequired>false</targetRequired>
+    <canUseAoeTooltip>false</canUseAoeTooltip>
+    <statBases>
+      <Ability_Duration>900</Ability_Duration>
+    </statBases>
+    <verbProperties>
+      <verbClass>DeathStrandingMod.Abilities.Verb_DOOMSCommunion</verbClass>
+      <label>Beach communion</label>
+      <range>0.9</range>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+      <warmupTime>600</warmupTime>
+      <defaultCooldownTime>14400</defaultCooldownTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <soundLanding>PsycastPsychicPulseGlobal</soundLanding>
+      <targetingParameters>
+        <canTargetSelf>true</canTargetSelf>
+      </targetingParameters>
+    </verbProperties>
+    <comps>
+      <li Class="DeathStrandingMod.CompProperties_AbilityBeachCommunion">
+        <communionDuration>900</communionDuration>
+        <knowledgeTypes>
+          <li>MapSecrets</li>
+          <li>EnemyPlans</li>
+          <li>ResourceLocations</li>
+          <li>FutureEvents</li>
+          <li>DimensionalThreats</li>
+        </knowledgeTypes>
+        <revelationChance>0.8</revelationChance>
+        <madnessRisk>0.4</madnessRisk>
+        <severeConsequenceChance>0.2</severeConsequenceChance>
+      </li>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <hediffDef>DOOMSBeachConnection</hediffDef>
+        <target>Caster</target>
+        <duration>900</duration>
+        <severity>1.0</severity>
+      </li>
+    </comps>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+  </AbilityDef>
+
+</Defs>

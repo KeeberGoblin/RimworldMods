@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- ==================== BT TETHER PROGRESSION SYSTEM ==================== -->
+  
+  <!-- BT Tether Stage 1 - Initial Contact -->
+  <HediffDef>
+    <defName>BTTether_Stage1</defName>
+    <label>BT tether (initial)</label>
+    <description>A faint supernatural connection has formed between this person and a Beach Thing. They may experience mild discomfort and occasional whispers from beyond. This is the beginning of a potentially dangerous progression.</description>
+    <hediffClass>DeathStrandingMod.Hediffs.Hediff_BTTether</hediffClass>
+    <defaultLabelColor>(0.7, 0.7, 0.9)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <tendable>false</tendable>
+    <chronic>true</chronic>
+    <stages>
+      <li>
+        <label>weak tether</label>
+        <minSeverity>0.01</minSeverity>
+        <painOffset>0.05</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <PsychicSensitivity>0.1</PsychicSensitivity>
+          <MentalBreakThreshold>0.05</MentalBreakThreshold>
+        </statOffsets>
+      </li>
+      <li>
+        <label>forming tether</label>
+        <minSeverity>0.5</minSeverity>
+        <painOffset>0.1</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <PsychicSensitivity>0.15</PsychicSensitivity>
+          <MentalBreakThreshold>0.1</MentalBreakThreshold>
+        </statOffsets>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>15</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+    <comps>
+      <li Class="DeathStrandingMod.HediffCompProperties_BTTether">
+        <tetherStage>1</tetherStage>
+        <progressionRate>0.001</progressionRate>
+        <maxProgressionSeverity>1.0</maxProgressionSeverity>
+        <nextStageHediff>BTTether_Stage2</nextStageHediff>
+        <btInfluenceRadius>5.9</btInfluenceRadius>
+        <whisperChance>0.1</whisperChance>
+        <visionChance>0.05</visionChance>
+      </li>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>0.05</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- BT Tether Stage 2 - Strengthening Bond -->
+  <HediffDef>
+    <defName>BTTether_Stage2</defName>
+    <label>BT tether (strengthening)</label>
+    <description>The supernatural connection has grown stronger. This person can now sense Beach Things more clearly and may receive visions or messages from the attached entity. The tether is beginning to affect their physical and mental state more severely.</description>
+    <hediffClass>DeathStrandingMod.Hediffs.Hediff_BTTether</hediffClass>
+    <defaultLabelColor>(0.6, 0.6, 0.9)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <tendable>false</tendable>
+    <chronic>true</chronic>
+    <stages>
+      <li>
+        <label>active tether</label>
+        <minSeverity>0.01</minSeverity>
+        <painOffset>0.15</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.15</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <PsychicSensitivity>0.25</PsychicSensitivity>
+          <MentalBreakThreshold>0.15</MentalBreakThreshold>
+        </statOffsets>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>10</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+      <li>
+        <label>strong tether</label>
+        <minSeverity>0.5</minSeverity>
+        <painOffset>0.25</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <PsychicSensitivity>0.35</PsychicSensitivity>
+          <MentalBreakThreshold>0.2</MentalBreakThreshold>
+        </statOffsets>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>7</mtbDays>
+          </li>
+          <li>
+            <mentalState>Berserk</mentalState>
+            <mtbDays>20</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+    <comps>
+      <li Class="DeathStrandingMod.HediffCompProperties_BTTether">
+        <tetherStage>2</tetherStage>
+        <progressionRate>0.002</progressionRate>
+        <maxProgressionSeverity>1.0</maxProgressionSeverity>
+        <nextStageHediff>BTTether_Stage3</nextStageHediff>
+        <btInfluenceRadius>10.9</btInfluenceRadius>
+        <whisperChance>0.3</whisperChance>
+        <visionChance>0.15</visionChance>
+        <compulsionChance>0.1</compulsionChance>
+      </li>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>0.08</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- BT Tether Stage 3 - Dangerous Symbiosis -->
+  <HediffDef>
+    <defName>BTTether_Stage3</defName>
+    <label>BT tether (symbiotic)</label>
+    <description>A dangerous symbiotic relationship has formed. The Beach Thing's influence is now constant and powerful, affecting the person's behavior and decision-making. They may act on compulsions that seem to come from outside their own mind.</description>
+    <hediffClass>DeathStrandingMod.Hediffs.Hediff_BTTether</hediffClass>
+    <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <tendable>true</tendable>
+    <chronic>true</chronic>
+    <stages>
+      <li>
+        <label>symbiotic tether</label>
+        <minSeverity>0.01</minSeverity>
+        <painOffset>0.3</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.25</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.15</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <PsychicSensitivity>0.5</PsychicSensitivity>
+          <MentalBreakThreshold>0.3</MentalBreakThreshold>
+        </statOffsets>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>5</mtbDays>
+          </li>
+          <li>
+            <mentalState>Berserk</mentalState>
+            <mtbDays>12</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+      <li>
+        <label>overwhelming tether</label>
+        <minSeverity>0.5</minSeverity>
+        <painOffset>0.45</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.35</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <PsychicSensitivity>0.7</PsychicSensitivity>
+          <MentalBreakThreshold>0.4</MentalBreakThreshold>
+        </statOffsets>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>3</mtbDays>
+          </li>
+          <li>
+            <mentalState>Berserk</mentalState>
+            <mtbDays>8</mtbDays>
+          </li>
+          <li>
+            <mentalState>Catatonic</mentalState>
+            <mtbDays>15</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+    <comps>
+      <li Class="DeathStrandingMod.HediffCompProperties_BTTether">
+        <tetherStage>3</tetherStage>
+        <progressionRate>0.003</progressionRate>
+        <maxProgressionSeverity>1.0</maxProgressionSeverity>
+        <nextStageHediff>BTTether_Stage4</nextStageHediff>
+        <btInfluenceRadius>15.9</btInfluenceRadius>
+        <whisperChance>0.5</whisperChance>
+        <visionChance>0.3</visionChance>
+        <compulsionChance>0.25</compulsionChance>
+        <possessionChance>0.1</possessionChance>
+      </li>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>0.12</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>12</baseTendDurationHours>
+        <severityPerDayTended>-0.05</severityPerDayTended>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- BT Tether Stage 4 - Possession Risk -->
+  <HediffDef>
+    <defName>BTTether_Stage4</defName>
+    <label>BT tether (possession risk)</label>
+    <description>The Beach Thing's influence has become overwhelming. This person is at severe risk of possession, where the BT may take control of their body for extended periods. They exist in a twilight state between life and death, human and supernatural entity.</description>
+    <hediffClass>DeathStrandingMod.Hediffs.Hediff_BTTether</hediffClass>
+    <defaultLabelColor>(0.4, 0.4, 0.9)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <tendable>true</tendable>
+    <chronic>true</chronic>
+    <lethalSeverity>1.0</lethalSeverity>
+    <stages>
+      <li>
+        <label>possession risk</label>
+        <minSeverity>0.01</minSeverity>
+        <painOffset>0.6</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.4</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.25</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.3</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <PsychicSensitivity>1.0</PsychicSensitivity>
+          <MentalBreakThreshold>0.6</MentalBreakThreshold>
+        </statOffsets>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>2</mtbDays>
+          </li>
+          <li>
+            <mentalState>Berserk</mentalState>
+            <mtbDays>5</mtbDays>
+          </li>
+          <li>
+            <mentalState>Catatonic</mentalState>
+            <mtbDays>8</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+      <li>
+        <label>imminent possession</label>
+        <minSeverity>0.7</minSeverity>
+        <painOffset>0.8</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.6</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.4</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.3</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.5</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <PsychicSensitivity>1.5</PsychicSensitivity>
+          <MentalBreakThreshold>0.8</MentalBreakThreshold>
+        </statOffsets>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>1</mtbDays>
+          </li>
+          <li>
+            <mentalState>Berserk</mentalState>
+            <mtbDays>3</mtbDays>
+          </li>
+          <li>
+            <mentalState>Catatonic</mentalState>
+            <mtbDays>4</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+    <comps>
+      <li Class="DeathStrandingMod.HediffCompProperties_BTTether">
+        <tetherStage>4</tetherStage>
+        <progressionRate>0.005</progressionRate>
+        <maxProgressionSeverity>1.0</maxProgressionSeverity>
+        <nextStageHediff>BTTether_Possession</nextStageHediff>
+        <btInfluenceRadius>25.9</btInfluenceRadius>
+        <whisperChance>0.8</whisperChance>
+        <visionChance>0.6</visionChance>
+        <compulsionChance>0.5</compulsionChance>
+        <possessionChance>0.3</possessionChance>
+        <deathConversionChance>0.1</deathConversionChance>
+      </li>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>0.2</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>8</baseTendDurationHours>
+        <severityPerDayTended>-0.1</severityPerDayTended>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- BT Tether Final Stage - Complete Possession -->
+  <HediffDef>
+    <defName>BTTether_Possession</defName>
+    <label>BT possession</label>
+    <description>The Beach Thing has achieved complete control. This person's consciousness has been subsumed by the supernatural entity, and they now act as a vessel for the BT's will. They are effectively no longer human, existing as a bridge between dimensions.</description>
+    <hediffClass>DeathStrandingMod.Hediffs.Hediff_BTTether</hediffClass>
+    <defaultLabelColor>(0.2, 0.2, 0.9)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <tendable>false</tendable>
+    <chronic>true</chronic>
+    <stages>
+      <li>
+        <label>possessed</label>
+        <minSeverity>0.01</minSeverity>
+        <painOffset>1.0</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.8</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.6</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.5</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.8</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <PsychicSensitivity>2.0</PsychicSensitivity>
+          <MentalBreakThreshold>1.0</MentalBreakThreshold>
+        </statOffsets>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Berserk</mentalState>
+            <mtbDays>0.5</mtbDays>
+          </li>
+        </mentalStateGivers>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>Heart_Attack</hediff>
+            <mtbDays>10</mtbDays>
+          </li>
+        </hediffGivers>
+      </li>
+    </stages>
+    <comps>
+      <li Class="DeathStrandingMod.HediffCompProperties_BTTether">
+        <tetherStage>5</tetherStage>
+        <progressionRate>0</progressionRate>
+        <maxProgressionSeverity>1.0</maxProgressionSeverity>
+        <btInfluenceRadius>50.9</btInfluenceRadius>
+        <whisperChance>1.0</whisperChance>
+        <visionChance>1.0</visionChance>
+        <compulsionChance>1.0</compulsionChance>
+        <possessionChance>1.0</possessionChance>
+        <deathConversionChance>0.5</deathConversionChance>
+        <isPossessed>true</isPossessed>
+        <attractsBTs>true</attractsBTs>
+        <createsVoidoutRisk>true</createsVoidoutRisk>
+      </li>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>0</severityPerDay>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- ==================== TETHER TREATMENT HEDIFFS ==================== -->
+  
+  <!-- Chiral Stabilization Treatment -->
+  <HediffDef>
+    <defName>ChiralStabilization</defName>
+    <label>chiral stabilization</label>
+    <description>Medical treatment using chiral technology to weaken supernatural connections. This treatment can slow or reverse BT tether progression but requires ongoing administration.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 1.0, 0.8)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <tendable>false</tendable>
+    <chronic>false</chronic>
+    <stages>
+      <li>
+        <statOffsets>
+          <PsychicSensitivity>-0.2</PsychicSensitivity>
+          <MentalBreakThreshold>-0.1</MentalBreakThreshold>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.5</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+      <li Class="DeathStrandingMod.HediffCompProperties_TetherSuppression">
+        <suppressionStrength>0.7</suppressionStrength>
+        <preventProgression>true</preventProgression>
+        <slowProgression>0.3</slowProgression>
+      </li>
+    </comps>
+  </HediffDef>
+
+</Defs>

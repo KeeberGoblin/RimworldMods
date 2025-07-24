@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- ==================== RESEARCH DEFINITIONS ==================== -->
+  
+  <ResearchProjectDef>
+    <defName>ChiralWeaponry</defName>
+    <label>chiral weaponry</label>
+    <description>Develop weapons that can channel chiral energy, making them highly effective against supernatural entities and dimensional threats.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>ChiralTechnology</li>
+      <li>PrecisionRifling</li>
+    </prerequisites>
+    <researchViewX>6.00</researchViewX>
+    <researchViewY>3.50</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>TemporalWeaponry</defName>
+    <label>temporal weaponry</label>
+    <description>Harness the power of time itself to create weapons that can disrupt temporal flow and age targets rapidly.</description>
+    <baseCost>6000</baseCost>
+    <techLevel>Ultra</techLevel>
+    <prerequisites>
+      <li>ChiralWeaponry</li>
+      <li>QuantumEntanglement</li>
+    </prerequisites>
+    <researchViewX>8.00</researchViewX>
+    <researchViewY>3.50</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>ChiralArmor</defName>
+    <label>chiral armor</label>
+    <description>Create protective equipment that can defend against both conventional and supernatural threats using chiral technology.</description>
+    <baseCost>2500</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>ChiralWeaponry</li>
+      <li>PoweredArmor</li>
+    </prerequisites>
+    <researchViewX>7.00</researchViewX>
+    <researchViewY>2.50</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- ==================== WEAPON STAT MODIFIERS ==================== -->
+  
+  <StatDef>
+    <defName>ChiralDamageMultiplier</defName>
+    <label>chiral damage multiplier</label>
+    <description>How much extra damage this weapon deals to supernatural entities.</description>
+    <category>Weapon</category>
+    <defaultBaseValue>1.0</defaultBaseValue>
+    <minValue>0.1</minValue>
+    <maxValue>10.0</maxValue>
+    <roundValue>false</roundValue>
+    <displayPriorityInCategory>60</displayPriorityInCategory>
+    <toStringStyle>PercentZero</toStringStyle>
+    <formatString>{0}</formatString>
+  </StatDef>
+
+  <StatDef>
+    <defName>TemporalResistance</defName>
+    <label>temporal resistance</label>
+    <description>How well this item resists temporal attacks and aging effects.</description>
+    <category>Apparel</category>
+    <defaultBaseValue>0.0</defaultBaseValue>
+    <minValue>0.0</minValue>
+    <maxValue>1.0</maxValue>
+    <roundValue>false</roundValue>
+    <displayPriorityInCategory>65</displayPriorityInCategory>
+    <toStringStyle>PercentZero</toStringStyle>
+    <formatString>{0}</formatString>
+  </StatDef>
+
+  <StatDef>
+    <defName>RealityStabilization</defName>
+    <label>reality stabilization</label>
+    <description>How much this item helps stabilize reality and prevent dimensional distortions.</description>
+    <category>Apparel</category>
+    <defaultBaseValue>0.0</defaultBaseValue>
+    <minValue>0.0</minValue>
+    <maxValue>1.0</maxValue>
+    <roundValue>false</roundValue>
+    <displayPriorityInCategory>66</displayPriorityInCategory>
+    <toStringStyle>PercentZero</toStringStyle>
+    <formatString>{0}</formatString>
+  </StatDef>
+
+  <!-- ==================== WEAPON TRAINING AND SKILLS ==================== -->
+  
+  <TraitDef>
+    <defName>ChiralWeaponSpecialist</defName>
+    <label>chiral weapon specialist</label>
+    <description>This person has trained extensively with chiral weaponry and can use these exotic weapons more effectively than others.</description>
+    <degreeDatas>
+      <li>
+        <label>chiral weapon specialist</label>
+        <description>This person has specialized training with chiral weapons, allowing them to use these otherworldly armaments with greater skill and effectiveness.</description>
+        <degree>0</degree>
+        <statOffsets>
+          <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
+          <MeleeHitChance>2</MeleeHitChance>
+        </statOffsets>
+        <skillGains>
+          <Shooting>2</Shooting>
+          <Melee>2</Melee>
+        </skillGains>
+      </li>
+    </degreeDatas>
+    <conflictingTraits>
+      <li>ShootingAccuracy</li>
+    </conflictingTraits>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>TemporalSensitive</defName>
+    <label>temporal sensitive</label>
+    <description>This person has an unusual sensitivity to temporal distortions and can better resist time-based attacks.</description>
+    <degreeDatas>
+      <li>
+        <label>temporal sensitive</label>
+        <description>This person can sense distortions in the flow of time and has developed a natural resistance to temporal manipulation.</description>
+        <degree>0</degree>
+        <statOffsets>
+          <PsychicSensitivity>0.15</PsychicSensitivity>
+        </statOffsets>
+        <statFactors>
+          <TemporalResistance>1.5</TemporalResistance>
+        </statFactors>
+      </li>
+    </degreeDatas>
+    <conflictingTraits>
+      <li>PsychicSensitivity</li>
+    </conflictingTraits>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>RealityAnchor</defName>
+    <label>reality anchor</label>
+    <description>This person has an exceptionally stable perception of reality and helps anchor others around them during dimensional disturbances.</description>
+    <degreeDatas>
+      <li>
+        <label>reality anchor</label>
+        <description>This person's mind is exceptionally stable and grounded in reality, making them resistant to dimensional effects and helpful in stabilizing others during supernatural events.</description>
+        <degree>0</degree>
+        <statOffsets>
+          <MentalBreakThreshold>-0.2</MentalBreakThreshold>
+          <PsychicSensitivity>-0.25</PsychicSensitivity>
+        </statOffsets>
+        <statFactors>
+          <RealityStabilization>2.0</RealityStabilization>
+        </statFactors>
+      </li>
+    </degreeDatas>
+    <conflictingTraits>
+      <li>Neurotic</li>
+      <li>Volatile</li>
+    </conflictingTraits>
+  </TraitDef>
+
+</Defs>

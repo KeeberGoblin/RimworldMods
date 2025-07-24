@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Note: These race definitions are for the BT proxy system that uses existing creatures -->
+  <!-- The actual BT behavior is handled by the CompBTBehavior component -->
+  
+  <!-- ==================== BT FACTION ==================== -->
+  
+  <FactionDef>
+    <defName>BTProxyFaction</defName>
+    <label>Beach Things</label>
+    <description>Supernatural entities from the Beach dimension that exist as echoes of the dead. They are drawn to the living and seek to drag them back to the world of the dead.</description>
+    <pawnSingular>BT</pawnSingular>
+    <pawnsPlural>BTs</pawnsPlural>
+    <categoryTag>Anomalous</categoryTag>
+    <listOrderPriority>40</listOrderPriority>
+    <settlementGenerationWeight>0</settlementGenerationWeight>
+    <requiredCountAtGameStart>0</requiredCountAtGameStart>
+    <maxCountAtGameStart>0</maxCountAtGameStart>
+    <canMakeRandomly>false</canMakeRandomly>
+    <canSiege>false</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+    <leaderTitle>Echo</leaderTitle>
+    <factionIconPath>World/WorldObjects/Expanding/BTIcon</factionIconPath>
+    <colorSpectrum>
+      <li>(0.2, 0.2, 0.4)</li>
+      <li>(0.3, 0.3, 0.5)</li>
+      <li>(0.1, 0.1, 0.3)</li>
+    </colorSpectrum>
+    <factionNameMaker>NamerFactionBaseTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+    <allowedCultures><li>Astropolitan</li></allowedCultures>
+    <backstoryCategories>
+      <li>Raider</li>
+    </backstoryCategories>
+    <geneticVariance>0</geneticVariance>
+    <fixedName>Beach Things</fixedName>
+    <configurationListOrderPriority>100</configurationListOrderPriority>
+    <hidden>true</hidden>
+    <permanentEnemy>true</permanentEnemy>
+    <goodwillDailyGain>0</goodwillDailyGain>
+    <goodwillDailyFall>0</goodwillDailyFall>
+    <naturalColonyGoodwill>-100~-100</naturalColonyGoodwill>
+    <permanentEnemyToEveryoneExcept>
+    </permanentEnemyToEveryoneExcept>
+    <techLevel>Undefined</techLevel>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Raider</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <caravanTraderKinds>
+    </caravanTraderKinds>
+    <visitorTraderKinds>
+    </visitorTraderKinds>
+    <baseTraderKinds>
+    </baseTraderKinds>
+    <allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
+    <raidCommonalityFromPointsCurve>
+      <points>
+        <li>(0, 0)</li>
+        <li>(50, 0.1)</li>
+        <li>(100, 0.3)</li>
+        <li>(200, 0.5)</li>
+        <li>(500, 0.8)</li>
+        <li>(1000, 1.0)</li>
+        <li>(2000, 1.2)</li>
+        <li>(4000, 1.5)</li>
+      </points>
+    </raidCommonalityFromPointsCurve>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0, 35)</li>
+        <li>(70, 50)</li>
+        <li>(700, 100)</li>
+        <li>(1400, 150)</li>
+        <li>(1800, 200)</li>
+        <li>(2500, 250)</li>
+        <li>(3500, 300)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <BTBasic>10</BTBasic>
+          <BTCatcher>8</BTCatcher>
+          <BTHunter>3</BTHunter>
+          <BTTech>5</BTTech>
+          <BTSentinel>4</BTSentinel>
+          <BTTitan>2</BTTitan>
+          <BTSwarm>15</BTSwarm>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <raidLootMaker>
+      <thingDefs>
+        <li>ChiralCrystal</li>
+        <li>BeachMatter</li>
+        <li>TimefallResidue</li>
+      </thingDefs>
+      <countRange>3~12</countRange>
+    </raidLootMaker>
+  </FactionDef>
+
+  <!-- ==================== BT PAWN KIND DEFINITIONS ==================== -->
+  
+  <!-- BT Basic Proxy (Uses Human) -->
+  <PawnKindDef>
+    <defName>BTBasic</defName>
+    <label>basic BT</label>
+    <race>Human</race>
+    <defaultFactionType>BTProxyFaction</defaultFactionType>
+    <backstoryCategories>
+      <li>Raider</li>
+    </backstoryCategories>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>Raider</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <combatPower>45</combatPower>
+    <baseRecruitDifficulty>0.99</baseRecruitDifficulty>
+    <canBeSapper>false</canBeSapper>
+    <canArriveManhunter>false</canArriveManhunter>
+    <apparelMoney>0~50</apparelMoney>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <apparelTags>
+      <li>OutlanderMilitary</li>
+    </apparelTags>
+    <weaponMoney>0~0</weaponMoney>
+    <weaponTags>
+    </weaponTags>
+    <techHediffsMoney>0~0</techHediffsMoney>
+    <techHediffsTags>
+    </techHediffsTags>
+    <techHediffsChance>0</techHediffsChance>
+    <biocodeWeaponChance>0</biocodeWeaponChance>
+    <itemQuality>Poor</itemQuality>
+  </PawnKindDef>
+
+  <!-- BT Catcher Proxy (Uses Bear) -->
+  <PawnKindDef>
+    <defName>BTCatcher</defName>
+    <label>catcher BT</label>
+    <race>Bear</race>
+    <defaultFactionType>BTProxyFaction</defaultFactionType>
+    <combatPower>120</combatPower>
+    <baseRecruitDifficulty>0.99</baseRecruitDifficulty>
+    <canBeSapper>false</canBeSapper>
+    <canArriveManhunter>true</canArriveManhunter>
+  </PawnKindDef>
+
+  <!-- BT Hunter Proxy (Uses Thrumbo) -->
+  <PawnKindDef>
+    <defName>BTHunter</defName>
+    <label>hunter BT</label>
+    <race>Thrumbo</race>
+    <defaultFactionType>BTProxyFaction</defaultFactionType>
+    <combatPower>300</combatPower>
+    <baseRecruitDifficulty>0.99</baseRecruitDifficulty>
+    <canBeSapper>false</canBeSapper>
+    <canArriveManhunter>true</canArriveManhunter>
+  </PawnKindDef>
+
+  <!-- BT Tech Proxy (Uses Scyther) -->
+  <PawnKindDef>
+    <defName>BTTech</defName>
+    <label>tech BT</label>
+    <race>Scyther</race>
+    <defaultFactionType>BTProxyFaction</defaultFactionType>
+    <combatPower>150</combatPower>
+    <baseRecruitDifficulty>0.99</baseRecruitDifficulty>
+    <canBeSapper>false</canBeSapper>
+    <canArriveManhunter>true</canArriveManhunter>
+  </PawnKindDef>
+
+  <!-- BT Sentinel Proxy (Uses Pikeman) -->
+  <PawnKindDef>
+    <defName>BTSentinel</defName>
+    <label>sentinel BT</label>
+    <race>Pikeman</race>
+    <defaultFactionType>BTProxyFaction</defaultFactionType>
+    <combatPower>200</combatPower>
+    <baseRecruitDifficulty>0.99</baseRecruitDifficulty>
+    <canBeSapper>false</canBeSapper>
+    <canArriveManhunter>true</canArriveManhunter>
+  </PawnKindDef>
+
+  <!-- BT Titan Proxy (Uses Centipede) -->
+  <PawnKindDef>
+    <defName>BTTitan</defName>
+    <label>titan BT</label>
+    <race>Centipede</race>
+    <defaultFactionType>BTProxyFaction</defaultFactionType>
+    <combatPower>400</combatPower>
+    <baseRecruitDifficulty>0.99</baseRecruitDifficulty>
+    <canBeSapper>false</canBeSapper>
+    <canArriveManhunter>true</canArriveManhunter>
+  </PawnKindDef>
+
+  <!-- BT Swarm Proxy (Uses Rat) -->
+  <PawnKindDef>
+    <defName>BTSwarm</defName>
+    <label>swarm BT</label>
+    <race>Rat</race>
+    <defaultFactionType>BTProxyFaction</defaultFactionType>
+    <combatPower>15</combatPower>
+    <baseRecruitDifficulty>0.99</baseRecruitDifficulty>
+    <canBeSapper>false</canBeSapper>
+    <canArriveManhunter>true</canArriveManhunter>
+  </PawnKindDef>
+
+  <!-- ==================== RAID STRATEGY DEFINITIONS ==================== -->
+  
+  <RaidStrategyDef>
+    <defName>BTSwarmAttack</defName>
+    <label>BT swarm</label>
+    <arrivalModeTag>EdgeWalkIn</arrivalModeTag>
+    <workerClass>DeathStrandingMod.Storyteller.RaidStrategyWorker_BTSwarm</workerClass>
+    <selectionWeightPerPointsCurve>
+      <points>
+        <li>(0, 0)</li>
+        <li>(200, 0.5)</li>
+        <li>(500, 1.0)</li>
+        <li>(1000, 1.5)</li>
+        <li>(2000, 2.0)</li>
+      </points>
+    </selectionWeightPerPointsCurve>
+    <minPawns>2</minPawns>
+    <maxPawns>8</maxPawns>
+  </RaidStrategyDef>
+
+  <RaidStrategyDef>
+    <defName>BTManifestation</defName>
+    <label>BT manifestation</label>
+    <arrivalModeTag>EdgeWalkIn</arrivalModeTag>
+    <workerClass>DeathStrandingMod.Storyteller.RaidStrategyWorker_BTManifestation</workerClass>
+    <selectionWeightPerPointsCurve>
+      <points>
+        <li>(0, 0.2)</li>
+        <li>(100, 0.8)</li>
+        <li>(300, 1.2)</li>
+        <li>(800, 1.5)</li>
+        <li>(1500, 1.8)</li>
+      </points>
+    </selectionWeightPerPointsCurve>
+    <minPawns>1</minPawns>
+    <maxPawns>3</maxPawns>
+  </RaidStrategyDef>
+
+  <!-- ==================== INCIDENT DEFINITIONS ==================== -->
+  
+  <IncidentDef>
+    <defName>BTSwarmRaid</defName>
+    <label>BT swarm</label>
+    <category>ThreatBig</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.Storyteller.IncidentWorker_BTSwarm</workerClass>
+    <baseChance>1.0</baseChance>
+    <baseChanceWithRoyalty>1.0</baseChanceWithRoyalty>
+    <minRefireDays>5</minRefireDays>
+    <earliestDay>8</earliestDay>
+    <minThreatPoints>150</minThreatPoints>
+    <letterText>Beach Things have manifested near the colony. These supernatural entities are drawn to the living and pose a severe threat. DOOMS carriers may be able to detect them more easily, but all colonists should seek shelter immediately.\n\nThe entities appear to be echoes of the dead, existing partially in our dimension and partially in the Beach. They are hostile to all life and will attempt to drag the living back to their dimension.</letterText>
+    <letterLabel>BT swarm detected</letterLabel>
+    <letterDef>ThreatBig</letterDef>
+    <pointsScaleable>true</pointsScaleable>
+    <usableForQuests>false</usableForQuests>
+  </IncidentDef>
+
+  <IncidentDef>
+    <defName>BTManifestation</defName>
+    <label>BT manifestation</label>
+    <category>ThreatSmall</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.Storyteller.IncidentWorker_BTManifestation</workerClass>
+    <baseChance>2.0</baseChance>
+    <baseChanceWithRoyalty>2.0</baseChanceWithRoyalty>
+    <minRefireDays>2</minRefireDays>
+    <earliestDay>3</earliestDay>
+    <minThreatPoints>50</minThreatPoints>
+    <letterText>A Beach Thing has manifested near the colony. This supernatural entity appears to be the echo of someone who died, now existing between dimensions. It is hostile and should be approached with extreme caution.\n\nDOOMS carriers may sense its presence more acutely. The entity's connection to the Beach dimension makes it unpredictable and dangerous.</letterText>
+    <letterLabel>BT manifestation</letterLabel>
+    <letterDef>ThreatSmall</letterDef>
+    <pointsScaleable>true</pointsScaleable>
+    <usableForQuests>false</usableForQuests>
+  </IncidentDef>
+
+  <IncidentDef>
+    <defName>CorpseConversionToBT</defName>
+    <label>corpse BT conversion</label>
+    <category>ThreatSmall</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.Storyteller.IncidentWorker_CorpseConversion</workerClass>
+    <baseChance>1.5</baseChance>
+    <baseChanceWithRoyalty>1.5</baseChanceWithRoyalty>
+    <minRefireDays>3</minRefireDays>
+    <earliestDay>5</earliestDay>
+    <minThreatPoints>0</minThreatPoints>
+    <letterText>A corpse has been converted into a Beach Thing due to dimensional instability. The deceased has risen as an echo, trapped between dimensions and hostile to the living.\n\nThis conversion likely occurred due to high Beach threat levels in the area. Proper disposal of the dead and maintaining chiral network protection can help prevent such incidents.</letterText>
+    <letterLabel>corpse converted to BT</letterLabel>
+    <letterDef>ThreatSmall</letterDef>
+    <pointsScaleable>false</pointsScaleable>
+    <usableForQuests>false</usableForQuests>
+  </IncidentDef>
+
+  <!-- ==================== BT BEHAVIORS AND MENTAL STATES ==================== -->
+  
+  <MentalStateDef>
+    <defName>BTHunting</defName>
+    <label>BT hunting</label>
+    <category>Aggro</category>
+    <nameColor>(1.0, 0.3, 0.3)</nameColor>
+    <stateClass>DeathStrandingMod.MentalStates.MentalState_BTHunting</stateClass>
+    <workerClass>DeathStrandingMod.MentalStates.MentalStateWorker_BTHunting</workerClass>
+    <blockRandomInteraction>true</blockRandomInteraction>
+    <recoveryMtbDays>999</recoveryMtbDays>
+    <minTicksBeforeRecovery>30000</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>180000</maxTicksBeforeRecovery>
+    <blockNormalThoughts>true</blockNormalThoughts>
+    <mentalBreakCandidate>false</mentalBreakCandidate>
+    <allowBeatfire>false</allowBeatfire>
+    <alwaysAllowedTargets>
+      <li>Human</li>
+    </alwaysAllowedTargets>
+    <requiredCapacities>
+      <li>Moving</li>
+    </requiredCapacities>
+  </MentalStateDef>
+
+  <MentalStateDef>
+    <defName>BTTethered</defName>
+    <label>BT tethered</label>
+    <category>Misc</category>
+    <nameColor>(0.4, 0.4, 0.8)</nameColor>
+    <stateClass>DeathStrandingMod.MentalStates.MentalState_BTTethered</stateClass>
+    <workerClass>DeathStrandingMod.MentalStates.MentalStateWorker_BTTethered</workerClass>
+    <blockRandomInteraction>true</blockRandomInteraction>
+    <recoveryMtbDays>3</recoveryMtbDays>
+    <minTicksBeforeRecovery>5000</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>60000</maxTicksBeforeRecovery>
+    <blockNormalThoughts>false</blockNormalThoughts>
+    <mentalBreakCandidate>false</mentalBreakCandidate>
+    <allowBeatfire>false</allowBeatfire>
+    <requiredCapacities>
+      <li>Consciousness</li>
+    </requiredCapacities>
+  </MentalStateDef>
+
+  <!-- ==================== BT LORE DEFINITIONS ==================== -->
+  
+  <ConceptDef>
+    <defName>BeachThings</defName>
+    <label>Beach Things (BTs)</label>
+    <priority>40</priority>
+    <helpText>Beach Things, or BTs, are supernatural entities that exist as echoes of the dead. They are drawn from the Beach dimension to our world and are hostile to all living beings.
+
+BTs appear as distorted versions of creatures that once lived, maintaining some of their original form but exhibiting otherworldly properties. They can phase between dimensions, making them difficult to predict and combat.
+
+DOOMS carriers can sense BTs more easily and may receive warnings about their presence. Chiral network nodes provide protection against BT manifestations, while certain weapons and equipment can be more effective against these supernatural threats.
+
+BTs are attracted to areas with high emotional resonance, recent deaths, or dimensional instability. Maintaining a strong chiral network and proper disposal of the dead can help prevent BT manifestations.</helpText>
+  </ConceptDef>
+
+  <ConceptDef>
+    <defName>BTProxy</defName>
+    <label>BT proxy system</label>
+    <priority>30</priority>
+    <helpText>Beach Things in this world appear using the forms of existing creatures as vessels. When a BT manifests, it inhabits and corrupts a creature's form, transforming it into a supernatural threat.
+
+This proxy system means that BTs may appear as corrupted humans, mutated animals, or even twisted mechanoids. The original creature's instincts and abilities are warped by the Beach dimension's influence, creating unpredictable hybrid entities.
+
+Different creature types manifest different BT characteristics:
+- Human proxies retain intelligence but lose empathy
+- Animal proxies become more aggressive and relentless  
+- Mechanoid proxies exhibit reality-distorting effects
+
+The BT's supernatural nature overrides the proxy creature's original behavior, making them universally hostile to the living regardless of their original disposition.</helpText>
+  </ConceptDef>
+
+</Defs>

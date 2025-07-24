@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- ==================== BT MANIFESTATION EVENTS ==================== -->
+  
+  <!-- BT Sighting -->
+  <IncidentDef>
+    <defName>BTSighting</defName>
+    <label>BT sighting</label>
+    <category>ThreatSmall</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_BTSighting</workerClass>
+    <baseChance>0.9</baseChance>
+    <minRefireDays>1</minRefireDays>
+    <letterText>A Beach Thing has been spotted in the area. DOOMS carriers report sensing an otherworldly presence nearby.\n\nWhile not immediately threatening, BTs can become dangerous if disturbed. Colonists should avoid the affected area and remain quiet to prevent attracting its attention.</letterText>
+    <letterLabel>BT sighted</letterLabel>
+    <letterDef>ThreatSmall</letterDef>
+    <pointsScaleable>true</pointsScaleable>
+    <minThreatPoints>120</minThreatPoints>
+  </IncidentDef>
+
+  <!-- BT Manifestation -->
+  <IncidentDef>
+    <defName>BTManifestation</defName>
+    <label>BT manifestation</label>
+    <category>ThreatBig</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_BTManifestation</workerClass>
+    <baseChance>0.6</baseChance>
+    <minRefireDays>2</minRefireDays>
+    <letterText>Beach Things are manifesting in the area! Multiple supernatural entities have crossed over from the Beach dimension and are now present in our reality.\n\nThese entities are highly dangerous and will attempt to drag living beings back to their dimension. Extreme caution is advised.</letterText>
+    <letterLabel>BT manifestation</letterLabel>
+    <letterDef>ThreatBig</letterDef>
+    <pointsScaleable>true</pointsScaleable>
+    <minThreatPoints>500</minThreatPoints>
+    <allowedBiomes>
+      <li>DeathStrandingMod_Beach</li>
+      <li>DeathStrandingMod_Wasteland</li>
+    </allowedBiomes>
+  </IncidentDef>
+
+  <!-- BT Territory -->
+  <IncidentDef>
+    <defName>BTTerritory</defName>
+    <label>BT territory established</label>
+    <category>ThreatBig</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_BTTerritory</workerClass>
+    <baseChance>0.4</baseChance>
+    <minRefireDays>5</minRefireDays>
+    <letterText>A group of Beach Things has established a territory near the colony. This area is now permanently infested with supernatural entities that will aggressively defend their domain.\n\nThe affected zone should be considered extremely dangerous. Any approach risks attracting the attention of multiple BTs simultaneously.</letterText>
+    <letterLabel>BT territory</letterLabel>
+    <letterDef>ThreatBig</letterDef>
+    <pointsScaleable>true</pointsScaleable>
+    <minThreatPoints>800</minThreatPoints>
+  </IncidentDef>
+
+  <!-- BT Hunter -->
+  <IncidentDef>
+    <defName>BTHunter</defName>
+    <label>BT hunter</label>
+    <category>ThreatBig</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_BTHunter</workerClass>
+    <baseChance>0.3</baseChance>
+    <minRefireDays>7</minRefireDays>
+    <letterText>A powerful BT hunter has appeared in the area. This massive supernatural entity actively seeks out living beings and poses an extreme threat to the colony.\n\nThis creature is far more dangerous than regular BTs and will pursue targets relentlessly. Consider evacuation protocols if it approaches the colony directly.</letterText>
+    <letterLabel>BT hunter appeared</letterLabel>
+    <letterDef>ThreatBig</letterDef>
+    <pointsScaleable>true</pointsScaleable>
+    <minThreatPoints>1200</minThreatPoints>
+  </IncidentDef>
+
+  <!-- BT Swarm -->
+  <IncidentDef>
+    <defName>BTSwarm</defName>
+    <label>BT swarm</label>
+    <category>ThreatBig</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_BTSwarm</workerClass>
+    <baseChance>0.2</baseChance>
+    <minRefireDays>10</minRefireDays>
+    <letterText>A massive swarm of Beach Things is approaching the colony! Dozens of supernatural entities are moving together in a coordinated assault.\n\nThis represents an unprecedented threat level. All defensive measures should be activated immediately. The survival of the colony is at stake.</letterText>
+    <letterLabel>BT swarm incoming</letterLabel>
+    <letterDef>ThreatBig</letterDef>
+    <pointsScaleable>true</pointsScaleable>
+    <minThreatPoints>2000</minThreatPoints>
+  </IncidentDef>
+
+  <!-- BT Possession Attempt -->
+  <IncidentDef>
+    <defName>BTPossessionAttempt</defName>
+    <label>BT possession attempt</label>
+    <category>ThreatSmall</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_BTPossessionAttempt</workerClass>
+    <baseChance>0.3</baseChance>
+    <minRefireDays>3</minRefireDays>
+    <letterText>A Beach Thing is attempting to possess {PAWN_nameDef}! The supernatural entity is trying to establish a connection that could lead to full possession.\n\nImmediate intervention is required to break the connection before it becomes permanent. DOOMS carriers may be able to assist in severing the supernatural link.</letterText>
+    <letterLabel>possession attempt</letterLabel>
+    <letterDef>ThreatSmall</letterDef>
+    <pointsScaleable>true</pointsScaleable>
+    <minThreatPoints>300</minThreatPoints>
+  </IncidentDef>
+
+  <!-- BT Whispers -->
+  <IncidentDef>
+    <defName>BTWhispers</defName>
+    <label>BT whispers</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_BTWhispers</workerClass>
+    <baseChance>0.7</baseChance>
+    <minRefireDays>1</minRefireDays>
+    <letterText>Colonists are reporting strange whispers and voices that seem to come from nowhere. These supernatural communications appear to be emanating from Beach Things in the area.\n\nWhile not immediately dangerous, these whispers can cause psychological distress and may indicate increasing BT activity in the region.</letterText>
+    <letterLabel>strange whispers</letterLabel>
+    <letterDef>NegativeEvent</letterDef>
+  </IncidentDef>
+
+  <!-- BT Handprints -->
+  <IncidentDef>
+    <defName>BTHandprints</defName>
+    <label>BT handprints</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_BTHandprints</workerClass>
+    <baseChance>0.6</baseChance>
+    <minRefireDays>1</minRefireDays>
+    <letterText>Mysterious handprints have appeared throughout the colony area. These otherworldly marks seem to be left by Beach Things as they move through our dimension.\n\nThe handprints indicate recent BT activity and serve as a warning that supernatural entities have been present in the immediate vicinity.</letterText>
+    <letterLabel>BT handprints found</letterLabel>
+    <letterDef>NeutralEvent</letterDef>
+  </IncidentDef>
+
+  <!-- BT Stalking -->
+  <IncidentDef>
+    <defName>BTStalking</defName>
+    <label>BT stalking</label>
+    <category>ThreatSmall</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_BTStalking</workerClass>
+    <baseChance>0.5</baseChance>
+    <minRefireDays>2</minRefireDays>
+    <letterText>{PAWN_nameDef} is being stalked by a Beach Thing! The supernatural entity has formed an attachment and is following them persistently.\n\nThis BT poses a constant threat and may attempt to capture or possess its target. Consider keeping the affected colonist in secure areas until the entity loses interest.</letterText>
+    <letterLabel>BT stalking colonist</letterLabel>
+    <letterDef>ThreatSmall</letterDef>
+    <pointsScaleable>true</pointsScaleable>
+    <minThreatPoints>250</minThreatPoints>
+  </IncidentDef>
+
+  <!-- BT Dimensional Rift -->
+  <IncidentDef>
+    <defName>BTDimensionalRift</defName>
+    <label>BT dimensional rift</label>
+    <category>ThreatBig</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_BTDimensionalRift</workerClass>
+    <baseChance>0.2</baseChance>
+    <minRefireDays>14</minRefireDays>
+    <letterText>Beach Things have torn open a dimensional rift! This supernatural gateway is allowing unlimited BTs to cross over from the Beach dimension.\n\nThe rift represents an existential threat to the colony. If not closed quickly, it could lead to a complete BT infestation of the area.</letterText>
+    <letterLabel>dimensional rift opened</letterLabel>
+    <letterDef>ThreatBig</letterDef>
+    <pointsScaleable>true</pointsScaleable>
+    <minThreatPoints>1500</minThreatPoints>
+  </IncidentDef>
+
+  <!-- BT Catcher Formation -->
+  <IncidentDef>
+    <defName>BTCatcherFormation</defName>
+    <label>BT catcher formation</label>
+    <category>ThreatBig</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_BTCatcherFormation</workerClass>
+    <baseChance>0.15</baseChance>
+    <minRefireDays>21</minRefireDays>
+    <letterText>A massive BT catcher is forming in the area! Multiple Beach Things are coalescing into a gigantic tar-like entity capable of devastating destruction.\n\nThis creature represents the ultimate BT threat and could trigger a voidout if it reaches critical mass. Immediate evacuation should be considered.</letterText>
+    <letterLabel>BT catcher forming</letterLabel>
+    <letterDef>ThreatBig</letterDef>
+    <pointsScaleable>true</pointsScaleable>
+    <minThreatPoints>3000</minThreatPoints>
+  </IncidentDef>
+
+  <!-- BT Investigation -->
+  <IncidentDef>
+    <defName>BTInvestigation</defName>
+    <label>BT investigation</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>DeathStrandingMod.IncidentWorker_BTInvestigation</workerClass>
+    <baseChance>0.4</baseChance>
+    <minRefireDays>3</minRefireDays>
+    <letterText>Beach Things appear to be investigating the colony. Multiple entities have been observed studying the settlement from a distance without showing immediate hostile intent.\n\nThis behavior suggests the BTs are learning about human activities. Their intentions remain unclear, but increased vigilance is recommended.</letterText>
+    <letterLabel>BTs investigating</letterLabel>
+    <letterDef>NeutralEvent</letterDef>
+  </IncidentDef>
+
+</Defs>

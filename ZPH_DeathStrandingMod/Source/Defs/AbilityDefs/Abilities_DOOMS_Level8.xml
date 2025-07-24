@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- ==================== DOOMS LEVEL 8 ABILITIES (HIGGS LEVEL) ==================== -->
+  
+  <!-- Voidout Creation -->
+  <AbilityDef>
+    <defName>DOOMSControl_Level8</defName>
+    <label>create voidout</label>
+    <description>Deliberately create a localized voidout - a devastating explosion that annihilates matter and creates a crater in reality. This ultimate DOOMS ability can destroy entire areas but risks consuming the user and everyone nearby.</description>
+    <iconPath>UI/Icons/Abilities/DOOMSVoidout</iconPath>
+    <category>DOOMS</category>
+    <displayOrder>1</displayOrder>
+    <cooldownTicksRange>36000~72000</cooldownTicksRange>
+    <aiCanUse>false</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <canUseAoeTooltip>true</canUseAoeTooltip>
+    <statBases>
+      <Ability_Range>50</Ability_Range>
+      <Ability_EffectRadius>25</Ability_EffectRadius>
+    </statBases>
+    <verbProperties>
+      <verbClass>DeathStrandingMod.Abilities.Verb_DOOMSVoidout</verbClass>
+      <label>create voidout</label>
+      <range>50.9</range>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+      <warmupTime>1200</warmupTime>
+      <defaultCooldownTime>36000</defaultCooldownTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <soundLanding>Explosion_Bomb</soundLanding>
+      <targetingParameters>
+        <canTargetLocations>true</canTargetLocations>
+      </targetingParameters>
+    </verbProperties>
+    <comps>
+      <li Class="DeathStrandingMod.CompProperties_AbilityVoidout">
+        <voidoutRadius>25.9</voidoutRadius>
+        <annihilationRadius>15.9</annihilationRadius>
+        <damageRadius>35.9</damageRadius>
+        <craterDepth>5</craterDepth>
+        <matterDestructionChance>1.0</matterDestructionChance>
+        <selfHarmChance>0.6</selfHarmChance>
+        <colonyWideConsequences>true</colonyWideConsequences>
+        <createsChiralCrystalDeposits>true</createsChiralCrystalDeposits>
+      </li>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <hediffDef>DOOMSVoidoutBacklash</hediffDef>
+        <target>Caster</target>
+        <duration>72000</duration>
+        <severity>1.0</severity>
+      </li>
+    </comps>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+  </AbilityDef>
+
+  <!-- BT Army Summoning -->
+  <AbilityDef>
+    <defName>DOOMSSummonArmy_Level8</defName>
+    <label>summon BT army</label>
+    <description>Call forth an army of Beach Things from the dimension beyond. This terrifying ability can manifest multiple BTs to serve as guardians or weapons, but controlling them requires immense willpower and risks catastrophic failure.</description>
+    <iconPath>UI/Icons/Abilities/DOOMSSummonArmy</iconPath>
+    <category>DOOMS</category>
+    <displayOrder>2</displayOrder>
+    <cooldownTicksRange>21600~43200</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <canUseAoeTooltip>true</canUseAoeTooltip>
+    <statBases>
+      <Ability_Duration>7200</Ability_Duration>
+      <Ability_Range>30</Ability_Range>
+      <Ability_EffectRadius>20</Ability_EffectRadius>
+    </statBases>
+    <verbProperties>
+      <verbClass>DeathStrandingMod.Abilities.Verb_DOOMSSummonArmy</verbClass>
+      <label>summon BT army</label>
+      <range>30.9</range>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+      <warmupTime>900</warmupTime>
+      <defaultCooldownTime>21600</defaultCooldownTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <soundLanding>PsycastPsychicPulseGlobal</soundLanding>
+      <targetingParameters>
+        <canTargetLocations>true</canTargetLocations>
+      </targetingParameters>
+    </verbProperties>
+    <comps>
+      <li Class="DeathStrandingMod.CompProperties_AbilityBTSummon">
+        <summonRadius>20.9</summonRadius>
+        <summonDuration>7200</summonDuration>
+        <maxSummonedBTs>8</maxSummonedBTs>
+        <btTypes>
+          <li>BTBasic</li>
+          <li>BTCatcher</li>
+          <li>BTHunter</li>
+          <li>BTSentinel</li>
+        </btTypes>
+        <controlDifficulty>0.7</controlDifficulty>
+        <rebelChance>0.3</rebelChance>
+        <massRebelChance>0.15</massRebelChance>
+      </li>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <hediffDef>DOOMSSummoningStrain</hediffDef>
+        <target>Caster</target>
+        <duration>21600</duration>
+        <severity>0.9</severity>
+      </li>
+    </comps>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+  </AbilityDef>
+
+  <!-- Reality Manipulation -->
+  <AbilityDef>
+    <defName>DOOMSRealityControl_Level8</defName>
+    <label>reality manipulation</label>
+    <description>Directly manipulate the fabric of reality itself. This god-like ability can alter terrain, change weather, heal wounds, or even resurrect the dead. However, each use risks uncontrollable dimensional consequences.</description>
+    <iconPath>UI/Icons/Abilities/DOOMSRealityControl</iconPath>
+    <category>DOOMS</category>
+    <displayOrder>3</displayOrder>
+    <cooldownTicksRange>18000~36000</cooldownTicksRange>
+    <aiCanUse>false</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <canUseAoeTooltip>true</canUseAoeTooltip>
+    <statBases>
+      <Ability_Range>40</Ability_Range>
+      <Ability_EffectRadius>15</Ability_EffectRadius>
+    </statBases>
+    <verbProperties>
+      <verbClass>DeathStrandingMod.Abilities.Verb_DOOMSRealityControl</verbClass>
+      <label>reality manipulation</label>
+      <range>40.9</range>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>true</canTargetBuildings>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+      <warmupTime>600</warmupTime>
+      <defaultCooldownTime>18000</defaultCooldownTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <soundLanding>PsycastPsychicPulseGlobal</soundLanding>
+      <targetingParameters>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>true</canTargetBuildings>
+        <canTargetLocations>true</canTargetLocations>
+      </targetingParameters>
+    </verbProperties>
+    <comps>
+      <li Class="DeathStrandingMod.CompProperties_AbilityRealityControl">
+        <controlRadius>15.9</controlRadius>
+        <manipulationTypes>
+          <li>TerrainAlteration</li>
+          <li>WeatherControl</li>
+          <li>MatterCreation</li>
+          <li>Healing</li>
+          <li>Resurrection</li>
+          <li>StructureModification</li>
+        </manipulationTypes>
+        <successChance>0.8</successChance>
+        <dimensionalRiftChance>0.3</dimensionalRiftChance>
+        <catastrophicFailureChance>0.1</catastrophicFailureChance>
+      </li>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <hediffDef>DOOMSRealityStrain</hediffDef>
+        <target>Caster</target>
+        <duration>36000</duration>
+        <severity>1.0</severity>
+      </li>
+    </comps>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+  </AbilityDef>
+
+  <!-- Dimensional Bridge -->
+  <AbilityDef>
+    <defName>DOOMSBridge_Level8</defName>
+    <label>dimensional bridge</label>
+    <description>Create a temporary bridge between the normal world and the Beach dimension, allowing passage between realms. This ultimate ability can provide escape routes, access to Beach resources, or unleash dimensional horrors upon enemies.</description>
+    <iconPath>UI/Icons/Abilities/DOOMSBridge</iconPath>
+    <category>DOOMS</category>
+    <displayOrder>4</displayOrder>
+    <cooldownTicksRange>28800~57600</cooldownTicksRange>
+    <aiCanUse>false</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <canUseAoeTooltip>true</canUseAoeTooltip>
+    <statBases>
+      <Ability_Duration>3600</Ability_Duration>
+      <Ability_Range>25</Ability_Range>
+      <Ability_EffectRadius>5</Ability_EffectRadius>
+    </statBases>
+    <verbProperties>
+      <verbClass>DeathStrandingMod.Abilities.Verb_DOOMSBridge</verbClass>
+      <label>dimensional bridge</label>
+      <range>25.9</range>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+      <warmupTime>1800</warmupTime>
+      <defaultCooldownTime>28800</defaultCooldownTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <soundLanding>PsycastPsychicPulseGlobal</soundLanding>
+      <targetingParameters>
+        <canTargetLocations>true</canTargetLocations>
+      </targetingParameters>
+    </verbProperties>
+    <comps>
+      <li Class="DeathStrandingMod.CompProperties_AbilityDimensionalBridge">
+        <bridgeRadius>5.9</bridgeRadius>
+        <bridgeDuration>3600</bridgeDuration>
+        <allowsTravel>true</allowsTravel>
+        <providesBeachAccess>true</providesBeachAccess>
+        <spawnsBeachMatter>true</spawnsBeachMatter>
+        <dimensionalInstabilityChance>0.4</dimensionalInstabilityChance>
+        <attractsBTs>true</attractsBTs>
+        <realityTearChance>0.2</realityTearChance>
+      </li>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <hediffDef>DOOMSDimensionalTear</hediffDef>
+        <target>Caster</target>
+        <duration>57600</duration>
+        <severity>1.0</severity>
+      </li>
+    </comps>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+  </AbilityDef>
+
+  <!-- Omniscient Perception -->
+  <AbilityDef>
+    <defName>DOOMSOmniscience_Level8</defName>
+    <label>omniscient perception</label>
+    <description>Achieve temporary omniscience, perceiving all events across time and space simultaneously. This transcendent ability reveals all secrets and threats but risks complete mental dissolution as the user's consciousness expands beyond human limits.</description>
+    <iconPath>UI/Icons/Abilities/DOOMSOmniscience</iconPath>
+    <category>DOOMS</category>
+    <displayOrder>5</displayOrder>
+    <cooldownTicksRange>72000~144000</cooldownTicksRange>
+    <aiCanUse>false</aiCanUse>
+    <targetRequired>false</targetRequired>
+    <canUseAoeTooltip>false</canUseAoeTooltip>
+    <statBases>
+      <Ability_Duration>1200</Ability_Duration>
+    </statBases>
+    <verbProperties>
+      <verbClass>DeathStrandingMod.Abilities.Verb_DOOMSOmniscience</verbClass>
+      <label>omniscient perception</label>
+      <range>0.9</range>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+      <warmupTime>2400</warmupTime>
+      <defaultCooldownTime>72000</defaultCooldownTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <soundLanding>PsycastPsychicPulseGlobal</soundLanding>
+      <targetingParameters>
+        <canTargetSelf>true</canTargetSelf>
+      </targetingParameters>
+    </verbProperties>
+    <comps>
+      <li Class="DeathStrandingMod.CompProperties_AbilityOmniscience">
+        <omniscientDuration>1200</omniscientDuration>
+        <revealsAllSecrets>true</revealsAllSecrets>
+        <predictsAllThreats>true</predictsAllThreats>
+        <showsAllConnections>true</showsAllConnections>
+        <providesAbsoluteKnowledge>true</providesAbsoluteKnowledge>
+        <mentalDissolutionChance>0.5</mentalDissolutionChance>
+        <transcendenceChance>0.1</transcendenceChance>
+        <deathRisk>0.3</deathRisk>
+      </li>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <hediffDef>DOOMSOmniscientStrain</hediffDef>
+        <target>Caster</target>
+        <duration>144000</duration>
+        <severity>1.0</severity>
+      </li>
+    </comps>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+  </AbilityDef>
+
+  <!-- Higgs Particle Manipulation -->
+  <AbilityDef>
+    <defName>DOOMSHiggsControl_Level8</defName>
+    <label>Higgs particle control</label>
+    <description>Manipulate the fundamental Higgs field, controlling gravity, mass, and the basic forces of reality. This ability, reminiscent of Higgs himself, can levitate objects, create gravitational anomalies, or fundamentally alter the physics of an area.</description>
+    <iconPath>UI/Icons/Abilities/DOOMSHiggsControl</iconPath>
+    <category>DOOMS</category>
+    <displayOrder>6</displayOrder>
+    <cooldownTicksRange>14400~28800</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <canUseAoeTooltip>true</canUseAoeTooltip>
+    <statBases>
+      <Ability_Duration>2400</Ability_Duration>
+      <Ability_Range>35</Ability_Range>
+      <Ability_EffectRadius>12</Ability_EffectRadius>
+    </statBases>
+    <verbProperties>
+      <verbClass>DeathStrandingMod.Abilities.Verb_DOOMSHiggsControl</verbClass>
+      <label>Higgs control</label>
+      <range>35.9</range>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>true</canTargetBuildings>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+      <warmupTime>300</warmupTime>
+      <defaultCooldownTime>14400</defaultCooldownTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <soundLanding>PsycastPsychicPulseGlobal</soundLanding>
+      <targetingParameters>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>true</canTargetBuildings>
+        <canTargetLocations>true</canTargetLocations>
+      </targetingParameters>
+    </verbProperties>
+    <comps>
+      <li Class="DeathStrandingMod.CompProperties_AbilityHiggsControl">
+        <controlRadius>12.9</controlRadius>
+        <controlDuration>2400</controlDuration>
+        <manipulationTypes>
+          <li>Levitation</li>
+          <li>GravityReversal</li>
+          <li>MassAlteration</li>
+          <li>ObjectTelekinesis</li>
+          <li>GravitationalCrush</li>
+          <li>Weightlessness</li>
+        </manipulationTypes>
+        <maxAffectedTargets>10</maxAffectedTargets>
+        <physicsBreakChance>0.2</physicsBreakChance>
+      </li>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <hediffDef>DOOMSHiggsStrain</hediffDef>
+        <target>Caster</target>
+        <duration>28800</duration>
+        <severity>0.8</severity>
+      </li>
+    </comps>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+  </AbilityDef>
+
+</Defs>

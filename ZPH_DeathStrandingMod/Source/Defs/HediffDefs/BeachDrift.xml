@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- ==================== BEACH DRIFT EFFECTS ==================== -->
+  
+  <!-- Beach Drift Main Condition -->
+  <HediffDef>
+    <defName>BeachDrift</defName>
+    <label>Beach drift</label>
+    <description>This person's consciousness is drifting between dimensions, partially existing in the Beach realm. They experience disconnection from reality, difficulty focusing on the physical world, and an increasing pull toward the supernatural dimension.</description>
+    <hediffClass>DeathStrandingMod.Hediffs.Hediff_BeachDrift</hediffClass>
+    <defaultLabelColor>(0.5, 0.8, 1.0)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <tendable>true</tendable>
+    <chronic>true</chronic>
+    <stages>
+      <li>
+        <label>mild drift</label>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <PsychicSensitivity>0.2</PsychicSensitivity>
+          <WorkSpeedGlobal>-0.1</WorkSpeedGlobal>
+        </statOffsets>
+      </li>
+      <li>
+        <label>moderate drift</label>
+        <minSeverity>0.3</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <PsychicSensitivity>0.4</PsychicSensitivity>
+          <WorkSpeedGlobal>-0.2</WorkSpeedGlobal>
+          <MentalBreakThreshold>0.1</MentalBreakThreshold>
+        </statOffsets>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Sad</mentalState>
+            <mtbDays>10</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+      <li>
+        <label>severe drift</label>
+        <minSeverity>0.6</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.35</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <PsychicSensitivity>0.6</PsychicSensitivity>
+          <WorkSpeedGlobal>-0.4</WorkSpeedGlobal>
+          <MentalBreakThreshold>0.2</MentalBreakThreshold>
+        </statOffsets>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Sad</mentalState>
+            <mtbDays>5</mtbDays>
+          </li>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>15</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+      <li>
+        <label>critical drift</label>
+        <minSeverity>0.85</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.5</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.3</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.25</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.4</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <PsychicSensitivity>1.0</PsychicSensitivity>
+          <WorkSpeedGlobal>-0.7</WorkSpeedGlobal>
+          <MentalBreakThreshold>0.4</MentalBreakThreshold>
+        </statOffsets>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>3</mtbDays>
+          </li>
+          <li>
+            <mentalState>Catatonic</mentalState>
+            <mtbDays>8</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>0.02</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>24</baseTendDurationHours>
+        <severityPerDayTended>-0.05</severityPerDayTended>
+      </li>
+      <li Class="DeathStrandingMod.HediffCompProperties_BeachDrift">
+        <driftRadius>10.9</driftRadius>
+        <phaseProbability>0.1</phaseProbability>
+        <dimensionalVisionChance>0.3</dimensionalVisionChance>
+        <btAttractionMultiplier>1.5</btAttractionMultiplier>
+        <realityDetachment>0.8</realityDetachment>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- Timefall Exposure -->
+  <HediffDef>
+    <defName>TimefallExposure</defName>
+    <label>timefall exposure</label>
+    <description>Exposure to timefall rain has caused accelerated aging and cellular damage. The affected areas show signs of rapid deterioration and increased susceptibility to further temporal effects.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.6, 0.4)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <tendable>true</tendable>
+    <chronic>false</chronic>
+    <stages>
+      <li>
+        <label>minor exposure</label>
+        <minSeverity>0.01</minSeverity>
+        <painOffset>0.05</painOffset>
+        <statOffsets>
+          <Beauty>-1</Beauty>
+        </statOffsets>
+      </li>
+      <li>
+        <label>moderate exposure</label>
+        <minSeverity>0.3</minSeverity>
+        <painOffset>0.15</painOffset>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <Beauty>-2</Beauty>
+          <PainShockThreshold>-0.1</PainShockThreshold>
+        </statOffsets>
+      </li>
+      <li>
+        <label>severe exposure</label>
+        <minSeverity>0.6</minSeverity>
+        <painOffset>0.3</painOffset>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.15</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <Beauty>-3</Beauty>
+          <PainShockThreshold>-0.2</PainShockThreshold>
+        </statOffsets>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>BadBack</hediff>
+            <mtbDays>60</mtbDays>
+          </li>
+        </hediffGivers>
+      </li>
+      <li>
+        <label>critical exposure</label>
+        <minSeverity>0.85</minSeverity>
+        <painOffset>0.5</painOffset>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.25</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <Beauty>-5</Beauty>
+          <PainShockThreshold>-0.3</PainShockThreshold>
+        </statOffsets>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>Frail</hediff>
+            <mtbDays>30</mtbDays>
+          </li>
+          <li Class="HediffGiver_Random">
+            <hediff>BadBack</hediff>
+            <mtbDays>20</mtbDays>
+          </li>
+        </hediffGivers>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.1</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>12</baseTendDurationHours>
+        <severityPerDayTended>-0.2</severityPerDayTended>
+      </li>
+      <li Class="DeathStrandingMod.HediffCompProperties_TimefallDamage">
+        <agingAcceleration>2.0</agingAcceleration>
+        <temporalSusceptibility>1.5</temporalSusceptibility>
+        <cellularDecay>0.3</cellularDecay>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- Dimensional Sickness -->
+  <HediffDef>
+    <defName>DimensionalSickness</defName>
+    <label>dimensional sickness</label>
+    <description>Prolonged exposure to dimensional anomalies has caused a form of supernatural sickness. The person experiences nausea, disorientation, and difficulty distinguishing between reality and the Beach dimension.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.7, 0.4, 0.8)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <tendable>true</tendable>
+    <chronic>false</chronic>
+    <stages>
+      <li>
+        <label>queasy</label>
+        <minSeverity>0.01</minSeverity>
+        <vomitMtbDays>5</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <WorkSpeedGlobal>-0.1</WorkSpeedGlobal>
+        </statOffsets>
+      </li>
+      <li>
+        <label>nauseous</label>
+        <minSeverity>0.4</minSeverity>
+        <vomitMtbDays>2</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.15</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <WorkSpeedGlobal>-0.25</WorkSpeedGlobal>
+          <MentalBreakThreshold>0.1</MentalBreakThreshold>
+        </statOffsets>
+      </li>
+      <li>
+        <label>severely ill</label>
+        <minSeverity>0.7</minSeverity>
+        <vomitMtbDays>0.5</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.3</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <WorkSpeedGlobal>-0.5</WorkSpeedGlobal>
+          <MentalBreakThreshold>0.2</MentalBreakThreshold>
+        </statOffsets>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Sad</mentalState>
+            <mtbDays>3</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.3</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>8</baseTendDurationHours>
+        <severityPerDayTended>-0.5</severityPerDayTended>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- Chiral Contamination -->
+  <HediffDef>
+    <defName>ChiralContamination</defName>
+    <label>chiral contamination</label>
+    <description>Exposure to raw chiral matter has contaminated this person's biological systems. Their body is slowly adapting to process chiral energy, but the transformation causes significant discomfort and unpredictable effects.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.4, 0.8, 1.0)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <tendable>false</tendable>
+    <chronic>true</chronic>
+    <stages>
+      <li>
+        <label>minor contamination</label>
+        <minSeverity>0.01</minSeverity>
+        <painOffset>0.1</painOffset>
+        <statOffsets>
+          <PsychicSensitivity>0.1</PsychicSensitivity>
+        </statOffsets>
+      </li>
+      <li>
+        <label>moderate contamination</label>
+        <minSeverity>0.3</minSeverity>
+        <painOffset>0.2</painOffset>
+        <capMods>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <PsychicSensitivity>0.2</PsychicSensitivity>
+          <ImmunityGainSpeed>-0.1</ImmunityGainSpeed>
+        </statOffsets>
+      </li>
+      <li>
+        <label>severe contamination</label>
+        <minSeverity>0.6</minSeverity>
+        <painOffset>0.35</painOffset>
+        <capMods>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>-0.25</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <PsychicSensitivity>0.4</PsychicSensitivity>
+          <ImmunityGainSpeed>-0.25</ImmunityGainSpeed>
+          <MentalBreakThreshold>0.1</MentalBreakThreshold>
+        </statOffsets>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>FoodPoisoning</hediff>
+            <mtbDays>10</mtbDays>
+          </li>
+        </hediffGivers>
+      </li>
+      <li>
+        <label>critical contamination</label>
+        <minSeverity>0.85</minSeverity>
+        <painOffset>0.5</painOffset>
+        <capMods>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>-0.4</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <PsychicSensitivity>0.6</PsychicSensitivity>
+          <ImmunityGainSpeed>-0.5</ImmunityGainSpeed>
+          <MentalBreakThreshold>0.2</MentalBreakThreshold>
+        </statOffsets>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>Malnutrition</hediff>
+            <mtbDays>20</mtbDays>
+          </li>
+          <li Class="HediffGiver_Random">
+            <hediff>FoodPoisoning</hediff>
+            <mtbDays>5</mtbDays>
+          </li>
+        </hediffGivers>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>0.01</severityPerDay>
+        <showDaysToRecover>false</showDaysToRecover>
+      </li>
+      <li Class="DeathStrandingMod.HediffCompProperties_ChiralContamination">
+        <chiralEnergyGeneration>0.1</chiralEnergyGeneration>
+        <dimensionalResonance>1.2</dimensionalResonance>
+        <biotechCompatibility>0.8</biotechCompatibility>
+        <mutationChance>0.05</mutationChance>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- Void Shock -->
+  <HediffDef>
+    <defName>VoidShock</defName>
+    <label>void shock</label>
+    <description>Exposure to a voidout event has caused severe psychological and physical trauma. The person experiences nightmares, reality dissociation, and persistent fear of dimensional anomalies.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.2, 0.2, 0.2)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <tendable>true</tendable>
+    <chronic>false</chronic>
+    <stages>
+      <li>
+        <label>shaken</label>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <MentalBreakThreshold>0.15</MentalBreakThreshold>
+          <WorkSpeedGlobal>-0.1</WorkSpeedGlobal>
+        </statOffsets>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Hide</mentalState>
+            <mtbDays>5</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+      <li>
+        <label>traumatized</label>
+        <minSeverity>0.4</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <MentalBreakThreshold>0.3</MentalBreakThreshold>
+          <WorkSpeedGlobal>-0.25</WorkSpeedGlobal>
+        </statOffsets>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Hide</mentalState>
+            <mtbDays>3</mtbDays>
+          </li>
+          <li>
+            <mentalState>PanicFlee</mentalState>
+            <mtbDays>8</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+      <li>
+        <label>severely traumatized</label>
+        <minSeverity>0.7</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.35</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.3</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <MentalBreakThreshold>0.5</MentalBreakThreshold>
+          <WorkSpeedGlobal>-0.5</WorkSpeedGlobal>
+        </statOffsets>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Hide</mentalState>
+            <mtbDays>1</mtbDays>
+          </li>
+          <li>
+            <mentalState>PanicFlee</mentalState>
+            <mtbDays>3</mtbDays>
+          </li>
+          <li>
+            <mentalState>Catatonic</mentalState>
+            <mtbDays>10</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.05</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>24</baseTendDurationHours>
+        <severityPerDayTended>-0.15</severityPerDayTended>
+      </li>
+    </comps>
+  </HediffDef>
+
+</Defs>

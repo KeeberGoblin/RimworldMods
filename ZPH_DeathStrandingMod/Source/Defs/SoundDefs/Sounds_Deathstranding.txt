@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- ==================== DEATH STRANDING CUSTOM SOUND EFFECTS ==================== -->
+  
+  <!-- ==================== TIMEFALL SOUNDS ==================== -->
+  
+  <!-- Timefall Rain -->
+  <SoundDef>
+    <defName>DeathStrandingMod_TimefallRain</defName>
+    <context>MapOnly</context>
+    <eventNames>
+      <li>DeathStrandingMod_TimefallRain</li>
+    </eventNames>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Timefall/Rain</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>0.6~0.8</volumeRange>
+        <pitchRange>0.9~1.1</pitchRange>
+        <sustainLoop>true</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- Timefall Storm -->
+  <SoundDef>
+    <defName>DeathStrandingMod_TimefallStorm</defName>
+    <context>MapOnly</context>
+    <eventNames>
+      <li>DeathStrandingMod_TimefallStorm</li>
+    </eventNames>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Timefall/Storm</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>0.8~1.0</volumeRange>
+        <pitchRange>0.85~1.15</pitchRange>
+        <sustainLoop>true</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- Temporal Lightning -->
+  <SoundDef>
+    <defName>DeathStrandingMod_TemporalLightning</defName>
+    <context>MapOnly</context>
+    <eventNames>
+      <li>DeathStrandingMod_TemporalLightning</li>
+    </eventNames>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Timefall/Lightning</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>0.7~0.9</volumeRange>
+        <pitchRange>0.8~1.2</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- ==================== BT SOUNDS ==================== -->
+
+  <!-- BT Presence -->
+  <SoundDef>
+    <defName>DeathStrandingMod_BTPresence</defName>
+    <context>MapOnly</context>
+    <eventNames>
+      <li>DeathStrandingMod_BTPresence</li>
+    </eventNames>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>BT/Presence</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>0.3~0.5</volumeRange>
+        <pitchRange>0.7~1.3</pitchRange>
+        <sustainLoop>true</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- BT Manifestation -->
+  <SoundDef>
+    <defName>DeathStrandingMod_BTManifestation</defName>
+    <context>MapOnly</context>
+    <eventNames>
+      <li>DeathStrandingMod_BTManifestation</li>
+    </eventNames>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>BT/Manifestation</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>0.6~0.8</volumeRange>
+        <pitchRange>0.6~1.4</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- BT Whispers -->
+  <SoundDef>
+    <defName>DeathStrandingMod_BTWhispers</defName>
+    <context>MapOnly</context>
+    <eventNames>
+      <li>DeathStrandingMod_BTWhispers</li>
+    </eventNames>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>BT/Whispers</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>0.2~0.4</volumeRange>
+        <pitchRange>0.8~1.2</pitchRange>
+        <sustainLoop>true</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- BT Catcher -->
+  <SoundDef>
+    <defName>DeathStrandingMod_BTCatcher</defName>
+    <context>MapOnly</context>
+    <eventNames>
+      <li>DeathStrandingMod_BTCatcher</li>
+    </eventNames>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>BT/Catcher</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>0.8~1.0</volumeRange>
+        <pitchRange>0.5~1.0</pitchRange>
+        <sustainLoop>true</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- ==================== CHIRAL NETWORK SOUNDS ==================== -->
+
+  <!-- Chiral Network Connection -->
+  <SoundDef>
+    <defName>DeathStrandingMod_ChiralNetworkConnection</defName>
+    <context>MapOnly</context>
+    <eventNames>
+      <li>DeathStrandingMod_ChiralNetworkConnection</li>
+    </eventNames>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>ChiralNetwork/Connection</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>0.5~0.7</volumeRange>
+        <pitchRange>0.9~1.1</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- Chiral Network Data Transfer -->
+  <SoundDef>
+    <defName>DeathStrandingMod_ChiralDataTransfer</defName>
+    <context>MapOnly</context>
+    <eventNames>
+      <li>DeathStrandingMod_ChiralDataTransfer</li>
+    </eventNames>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>ChiralNetwork/DataTransfer</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>0.4~0.6</volumeRange>
+        <pitchRange>0.8~1.2</pitchRange>
+        <sustainLoop>true</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- Chiral Network Malfunction -->
+  <SoundDef>
+    <defName>DeathStrandingMod_ChiralNetworkMalfunction</defName>
+    <context>MapOnly</context>
+    <eventNames>
+      <li>DeathStrandingMod_ChiralNetworkMalfunction</li>
+    </eventNames>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>ChiralNetwork/Malfunction</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>0.6~0.8</volumeRange>
+        <pitchRange>0.7~1.3</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- ==================== DIMENSIONAL SOUNDS ==================== -->
+
+  <!-- Dimensional Rift Opening -->
+  <SoundDef>
+    <defName>DeathStrandingMod_DimensionalRiftOpen</defName>
+    <context>MapOnly</context>
+    <eventNames>
+      <li>DeathStrandingMod_DimensionalRiftOpen</li>
+    </eventNames>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Dimensional/RiftOpen</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>0.7~0.9</volumeRange>
+        <pitchRange>0.6~1.4</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- Reality Distortion -->
+  <SoundDef>
+    <defName>DeathStrandingMod_RealityDistortion</defName>
+    <context>MapOnly</context>
+    <eventNames>
+      <li>DeathStrandingMod_RealityDistortion</li>
+    </eventNames>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Dimensional/RealityDistortion</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>0.5~0.7</volumeRange>
+        <pitchRange>0.5~1.5</pitchRange>
+        <sustainLoop>true</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- Voidout Warning -->
+  <SoundDef>
+    <defName>DeathStrandingMod_VoidoutWarning</defName>
+    <context>MapOnly</context>
+    <eventNames>
+      <li>DeathStrandingMod_VoidoutWarning</li>
+    </eventNames>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Dimensional/VoidoutWarning</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>0.8~1.0</volumeRange>
+        <pitchRange>0.8~1.2</pitchRange>
+        <sustainLoop>true</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- Voidout Explosion -->
+  <SoundDef>
+    <defName>DeathStrandingMod_VoidoutExplosion</defName>
+    <context>MapOnly</context>
+    <eventNames>
+      <li>DeathStrandingMod_VoidoutExplosion</li>
+    </eventNames>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Dimensional/VoidoutExplosion</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>1.0~1.0</volumeRange>
+        <pitchRange>0.9~1.1</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- ==================== DOOMS SOUNDS ==================== -->
+
+  <!-- DOOMS Vision -->
+  <SoundDef>
+    <defName>DeathStrandingMod_DOOMSVision</defName>
+    <context>MapOnly</context>
+    <eventNames>
+      <li>DeathStrandingMod_DOOMSVision</li>
+    </eventNames>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>DOOMS/Vision</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>0.4~0.6</volumeRange>
+        <pitchRange>0.8~1.2</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- DOOMS Strain -->
+  <SoundDef>
+    <defName>DeathStrandingMod_DOOMSStrain</defName>
+    <context>MapOnly</context>
+    <eventNames>
+      <li>DeathStrandingMod_DOOMSStrain</li>
+    </eventNames>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>DOOMS/Strain</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>0.3~0.5</volumeRange>
+        <pitchRange>0.9~1.1</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- DOOMS Awakening -->
+  <SoundDef>
+    <defName>DeathStrandingMod_DOOMSAwakening</defName>
+    <context>MapOnly</context>
+    <eventNames>
+      <li>DeathStrandingMod_DOOMSAwakening</li>
+    </eventNames>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>DOOMS/Awakening</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>0.6~0.8</volumeRange>
+        <pitchRange>0.7~1.3</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- ==================== EQUIPMENT SOUNDS ==================== -->
+
+  <!-- Odradek Scan -->
+  <SoundDef>
+    <defName>DeathStrandingMod_OdradekScan</defName>
+    <context>MapOnly</context>
+    <eventNames>
+      <li>DeathStrandingMod_OdradekScan</li>
+    </eventNames>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Equipment/OdradekScan</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>0.5~0.7</volumeRange>
+        <pitchRange>0.9~1.1</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- Chiral Printer Working -->
+  <SoundDef>
+    <defName>DeathStrandingMod_ChiralPrinterWorking</defName>
+    <context>MapOnly</context>
+    <eventNames>
+      <li>DeathStrandingMod_ChiralPrinterWorking</li>
+    </eventNames>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Equipment/ChiralPrinter</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>0.4~0.6</volumeRange>
+        <pitchRange>0.8~1.2</pitchRange>
+        <sustainLoop>true</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- ==================== AMBIENT SOUNDS ==================== -->
+
+  <!-- Beach Dimension Ambient -->
+  <SoundDef>
+    <defName>DeathStrandingMod_BeachAmbient</defName>
+    <context>MapOnly</context>
+    <eventNames>
+      <li>DeathStrandingMod_BeachAmbient</li>
+    </eventNames>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Ambient/BeachDimension</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>0.2~0.4</volumeRange>
+        <pitchRange>0.9~1.1</pitchRange>
+        <sustainLoop>true</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- Wasteland Wind -->
+  <SoundDef>
+    <defName>DeathStrandingMod_WastelandWind</defName>
+    <context>MapOnly</context>
+    <eventNames>
+      <li>DeathStrandingMod_WastelandWind</li>
+    </eventNames>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Ambient/WastelandWind</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>0.3~0.5</volumeRange>
+        <pitchRange>0.8~1.2</pitchRange>
+        <sustainLoop>true</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

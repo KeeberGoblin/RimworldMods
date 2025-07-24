@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- ==================== CHIRAL NETWORK WORK ASSIGNMENTS ==================== -->
+  
+  <!-- Operate Chiral Network Node -->
+  <WorkGiverDef>
+    <defName>OperateChiralNetworkNode</defName>
+    <label>operate chiral network node</label>
+    <giverClass>DeathStrandingMod.WorkGiver_OperateChiralNetworkNode</giverClass>
+    <workType>Research</workType>
+    <priorityInType>100</priorityInType>
+    <verb>operating</verb>
+    <gerund>operating chiral network node</gerund>
+    <requiredCapacities>
+      <li>Consciousness</li>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeStat>ResearchSpeed</prioritizeStat>
+  </WorkGiverDef>
+
+  <!-- Maintain Chiral Equipment -->
+  <WorkGiverDef>
+    <defName>MaintainChiralEquipment</defName>
+    <label>maintain chiral equipment</label>
+    <giverClass>DeathStrandingMod.WorkGiver_MaintainChiralEquipment</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>90</priorityInType>
+    <verb>maintaining</verb>
+    <gerund>maintaining chiral equipment</gerund>
+    <requiredCapacities>
+      <li>Consciousness</li>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeStat>WorkSpeedGlobal</prioritizeStat>
+  </WorkGiverDef>
+
+  <!-- Calibrate BT Detector -->
+  <WorkGiverDef>
+    <defName>CalibrateBTDetector</defName>
+    <label>calibrate BT detector</label>
+    <giverClass>DeathStrandingMod.WorkGiver_CalibrateBTDetector</giverClass>
+    <workType>Research</workType>
+    <priorityInType>85</priorityInType>
+    <verb>calibrating</verb>
+    <gerund>calibrating BT detector</gerund>
+    <requiredCapacities>
+      <li>Consciousness</li>
+      <li>Manipulation</li>
+      <li>Sight</li>
+    </requiredCapacities>
+    <prioritizeStat>ResearchSpeed</prioritizeStat>
+  </WorkGiverDef>
+
+  <!-- Process Chiral Crystals -->
+  <WorkGiverDef>
+    <defName>ProcessChiralCrystals</defName>
+    <label>process chiral crystals</label>
+    <giverClass>DeathStrandingMod.WorkGiver_ProcessChiralCrystals</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>80</priorityInType>
+    <verb>processing</verb>
+    <gerund>processing chiral crystals</gerund>
+    <requiredCapacities>
+      <li>Consciousness</li>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeStat>WorkSpeedGlobal</prioritizeStat>
+  </WorkGiverDef>
+
+  <!-- Monitor Dimensional Stability -->
+  <WorkGiverDef>
+    <defName>MonitorDimensionalStability</defName>
+    <label>monitor dimensional stability</label>
+    <giverClass>DeathStrandingMod.WorkGiver_MonitorDimensionalStability</giverClass>
+    <workType>Research</workType>
+    <priorityInType>75</priorityInType>
+    <verb>monitoring</verb>
+    <gerund>monitoring dimensional stability</gerund>
+    <requiredCapacities>
+      <li>Consciousness</li>
+      <li>Sight</li>
+    </requiredCapacities>
+    <prioritizeStat>ResearchSpeed</prioritizeStat>
+  </WorkGiverDef>
+
+  <!-- Align Chiral Transmitter -->
+  <WorkGiverDef>
+    <defName>AlignChiralTransmitter</defName>
+    <label>align chiral transmitter</label>
+    <giverClass>DeathStrandingMod.WorkGiver_AlignChiralTransmitter</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>70</priorityInType>
+    <verb>aligning</verb>
+    <gerund>aligning chiral transmitter</gerund>
+    <requiredCapacities>
+      <li>Consciousness</li>
+      <li>Manipulation</li>
+      <li>Sight</li>
+    </requiredCapacities>
+    <prioritizeStat>WorkSpeedGlobal</prioritizeStat>
+  </WorkGiverDef>
+
+  <!-- Harvest Timefall Residue -->
+  <WorkGiverDef>
+    <defName>HarvestTimefallResidue</defName>
+    <label>harvest timefall residue</label>
+    <giverClass>DeathStrandingMod.WorkGiver_HarvestTimefallResidue</giverClass>
+    <workType>PlantWork</workType>
+    <priorityInType>65</priorityInType>
+    <verb>harvesting</verb>
+    <gerund>harvesting timefall residue</gerund>
+    <requiredCapacities>
+      <li>Consciousness</li>
+      <li>Manipulation</li>
+      <li>Moving</li>
+    </requiredCapacities>
+    <prioritizeStat>PlantWorkSpeed</prioritizeStat>
+  </WorkGiverDef>
+
+  <!-- Synchronize Network Connection -->
+  <WorkGiverDef>
+    <defName>SynchronizeNetworkConnection</defName>
+    <label>synchronize network connection</label>
+    <giverClass>DeathStrandingMod.WorkGiver_SynchronizeNetworkConnection</giverClass>
+    <workType>Research</workType>
+    <priorityInType>60</priorityInType>
+    <verb>synchronizing</verb>
+    <gerund>synchronizing network connection</gerund>
+    <requiredCapacities>
+      <li>Consciousness</li>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeStat>ResearchSpeed</prioritizeStat>
+  </WorkGiverDef>
+
+  <!-- Purge Chiral Contamination -->
+  <WorkGiverDef>
+    <defName>PurgeChiralContamination</defName>
+    <label>purge chiral contamination</label>
+    <giverClass>DeathStrandingMod.WorkGiver_PurgeChiralContamination</giverClass>
+    <workType>Cleaning</workType>
+    <priorityInType>55</priorityInType>
+    <verb>purging</verb>
+    <gerund>purging chiral contamination</gerund>
+    <requiredCapacities>
+      <li>Consciousness</li>
+      <li>Manipulation</li>
+      <li>Moving</li>
+    </requiredCapacities>
+    <prioritizeStat>WorkSpeedGlobal</prioritizeStat>
+  </WorkGiverDef>
+
+  <!-- Upload Data Package -->
+  <WorkGiverDef>
+    <defName>UploadDataPackage</defName>
+    <label>upload data package</label>
+    <giverClass>DeathStrandingMod.WorkGiver_UploadDataPackage</giverClass>
+    <workType>Research</workType>
+    <priorityInType>50</priorityInType>
+    <verb>uploading</verb>
+    <gerund>uploading data package</gerund>
+    <requiredCapacities>
+      <li>Consciousness</li>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeStat>ResearchSpeed</prioritizeStat>
+  </WorkGiverDef>
+
+  <!-- Download Network Resources -->
+  <WorkGiverDef>
+    <defName>DownloadNetworkResources</defName>
+    <label>download network resources</label>
+    <giverClass>DeathStrandingMod.WorkGiver_DownloadNetworkResources</giverClass>
+    <workType>Research</workType>
+    <priorityInType>45</priorityInType>
+    <verb>downloading</verb>
+    <gerund>downloading network resources</gerund>
+    <requiredCapacities>
+      <li>Consciousness</li>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeStat>ResearchSpeed</prioritizeStat>
+  </WorkGiverDef>
+
+  <!-- Stabilize Dimensional Rift -->
+  <WorkGiverDef>
+    <defName>StabilizeDimensionalRift</defName>
+    <label>stabilize dimensional rift</label>
+    <giverClass>DeathStrandingMod.WorkGiver_StabilizeDimensionalRift</giverClass>
+    <workType>Research</workType>
+    <priorityInType>95</priorityInType>
+    <verb>stabilizing</verb>
+    <gerund>stabilizing dimensional rift</gerund>
+    <requiredCapacities>
+      <li>Consciousness</li>
+      <li>Manipulation</li>
+      <li>Moving</li>
+    </requiredCapacities>
+    <prioritizeStat>ResearchSpeed</prioritizeStat>
+    <emergency>true</emergency>
+  </WorkGiverDef>
+
+  <!-- Recalibrate Temporal Sensors -->
+  <WorkGiverDef>
+    <defName>RecalibrateTemporalSensors</defName>
+    <label>recalibrate temporal sensors</label>
+    <giverClass>DeathStrandingMod.WorkGiver_RecalibrateTemporalSensors</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>40</priorityInType>
+    <verb>recalibrating</verb>
+    <gerund>recalibrating temporal sensors</gerund>
+    <requiredCapacities>
+      <li>Consciousness</li>
+      <li>Manipulation</li>
+      <li>Sight</li>
+    </requiredCapacities>
+    <prioritizeStat>WorkSpeedGlobal</prioritizeStat>
+  </WorkGiverDef>
+
+  <!-- Perform DOOMS Training -->
+  <WorkGiverDef>
+    <defName>PerformDOOMSTraining</defName>
+    <label>perform DOOMS training</label>
+    <giverClass>DeathStrandingMod.WorkGiver_PerformDOOMSTraining</giverClass>
+    <workType>Research</workType>
+    <priorityInType>35</priorityInType>
+    <verb>training</verb>
+    <gerund>performing DOOMS training</gerund>
+    <requiredCapacities>
+      <li>Consciousness</li>
+      <li>Talking</li>
+    </requiredCapacities>
+    <prioritizeStat>ResearchSpeed</prioritizeStat>
+  </WorkGiverDef>
+
+  <!-- Archive Memory Data -->
+  <WorkGiverDef>
+    <defName>ArchiveMemoryData</defName>
+    <label>archive memory data</label>
+    <giverClass>DeathStrandingMod.WorkGiver_ArchiveMemoryData</giverClass>
+    <workType>Research</workType>
+    <priorityInType>30</priorityInType>
+    <verb>archiving</verb>
+    <gerund>archiving memory data</gerund>
+    <requiredCapacities>
+      <li>Consciousness</li>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeStat>ResearchSpeed</prioritizeStat>
+  </WorkGiverDef>
+
+  <!-- Emergency Voidout Prevention -->
+  <WorkGiverDef>
+    <defName>EmergencyVoidoutPrevention</defName>
+    <label>emergency voidout prevention</label>
+    <giverClass>DeathStrandingMod.WorkGiver_EmergencyVoidoutPrevention</giverClass>
+    <workType>Research</workType>
+    <priorityInType>200</priorityInType>
+    <verb>preventing</verb>
+    <gerund>preventing voidout</gerund>
+    <requiredCapacities>
+      <li>Consciousness</li>
+      <li>Manipulation</li>
+      <li>Moving</li>
+    </requiredCapacities>
+    <prioritizeStat>ResearchSpeed</prioritizeStat>
+    <emergency>true</emergency>
+  </WorkGiverDef>
+
+  <!-- Repair Chiral Network Infrastructure -->
+  <WorkGiverDef>
+    <defName>RepairChiralNetworkInfrastructure</defName>
+    <label>repair chiral network infrastructure</label>
+    <giverClass>DeathStrandingMod.WorkGiver_RepairChiralNetworkInfrastructure</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>85</priorityInType>
+    <verb>repairing</verb>
+    <gerund>repairing network infrastructure</gerund>
+    <requiredCapacities>
+      <li>Consciousness</li>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeStat>ConstructionSpeed</prioritizeStat>
+  </WorkGiverDef>
+
+</Defs>

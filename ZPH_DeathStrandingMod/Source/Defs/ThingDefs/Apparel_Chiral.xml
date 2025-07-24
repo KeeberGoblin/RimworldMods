@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- ==================== CHIRAL ARMOR AND PROTECTIVE GEAR ==================== -->
+  
+  <!-- Chiral Vest -->
+  <ThingDef ParentName="ArmorVestBase">
+    <defName>ChiralVest</defName>
+    <label>chiral vest</label>
+    <description>A protective vest woven with chiral fibers that can deflect supernatural attacks. The vest provides moderate protection against conventional weapons while offering significant resistance to dimensional and temporal damage.</description>
+    <techLevel>Spacer</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <researchPrerequisite>ChiralArmor</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/ChiralVest/ChiralVest</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costList>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <ChiralAlloy>8</ChiralAlloy>
+      <DevilstrandCloth>40</DevilstrandCloth>
+    </costList>
+    <statBases>
+      <WorkToMake>15000</WorkToMake>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Mass>2.5</Mass>
+      <Flammability>0.2</Flammability>
+      <ArmorRating_Sharp>0.65</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.35</ArmorRating_Heat>
+      <Insulation_Cold>5</Insulation_Cold>
+      <EquipDelay>3</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.05</MoveSpeed>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/ChiralVest/ChiralVest</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+      </layers>
+      <tags>
+        <li>Military</li>
+        <li>ChiralArmor</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+    <comps>
+      <li Class="DeathStrandingMod.CompProperties_ChiralProtection">
+        <protectionMultiplier>0.6</protectionMultiplier>
+        <temporalResistance>0.7</temporalResistance>
+        <realityStabilization>0.3</realityStabilization>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- Temporal Shield Belt -->
+  <ThingDef ParentName="ApparelBase">
+    <defName>TemporalShieldBelt</defName>
+    <label>temporal shield belt</label>
+    <description>An advanced energy shield that exists partially outside normal time. The belt can slow incoming projectiles and deflect temporal attacks. It requires periodic recharging with chiral crystals.</description>
+    <techLevel>Ultra</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>TemporalWeaponry</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+        <Intellectual>8</Intellectual>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/TemporalShieldBelt/TemporalShieldBelt</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costList>
+      <ComponentSpacer>6</ComponentSpacer>
+      <ChiralAlloy>12</ChiralAlloy>
+      <BeachMatter>4</BeachMatter>
+      <QuantumEntanglementDevice>2</QuantumEntanglementDevice>
+    </costList>
+    <statBases>
+      <WorkToMake>45000</WorkToMake>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Mass>1.8</Mass>
+      <Flammability>0.1</Flammability>
+      <EquipDelay>5</EquipDelay>
+    </statBases>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>Waist</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/TemporalShieldBelt/TemporalShieldBelt</wornGraphicPath>
+      <layers>
+        <li>Belt</li>
+      </layers>
+      <tags>
+        <li>Military</li>
+        <li>TemporalGear</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+    <comps>
+      <li Class="CompProperties_Shield">
+        <shieldMaxEnergy>150</shieldMaxEnergy>
+        <shieldRechargeRate>0.18</shieldRechargeRate>
+        <shieldRechargeTicks>300</shieldRechargeTicks>
+        <blocksRangedWeapons>true</blocksRangedWeapons>
+        <shieldTexPath>Other/ShieldBubble</shieldTexPath>
+      </li>
+      <li Class="DeathStrandingMod.CompProperties_TemporalShield">
+        <temporalSlowFactor>0.4</temporalSlowFactor>
+        <energyConsumptionPerBlock>15</energyConsumptionPerBlock>
+        <temporalResistance>0.9</temporalResistance>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- DOOMS Detection Helmet -->
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>DOOMSHelmet</defName>
+    <label>DOOMS detection helmet</label>
+    <description>A specialized helmet that enhances the wearer's supernatural detection abilities. While primarily designed for DOOMS carriers, it can provide anyone with limited ability to sense dimensional anomalies and BT presence.</description>
+    <techLevel>Spacer</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>ChiralArmor</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+        <Intellectual>6</Intellectual>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/DOOMSHelmet/DOOMSHelmet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costList>
+      <ComponentIndustrial>6</ComponentIndustrial>
+      <ChiralAlloy>10</ChiralAlloy>
+      <ChiralCrystal>8</ChiralCrystal>
+      <Steel>25</Steel>
+    </costList>
+    <statBases>
+      <WorkToMake>20000</WorkToMake>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Mass>1.5</Mass>
+      <Flammability>0.2</Flammability>
+      <ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.30</ArmorRating_Heat>
+      <Insulation_Cold>2</Insulation_Cold>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <PsychicSensitivity>0.25</PsychicSensitivity>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/DOOMSHelmet/DOOMSHelmet</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+        <li>Military</li>
+        <li>DOOMSGear</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+    <comps>
+      <li Class="DeathStrandingMod.CompProperties_DOOMSEnhancer">
+        <detectionRange>15.9</detectionRange>
+        <doomsAmplification>1.5</doomsAmplification>
+        <btWarningChance>0.8</btWarningChance>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- Porter Suit -->
+  <ThingDef ParentName="ApparelBase">
+    <defName>PorterSuit</defName>
+    <label>porter suit</label>
+    <description>A specialized full-body suit designed for porter expeditions across dangerous terrain. The suit provides protection against timefall, dimensional exposure, and environmental hazards while maintaining mobility for long-distance travel.</description>
+    <techLevel>Spacer</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <researchPrerequisite>PorterTechnology</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/PorterSuit/PorterSuit</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costList>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <ChiralAlloy>6</ChiralAlloy>
+      <Synthread>80</Synthread>
+      <Steel>20</Steel>
+    </costList>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Mass>3.2</Mass>
+      <Flammability>0.3</Flammability>
+      <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.60</ArmorRating_Heat>
+      <Insulation_Cold>15</Insulation_Cold>
+      <Insulation_Heat>10</Insulation_Heat>
+      <EquipDelay>8</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <CarryingCapacity>15</CarryingCapacity>
+      <MoveSpeed>0.1</MoveSpeed>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/PorterSuit/PorterSuit</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+        <li>Middle</li>
+      </layers>
+      <tags>
+        <li>PorterGear</li>
+        <li>Worker</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+    </apparel>
+    <comps>
+      <li Class="DeathStrandingMod.CompProperties_TimefallProtection">
+        <protectionEffectiveness>0.8</protectionEffectiveness>
+        <degradationResistance>0.6</degradationResistance>
+      </li>
+      <li Class="DeathStrandingMod.CompProperties_ChiralProtection">
+        <protectionMultiplier>0.4</protectionMultiplier>
+        <temporalResistance>0.5</temporalResistance>
+        <realityStabilization>0.2</realityStabilization>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- Chiral Powered Armor -->
+  <ThingDef ParentName="ApparelBase">
+    <defName>ChiralPoweredArmor</defName>
+    <label>chiral powered armor</label>
+    <description>Advanced powered armor infused with chiral technology. This full-body suit provides exceptional protection against both conventional and supernatural threats while enhancing the wearer's physical capabilities. The armor's power systems can interface with chiral networks for enhanced functionality.</description>
+    <techLevel>Ultra</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>ChiralArmor</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>15</Crafting>
+        <Intellectual>10</Intellectual>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/ChiralPoweredArmor/ChiralPoweredArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costList>
+      <ComponentSpacer>15</ComponentSpacer>
+      <ChiralAlloy>40</ChiralAlloy>
+      <BeachMatter>8</BeachMatter>
+      <QuantumEntanglementDevice>4</QuantumEntanglementDevice>
+      <Plasteel>80</Plasteel>
+    </costList>
+    <statBases>
+      <WorkToMake>80000</WorkToMake>
+      <MaxHitPoints>400</MaxHitPoints>
+      <Mass>25</Mass>
+      <Flammability>0.1</Flammability>
+      <ArmorRating_Sharp>0.90</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.80</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.75</ArmorRating_Heat>
+      <Insulation_Cold>25</Insulation_Cold>
+      <Insulation_Heat>20</Insulation_Heat>
+      <EquipDelay>15</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <CarryingCapacity>35</CarryingCapacity>
+      <MoveSpeed>0.2</MoveSpeed>
+      <ShootingAccuracyPawn>5</ShootingAccuracyPawn>
+      <MeleeHitChance>3</MeleeHitChance>
+      <PsychicSensitivity>0.3</PsychicSensitivity>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/ChiralPoweredArmor/ChiralPoweredArmor</wornGraphicPath>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>Military</li>
+        <li>ChiralArmor</li>
+        <li>PoweredArmor</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+    <comps>
+      <li Class="CompProperties_Reloadable">
+        <maxCharges>100</maxCharges>
+        <ammoDef>ChiralCrystal</ammoDef>
+        <ammoCountPerCharge>1</ammoCountPerCharge>
+        <baseReloadTicks>600</baseReloadTicks>
+        <soundReload>Standard_Reload</soundReload>
+        <hotKey>Misc4</hotKey>
+        <chargeNoun>power</chargeNoun>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+      </li>
+      <li Class="DeathStrandingMod.CompProperties_ChiralProtection">
+        <protectionMultiplier>0.9</protectionMultiplier>
+        <temporalResistance>0.95</temporalResistance>
+        <realityStabilization>0.8</realityStabilization>
+      </li>
+      <li Class="DeathStrandingMod.CompProperties_PoweredArmor">
+        <strengthBonus>2</strengthBonus>
+        <speedBonus>0.2</speedBonus>
+        <carryingBonus>35</carryingBonus>
+        <sensorRange>25.9</sensorRange>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

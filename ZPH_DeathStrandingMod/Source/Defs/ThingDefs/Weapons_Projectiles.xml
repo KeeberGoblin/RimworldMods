@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- ==================== PROJECTILE DEFINITIONS ==================== -->
+  
+  <!-- Chiral Rifle Bullet -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_ChiralRifle</defName>
+    <label>chiral bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(100,200,255)</color>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>25</damageAmountBase>
+      <speed>70</speed>
+      <stoppingPower>1.5</stoppingPower>
+      <armorPenetrationBase>0.35</armorPenetrationBase>
+    </projectile>
+    <comps>
+      <li Class="DeathStrandingMod.CompProperties_ProjectileChiral">
+        <chiralDamageMultiplier>2.5</chiralDamageMultiplier>
+        <btDamageMultiplier>3.0</btDamageMultiplier>
+        <realityStabilization>0.2</realityStabilization>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- Chiral Pistol Bullet -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_ChiralPistol</defName>
+    <label>chiral pistol bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(100,200,255)</color>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>18</damageAmountBase>
+      <speed>55</speed>
+      <stoppingPower>1.0</stoppingPower>
+      <armorPenetrationBase>0.25</armorPenetrationBase>
+    </projectile>
+    <comps>
+      <li Class="DeathStrandingMod.CompProperties_ProjectileChiral">
+        <chiralDamageMultiplier>2.0</chiralDamageMultiplier>
+        <btDamageMultiplier>2.5</btDamageMultiplier>
+        <realityStabilization>0.15</realityStabilization>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- Temporal Disruptor Projectile -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Projectile_TemporalDisruptor</defName>
+    <label>temporal disruption wave</label>
+    <graphicData>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(255,100,255)</color>
+    </graphicData>
+    <projectile>
+      <damageDef>TemporalDisruption</damageDef>
+      <damageAmountBase>30</damageAmountBase>
+      <speed>45</speed>
+      <stoppingPower>2.0</stoppingPower>
+      <armorPenetrationBase>0.60</armorPenetrationBase>
+      <explosionRadius>3.9</explosionRadius>
+      <explosionDelay>0</explosionDelay>
+      <flyOverhead>false</flyOverhead>
+    </projectile>
+    <comps>
+      <li Class="DeathStrandingMod.CompProperties_ProjectileTemporal">
+        <temporalSlowFactor>0.3</temporalSlowFactor>
+        <temporalDuration>180</temporalDuration>
+        <agingEffect>0.1</agingEffect>
+        <realityDistortion>0.5</realityDistortion>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- Reality Stabilizer Projectile -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Projectile_RealityStabilizer</defName>
+    <label>stabilization field</label>
+    <graphicData>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(200,255,200)</color>
+    </graphicData>
+    <projectile>
+      <damageDef>RealityStabilization</damageDef>
+      <damageAmountBase>15</damageAmountBase>
+      <speed>30</speed>
+      <stoppingPower>0.5</stoppingPower>
+      <armorPenetrationBase>0.10</armorPenetrationBase>
+      <explosionRadius>6.9</explosionRadius>
+      <explosionDelay>30</explosionDelay>
+      <flyOverhead>false</flyOverhead>
+    </projectile>
+    <comps>
+      <li Class="DeathStrandingMod.CompProperties_ProjectileStabilizer">
+        <stabilizationRadius>8.9</stabilizationRadius>
+        <stabilizationStrength>0.8</stabilizationStrength>
+        <stabilizationDuration>600</stabilizationDuration>
+        <btBanishmentChance>0.7</btBanishmentChance>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- ==================== DAMAGE DEFINITIONS ==================== -->
+  
+  <DamageDef>
+    <defName>TemporalDisruption</defName>
+    <label>temporal disruption</label>
+    <workerClass>DeathStrandingMod.DamageWorkers.DamageWorker_TemporalDisruption</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} was torn apart by temporal forces.</deathMessage>
+    <hediff>TemporalDisruption</hediff>
+    <hediffLayerSolid>true</hediffLayerSolid>
+    <canInterruptJobs>true</canInterruptJobs>
+    <makesBlood>false</makesBlood>
+    <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+    <buildingDamageFactor>0.5</buildingDamageFactor>
+    <plantDamageFactor>2.0</plantDamageFactor>
+    <bluntInnerHitChance>0.1</bluntInnerHitChance>
+    <harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
+    <impactSoundType>Bullet</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+  </DamageDef>
+
+  <DamageDef>
+    <defName>RealityStabilization</defName>
+    <label>reality stabilization</label>
+    <workerClass>DeathStrandingMod.DamageWorkers.DamageWorker_RealityStabilization</workerClass>
+    <externalViolence>false</externalViolence>
+    <deathMessage>{0} was stabilized out of existence.</deathMessage>
+    <hediff>RealityStabilization</hediff>
+    <hediffLayerSolid>false</hediffLayerSolid>
+    <canInterruptJobs>true</canInterruptJobs>
+    <makesBlood>false</makesBlood>
+    <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+    <buildingDamageFactor>0.1</buildingDamageFactor>
+    <plantDamageFactor>0.1</plantDamageFactor>
+    <bluntInnerHitChance>0</bluntInnerHitChance>
+    <harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
+    <impactSoundType>Bullet</impactSoundType>
+    <armorCategory>Heat</armorCategory>
+  </DamageDef>
+
+</Defs>

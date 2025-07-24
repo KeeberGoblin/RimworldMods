@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- ==================== DOOMS LEVEL 5 ABILITIES ==================== -->
+  
+  <!-- BT Detection Scan -->
+  <AbilityDef>
+    <defName>DOOMSSense_Level5</defName>
+    <label>DOOMS sense</label>
+    <description>Focus supernatural senses to detect Beach Things in a wide area. This ability reveals the location of all BTs within range and provides brief visions of their threat level.</description>
+    <iconPath>UI/Icons/Abilities/DOOMSSense</iconPath>
+    <category>DOOMS</category>
+    <displayOrder>1</displayOrder>
+    <cooldownTicksRange>3600~4800</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>false</targetRequired>
+    <canUseAoeTooltip>false</canUseAoeTooltip>
+    <statBases>
+      <Ability_Duration>180</Ability_Duration>
+      <Ability_Range>50</Ability_Range>
+      <Ability_EffectRadius>50</Ability_EffectRadius>
+    </statBases>
+    <verbProperties>
+      <verbClass>DeathStrandingMod.Abilities.Verb_DOOMSSense</verbClass>
+      <label>DOOMS sense</label>
+      <range>0.9</range>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+      <warmupTime>60</warmupTime>
+      <defaultCooldownTime>3600</defaultCooldownTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <soundLanding>PsycastPsychicPulseGlobal</soundLanding>
+      <targetingParameters>
+        <canTargetSelf>true</canTargetSelf>
+      </targetingParameters>
+    </verbProperties>
+    <comps>
+      <li Class="DeathStrandingMod.CompProperties_AbilityDOOMSSense">
+        <detectionRadius>50.9</detectionRadius>
+        <durationTicks>180</durationTicks>
+        <showThreatLevel>true</showThreatLevel>
+        <providesVisions>true</providesVisions>
+      </li>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <hediffDef>DOOMSSensing</hediffDef>
+        <target>Caster</target>
+        <duration>180</duration>
+        <severity>1.0</severity>
+      </li>
+    </comps>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+  </AbilityDef>
+
+  <!-- Precognitive Vision -->
+  <AbilityDef>
+    <defName>DOOMSVision_Level5</defName>
+    <label>precognitive vision</label>
+    <description>Experience a powerful vision of future events. This ability can reveal incoming threats, identify safe paths, or provide warnings about potential disasters.</description>
+    <iconPath>UI/Icons/Abilities/DOOMSVision</iconPath>
+    <category>DOOMS</category>
+    <displayOrder>2</displayOrder>
+    <cooldownTicksRange>7200~9600</cooldownTicksRange>
+    <aiCanUse>false</aiCanUse>
+    <targetRequired>false</targetRequired>
+    <canUseAoeTooltip>false</canUseAoeTooltip>
+    <statBases>
+      <Ability_Duration>300</Ability_Duration>
+    </statBases>
+    <verbProperties>
+      <verbClass>DeathStrandingMod.Abilities.Verb_DOOMSVision</verbClass>
+      <label>precognitive vision</label>
+      <range>0.9</range>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+      <warmupTime>120</warmupTime>
+      <defaultCooldownTime>7200</defaultCooldownTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <soundLanding>PsycastPsychicPulseGlobal</soundLanding>
+      <targetingParameters>
+        <canTargetSelf>true</canTargetSelf>
+      </targetingParameters>
+    </verbProperties>
+    <comps>
+      <li Class="DeathStrandingMod.CompProperties_AbilityDOOMSVision">
+        <visionTypes>
+          <li>IncomingThreat</li>
+          <li>SafePath</li>
+          <li>ResourceLocation</li>
+          <li>WeatherWarning</li>
+        </visionTypes>
+        <accuracyFactor>0.8</accuracyFactor>
+        <maxPredictionDays>3</maxPredictionDays>
+      </li>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <hediffDef>DOOMSVisionStrain</hediffDef>
+        <target>Caster</target>
+        <duration>1800</duration>
+        <severity>0.5</severity>
+      </li>
+    </comps>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+  </AbilityDef>
+
+  <!-- Reality Anchor -->
+  <AbilityDef>
+    <defName>DOOMSAnchor_Level5</defName>
+    <label>reality anchor</label>
+    <description>Use DOOMS abilities to stabilize reality in the surrounding area, preventing dimensional distortions and reducing the likelihood of BT manifestations.</description>
+    <iconPath>UI/Icons/Abilities/DOOMSAnchor</iconPath>
+    <category>DOOMS</category>
+    <displayOrder>3</displayOrder>
+    <cooldownTicksRange>1800~2400</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <canUseAoeTooltip>true</canUseAoeTooltip>
+    <statBases>
+      <Ability_Duration>1800</Ability_Duration>
+      <Ability_Range>25</Ability_Range>
+      <Ability_EffectRadius>15</Ability_EffectRadius>
+    </statBases>
+    <verbProperties>
+      <verbClass>DeathStrandingMod.Abilities.Verb_DOOMSAnchor</verbClass>
+      <label>reality anchor</label>
+      <range>25.9</range>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+      <warmupTime>180</warmupTime>
+      <defaultCooldownTime>1800</defaultCooldownTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <soundLanding>PsycastPsychicPulseGlobal</soundLanding>
+      <targetingParameters>
+        <canTargetLocations>true</canTargetLocations>
+      </targetingParameters>
+    </verbProperties>
+    <comps>
+      <li Class="DeathStrandingMod.CompProperties_AbilityRealityAnchor">
+        <anchorRadius>15.9</anchorRadius>
+        <anchorDuration>1800</anchorDuration>
+        <stabilizationStrength>0.8</stabilizationStrength>
+        <btManifestationReduction>0.6</btManifestationReduction>
+        <realityDistortionPrevention>0.7</realityDistortionPrevention>
+      </li>
+    </comps>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+  </AbilityDef>
+
+  <!-- Timefall Warning -->
+  <AbilityDef>
+    <defName>DOOMSTimefallWarning_Level5</defName>
+    <label>timefall warning</label>
+    <description>Sense approaching timefall storms and warn the colony. This ability provides advance notice of temporal precipitation, allowing time to seek shelter.</description>
+    <iconPath>UI/Icons/Abilities/DOOMSTimefallWarning</iconPath>
+    <category>DOOMS</category>
+    <displayOrder>4</displayOrder>
+    <cooldownTicksRange>600~1200</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>false</targetRequired>
+    <canUseAoeTooltip>false</canUseAoeTooltip>
+    <statBases>
+      <Ability_Range>200</Ability_Range>
+    </statBases>
+    <verbProperties>
+      <verbClass>DeathStrandingMod.Abilities.Verb_DOOMSTimefallWarning</verbClass>
+      <label>timefall warning</label>
+      <range>0.9</range>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+      <warmupTime>30</warmupTime>
+      <defaultCooldownTime>600</defaultCooldownTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <targetingParameters>
+        <canTargetSelf>true</canTargetSelf>
+      </targetingParameters>
+    </verbProperties>
+    <comps>
+      <li Class="DeathStrandingMod.CompProperties_AbilityTimefallWarning">
+        <detectionRange>200.9</detectionRange>
+        <warningAdvanceTime>3600</warningAdvanceTime>
+        <accuracyFactor>0.9</accuracyFactor>
+        <sendsColonyMessage>true</sendsColonyMessage>
+      </li>
+    </comps>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+  </AbilityDef>
+
+  <!-- BT Pacification -->
+  <AbilityDef>
+    <defName>DOOMSPacify_Level5</defName>
+    <label>BT pacification</label>
+    <description>Attempt to calm and pacify nearby Beach Things through supernatural connection. This ability can temporarily make BTs non-hostile, though the effect is unpredictable.</description>
+    <iconPath>UI/Icons/Abilities/DOOMSPacify</iconPath>
+    <category>DOOMS</category>
+    <displayOrder>5</displayOrder>
+    <cooldownTicksRange>2400~3600</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <canUseAoeTooltip>true</canUseAoeTooltip>
+    <statBases>
+      <Ability_Duration>600</Ability_Duration>
+      <Ability_Range>20</Ability_Range>
+      <Ability_EffectRadius>10</Ability_EffectRadius>
+    </statBases>
+    <verbProperties>
+      <verbClass>DeathStrandingMod.Abilities.Verb_DOOMSPacify</verbClass>
+      <label>BT pacification</label>
+      <range>20.9</range>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+      <warmupTime>150</warmupTime>
+      <defaultCooldownTime>2400</defaultCooldownTime>
+      <soundCast>PsycastPsychicEffect</soundCast>
+      <soundLanding>PsycastPsychicPulseGlobal</soundLanding>
+      <targetingParameters>
+        <canTargetPawns>true</canTargetPawns>
+        <mustBeHostile>true</mustBeHostile>
+      </targetingParameters>
+    </verbProperties>
+    <comps>
+      <li Class="DeathStrandingMod.CompProperties_AbilityBTPacify">
+        <pacificationRadius>10.9</pacificationRadius>
+        <pacificationDuration>600</pacificationDuration>
+        <successChance>0.7</successChance>
+        <onlyAffectsBTs>true</onlyAffectsBTs>
+        <backfireChance>0.2</backfireChance>
+      </li>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <hediffDef>DOOMSExhaustion</hediffDef>
+        <target>Caster</target>
+        <duration>3600</duration>
+        <severity>0.3</severity>
+      </li>
+    </comps>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+  </AbilityDef>
+
+</Defs>

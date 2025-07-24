@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- ==================== DOOMS-RELATED CONDITIONS ==================== -->
+  
+  <!-- DOOMS Sensing Active -->
+  <HediffDef>
+    <defName>DOOMSSensing</defName>
+    <label>DOOMS sensing</label>
+    <description>This person is actively using their DOOMS abilities to sense supernatural phenomena. Their perception is heightened, but they experience mental strain from processing dimensional information.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.8, 1.0)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <tendable>false</tendable>
+    <chronic>false</chronic>
+    <stages>
+      <li>
+        <statOffsets>
+          <PsychicSensitivity>0.5</PsychicSensitivity>
+          <ShootingAccuracyPawn>3</ShootingAccuracyPawn>
+          <MeleeHitChance>2</MeleeHitChance>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.3</offset>
+          </li>
+          <li>
+            <capacity>Hearing</capacity>
+            <offset>0.2</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-8.0</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- DOOMS Vision Strain -->
+  <HediffDef>
+    <defName>DOOMSVisionStrain</defName>
+    <label>vision strain</label>
+    <description>The mental effort of processing precognitive visions has caused severe strain. The person experiences headaches, confusion, and difficulty focusing on immediate tasks.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.4, 0.4)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <tendable>true</tendable>
+    <chronic>false</chronic>
+    <stages>
+      <li>
+        <painOffset>0.2</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.3</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <WorkSpeedGlobal>-0.3</WorkSpeedGlobal>
+          <MentalBreakThreshold>0.1</MentalBreakThreshold>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.5</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>12</baseTendDurationHours>
+        <severityPerDayTended>-1.0</severityPerDayTended>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- DOOMS Severe Strain -->
+  <HediffDef>
+    <defName>DOOMSSevereStrain</defName>
+    <label>severe DOOMS strain</label>
+    <description>Intensive use of advanced DOOMS abilities has caused severe mental and physical strain. The person's nervous system is overloaded from processing multidimensional information.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.9, 0.2, 0.2)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <tendable>true</tendable>
+    <chronic>false</chronic>
+    <stages>
+      <li>
+        <painOffset>0.4</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.4</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.3</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <WorkSpeedGlobal>-0.6</WorkSpeedGlobal>
+          <MentalBreakThreshold>0.3</MentalBreakThreshold>
+        </statOffsets>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Sad</mentalState>
+            <mtbDays>3</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.15</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>8</baseTendDurationHours>
+        <severityPerDayTended>-0.3</severityPerDayTended>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- DOOMS Exhaustion -->
+  <HediffDef>
+    <defName>DOOMSExhaustion</defName>
+    <label>DOOMS exhaustion</label>
+    <description>Using DOOMS abilities has drained this person's supernatural reserves. They feel mentally and spiritually exhausted, requiring rest before they can use their abilities effectively again.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.6, 0.8)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <tendable>false</tendable>
+    <chronic>false</chronic>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <PsychicSensitivity>-0.3</PsychicSensitivity>
+          <WorkSpeedGlobal>-0.2</WorkSpeedGlobal>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.3</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- DOOMS Command Strain -->
+  <HediffDef>
+    <defName>DOOMSCommandStrain</defName>
+    <label>command strain</label>
+    <description>Attempting to control Beach Things has put enormous stress on this person's mind. The effort of imposing their will on supernatural entities has left them mentally drained and vulnerable.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.7, 0.3, 0.7)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <tendable>true</tendable>
+    <chronic>false</chronic>
+    <stages>
+      <li>
+        <painOffset>0.3</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.3</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.2</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <PsychicSensitivity>-0.2</PsychicSensitivity>
+          <MentalBreakThreshold>0.2</MentalBreakThreshold>
+          <WorkSpeedGlobal>-0.4</WorkSpeedGlobal>
+        </statOffsets>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>5</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.2</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>6</baseTendDurationHours>
+        <severityPerDayTended>-0.4</severityPerDayTended>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- DOOMS Temporal Strain -->
+  <HediffDef>
+    <defName>DOOMSTemporalStrain</defName>
+    <label>temporal strain</label>
+    <description>Perceiving across time has caused temporal displacement syndrome. The person exists slightly out of phase with normal time, causing disorientation and difficulty interacting with the present moment.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.6, 1.0)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <tendable>true</tendable>
+    <chronic>false</chronic>
+    <stages>
+      <li>
+        <painOffset>0.2</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.25</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.3</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.2</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <WorkSpeedGlobal>-0.5</WorkSpeedGlobal>
+          <MentalBreakThreshold>0.15</MentalBreakThreshold>
+        </statOffsets>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Sad</mentalState>
+            <mtbDays>4</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.08</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>24</baseTendDurationHours>
+        <severityPerDayTended>-0.2</severityPerDayTended>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- DOOMS Reality Strain -->
+  <HediffDef>
+    <defName>DOOMSRealityStrain</defName>
+    <label>reality strain</label>
+    <description>Manipulating reality itself has caused severe psychological stress. The person struggles to distinguish between what they've altered and what is naturally occurring, leading to confusion and paranoia.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.4, 0.8)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <tendable>true</tendable>
+    <chronic>false</chronic>
+    <stages>
+      <li>
+        <painOffset>0.35</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.4</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.3</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <WorkSpeedGlobal>-0.6</WorkSpeedGlobal>
+          <MentalBreakThreshold>0.4</MentalBreakThreshold>
+        </statOffsets>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>2</mtbDays>
+          </li>
+          <li>
+            <mentalState>Berserk</mentalState>
+            <mtbDays>10</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.05</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>12</baseTendDurationHours>
+        <severityPerDayTended>-0.15</severityPerDayTended>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- DOOMS Beach Connection -->
+  <HediffDef>
+    <defName>DOOMSBeachConnection</defName>
+    <label>Beach connection</label>
+    <description>This person is actively connected to the Beach dimension, receiving knowledge and insights from beyond. While informative, the connection is dangerous and may attract unwanted supernatural attention.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.3, 0.6, 1.0)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <tendable>false</tendable>
+    <chronic>false</chronic>
+    <stages>
+      <li>
+        <statOffsets>
+          <PsychicSensitivity>1.0</PsychicSensitivity>
+          <ResearchSpeed>0.5</ResearchSpeed>
+          <NegotiationAbility>0.3</NegotiationAbility>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.2</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1.0</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+      <li Class="DeathStrandingMod.HediffCompProperties_BeachConnection">
+        <attractsBTs>true</attractsBTs>
+        <attractionRadius>50.9</attractionRadius>
+        <knowledgeGainChance>0.6</knowledgeGainChance>
+        <madnessRisk>0.3</madnessRisk>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- DOOMS Voidout Backlash -->
+  <HediffDef>
+    <defName>DOOMSVoidoutBacklash</defName>
+    <label>voidout backlash</label>
+    <description>Creating a voidout has severely damaged this person's connection to reality. They exist in constant pain as their body tries to process the trauma of annihilating matter and space.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.1, 0.1, 0.1)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <tendable>true</tendable>
+    <chronic>false</chronic>
+    <lethalSeverity>1.0</lethalSeverity>
+    <stages>
+      <li>
+        <painOffset>0.8</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.6</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.5</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.4</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.6</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <WorkSpeedGlobal>-0.9</WorkSpeedGlobal>
+          <MentalBreakThreshold>0.8</MentalBreakThreshold>
+        </statOffsets>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Catatonic</mentalState>
+            <mtbDays>1</mtbDays>
+          </li>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>0.5</mtbDays>
+          </li>
+        </mentalStateGivers>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>Heart_Attack</hediff>
+            <mtbDays>5</mtbDays>
+          </li>
+        </hediffGivers>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.02</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>4</baseTendDurationHours>
+        <severityPerDayTended>-0.05</severityPerDayTended>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- DOOMS Summoning Strain -->
+  <HediffDef>
+    <defName>DOOMSSummoningStrain</defName>
+    <label>summoning strain</label>
+    <description>Summoning and controlling multiple Beach Things has exhausted this person's supernatural reserves. They feel hollow and drained, as if part of their essence was used to fuel the manifestation.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.5, 0.3, 0.8)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <tendable>true</tendable>
+    <chronic>false</chronic>
+    <stages>
+      <li>
+        <painOffset>0.4</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.5</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.3</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <PsychicSensitivity>-0.5</PsychicSensitivity>
+          <WorkSpeedGlobal>-0.7</WorkSpeedGlobal>
+          <MentalBreakThreshold>0.3</MentalBreakThreshold>
+        </statOffsets>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Sad</mentalState>
+            <mtbDays>2</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.06</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>8</baseTendDurationHours>
+        <severityPerDayTended>-0.15</severityPerDayTended>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- DOOMS Dimensional Tear -->
+  <HediffDef>
+    <defName>DOOMSDimensionalTear</defName>
+    <label>dimensional tear</label>
+    <description>Creating a bridge between dimensions has torn this person's consciousness across multiple realities. They exist partially in each dimension, causing extreme disorientation and making normal life nearly impossible.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.2, 0.8, 0.9)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <tendable>true</tendable>
+    <chronic>false</chronic>
+    <stages>
+      <li>
+        <painOffset>0.6</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.7</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.4</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.5</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.7</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <WorkSpeedGlobal>-0.8</WorkSpeedGlobal>
+          <MentalBreakThreshold>0.6</MentalBreakThreshold>
+        </statOffsets>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>1</mtbDays>
+          </li>
+          <li>
+            <mentalState>Catatonic</mentalState>
+            <mtbDays>3</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.02</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>6</baseTendDurationHours>
+        <severityPerDayTended>-0.08</severityPerDayTended>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- DOOMS Omniscient Strain -->
+  <HediffDef>
+    <defName>DOOMSOmniscientStrain</defName>
+    <label>omniscient strain</label>
+    <description>Experiencing omniscience has fundamentally changed this person's perception of reality. They struggle to focus on mundane concerns when they have glimpsed the true nature of existence across all dimensions and times.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 1.0, 0.8)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <tendable>false</tendable>
+    <chronic>false</chronic>
+    <lethalSeverity>1.0</lethalSeverity>
+    <stages>
+      <li>
+        <painOffset>0.5</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.8</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.6</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.7</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.9</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <WorkSpeedGlobal>-0.95</WorkSpeedGlobal>
+          <MentalBreakThreshold>1.0</MentalBreakThreshold>
+        </statOffsets>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Catatonic</mentalState>
+            <mtbDays>0.5</mtbDays>
+          </li>
+        </mentalStateGivers>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>Heart_Attack</hediff>
+            <mtbDays>3</mtbDays>
+          </li>
+          <li Class="HediffGiver_Random">
+            <hediff>Stroke</hediff>
+            <mtbDays>5</mtbDays>
+          </li>
+        </hediffGivers>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.01</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- DOOMS Higgs Strain -->
+  <HediffDef>
+    <defName>DOOMSHiggsStrain</defName>
+    <label>Higgs strain</label>
+    <description>Manipulating the fundamental forces of reality has put enormous stress on this person's body and mind. They feel the weight of altered physics and struggle to exist in normal space-time.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.5, 1.0)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <tendable>true</tendable>
+    <chronic>false</chronic>
+    <stages>
+      <li>
+        <painOffset>0.3</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.3</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.4</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.2</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <WorkSpeedGlobal>-0.5</WorkSpeedGlobal>
+          <MentalBreakThreshold>0.2</MentalBreakThreshold>
+        </statOffsets>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Sad</mentalState>
+            <mtbDays>3</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.04</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>12</baseTendDurationHours>
+        <severityPerDayTended>-0.1</severityPerDayTended>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- Chaphobia (Rain Fear) -->
+  <HediffDef>
+    <defName>Chaphobia</defName>
+    <label>chaphobia</label>
+    <description>An overwhelming fear of rain, common among DOOMS carriers. This person experiences severe anxiety and panic when exposed to precipitation, especially timefall. The fear is rooted in their supernatural connection to the Beach dimension.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.4, 0.4, 0.6)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <tendable>false</tendable>
+    <chronic>true</chronic>
+    <stages>
+      <li>
+        <label>mild</label>
+        <minSeverity>0.01</minSeverity>
+        <statOffsets>
+          <MentalBreakThreshold>0.05</MentalBreakThreshold>
+        </statOffsets>
+        <conditionalStatAffecters>
+          <li Class="DeathStrandingMod.ConditionalStatAffector_Raining">
+            <statDef>MoveSpeed</statDef>
+            <offset>-0.1</offset>
+          </li>
+          <li Class="DeathStrandingMod.ConditionalStatAffector_Raining">
+            <statDef>MentalBreakThreshold</statDef>
+            <offset>0.1</offset>
+          </li>
+        </conditionalStatAffecters>
+      </li>
+      <li>
+        <label>moderate</label>
+        <minSeverity>0.3</minSeverity>
+        <statOffsets>
+          <MentalBreakThreshold>0.1</MentalBreakThreshold>
+        </statOffsets>
+        <conditionalStatAffecters>
+          <li Class="DeathStrandingMod.ConditionalStatAffector_Raining">
+            <statDef>MoveSpeed</statDef>
+            <offset>-0.2</offset>
+          </li>
+          <li Class="DeathStrandingMod.ConditionalStatAffector_Raining">
+            <statDef>MentalBreakThreshold</statDef>
+            <offset>0.2</offset>
+          </li>
+          <li Class="DeathStrandingMod.ConditionalStatAffector_Raining">
+            <statDef>WorkSpeedGlobal</statDef>
+            <offset>-0.15</offset>
+          </li>
+        </conditionalStatAffecters>
+        <mentalStateGivers>
+          <li>
+            <mentalState>PanicFlee</mentalState>
+            <mtbDays>10</mtbDays>
+            <onlyIfCauseIs>Weather</onlyIfCauseIs>
+          </li>
+        </mentalStateGivers>
+      </li>
+      <li>
+        <label>severe</label>
+        <minSeverity>0.6</minSeverity>
+        <statOffsets>
+          <MentalBreakThreshold>0.2</MentalBreakThreshold>
+        </statOffsets>
+        <conditionalStatAffecters>
+          <li Class="DeathStrandingMod.ConditionalStatAffector_Raining">
+            <statDef>MoveSpeed</statDef>
+            <offset>-0.4</offset>
+          </li>
+          <li Class="DeathStrandingMod.ConditionalStatAffector_Raining">
+            <statDef>MentalBreakThreshold</statDef>
+            <offset>0.4</offset>
+          </li>
+          <li Class="DeathStrandingMod.ConditionalStatAffector_Raining">
+            <statDef>WorkSpeedGlobal</statDef>
+            <offset>-0.3</offset>
+          </li>
+        </conditionalStatAffecters>
+        <mentalStateGivers>
+          <li>
+            <mentalState>PanicFlee</mentalState>
+            <mtbDays>3</mtbDays>
+            <onlyIfCauseIs>Weather</onlyIfCauseIs>
+          </li>
+          <li>
+            <mentalState>Hide</mentalState>
+            <mtbDays>5</mtbDays>
+            <onlyIfCauseIs>Weather</onlyIfCauseIs>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>0</severityPerDay>
+      </li>
+    </comps>
+  </HediffDef>
+
+</Defs>

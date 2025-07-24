@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- ==================== MELEE WEAPONS ==================== -->
+  
+  <!-- Chiral Blade -->
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>ChiralBlade</defName>
+    <label>chiral blade</label>
+    <description>A sword forged with chiral alloy that exists partially in both dimensions. The blade can cut through supernatural entities and disrupt dimensional barriers. Its edge shimmers with otherworldly energy.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/ChiralBlade</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconPath>Things/Item/Equipment/WeaponMelee/ChiralBlade</uiIconPath>
+    <weaponTags>
+      <li>ChiralWeapon</li>
+      <li>MedievalMeleeAdvanced</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>Melee</li>
+      <li>MeleePiercer</li>
+    </weaponClasses>
+    <costList>
+      <Steel>40</Steel>
+      <ChiralAlloy>15</ChiralAlloy>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <WorkToMake>18000</WorkToMake>
+      <Mass>2.0</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.15</MoveSpeed>
+    </equippedStatOffsets>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2.0</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>22</power>
+        <cooldownTime>2.0</cooldownTime>
+        <armorPenetration>0.35</armorPenetration>
+        <chanceFactor>1.33</chanceFactor>
+        <extraMeleeDamages>
+          <li>
+            <def>ChiralSlash</def>
+            <amount>5</amount>
+            <chance>0.3</chance>
+          </li>
+        </extraMeleeDamages>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>20</power>
+        <cooldownTime>2.0</cooldownTime>
+        <armorPenetration>0.30</armorPenetration>
+        <chanceFactor>1.33</chanceFactor>
+        <extraMeleeDamages>
+          <li>
+            <def>ChiralSlash</def>
+            <amount>5</amount>
+            <chance>0.3</chance>
+          </li>
+        </extraMeleeDamages>
+      </li>
+    </tools>
+    <recipeMaker>
+      <researchPrerequisite>ChiralWeaponry</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+
+  <!-- Temporal Hammer -->
+  <ThingDef ParentName="BaseMeleeWeapon_Blunt_Quality">
+    <defName>TemporalHammer</defName>
+    <label>temporal hammer</label>
+    <description>A massive war hammer infused with temporal energy. Each strike can age targets or slow their movement through time distortion. The weapon hums with chronological power and requires great strength to wield effectively.</description>
+    <techLevel>Ultra</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/TemporalHammer</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconPath>Things/Item/Equipment/WeaponMelee/TemporalHammer</uiIconPath>
+    <weaponTags>
+      <li>ChiralWeapon</li>
+      <li>TemporalWeapon</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>Melee</li>
+      <li>MeleeBlunt</li>
+    </weaponClasses>
+    <costList>
+      <Steel>60</Steel>
+      <ChiralAlloy>20</ChiralAlloy>
+      <BeachMatter>3</BeachMatter>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <statBases>
+      <WorkToMake>35000</WorkToMake>
+      <Mass>4.5</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.25</MoveSpeed>
+    </equippedStatOffsets>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>35</power>
+        <cooldownTime>3.5</cooldownTime>
+        <armorPenetration>0.45</armorPenetration>
+        <chanceFactor>0.8</chanceFactor>
+        <extraMeleeDamages>
+          <li>
+            <def>TemporalShock</def>
+            <amount>8</amount>
+            <chance>0.4</chance>
+          </li>
+        </extraMeleeDamages>
+      </li>
+    </tools>
+    <recipeMaker>
+      <researchPrerequisite>TemporalWeaponry</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+
+  <!-- Reality Anchor Staff -->
+  <ThingDef ParentName="BaseMeleeWeapon_Blunt_Quality">
+    <defName>RealityAnchorStaff</defName>
+    <label>reality anchor staff</label>
+    <description>A ceremonial staff topped with concentrated beach matter that can anchor reality in the surrounding area. While not primarily a weapon, it can disrupt dimensional entities and provides mental stability to the wielder.</description>
+    <techLevel>Ultra</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/RealityAnchorStaff</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconPath>Things/Item/Equipment/WeaponMelee/RealityAnchorStaff</uiIconPath>
+    <weaponTags>
+      <li>ChiralWeapon</li>
+      <li>RealityWeapon</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>Melee</li>
+      <li>MeleeBlunt</li>
+    </weaponClasses>
+    <costList>
+      <WoodLog>30</WoodLog>
+      <ChiralAlloy>8</ChiralAlloy>
+      <BeachMatter>5</BeachMatter>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <statBases>
+      <WorkToMake>25000</WorkToMake>
+      <Mass>2.8</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <PsychicSensitivity>0.2</PsychicSensitivity>
+      <MentalBreakThreshold>-0.1</MentalBreakThreshold>
+    </equippedStatOffsets>
+    <tools>
+      <li>
+        <label>shaft</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2.2</cooldownTime>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>18</power>
+        <cooldownTime>2.8</cooldownTime>
+        <armorPenetration>0.25</armorPenetration>
+        <chanceFactor>1.1</chanceFactor>
+        <extraMeleeDamages>
+          <li>
+            <def>RealityStabilization</def>
+            <amount>6</amount>
+            <chance>0.25</chance>
+          </li>
+        </extraMeleeDamages>
+      </li>
+    </tools>
+    <recipeMaker>
+      <researchPrerequisite>RealityManipulation</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+        <Intellectual>8</Intellectual>
+      </skillRequirements>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+
+  <!-- ==================== MELEE DAMAGE TYPES ==================== -->
+  
+  <DamageDef>
+    <defName>ChiralSlash</defName>
+    <label>chiral slash</label>
+    <workerClass>DeathStrandingMod.DamageWorkers.DamageWorker_ChiralSlash</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} was sliced by chiral energy.</deathMessage>
+    <hediff>ChiralSlash</hediff>
+    <hediffLayerSolid>true</hediffLayerSolid>
+    <canInterruptJobs>true</canInterruptJobs>
+    <makesBlood>true</makesBlood>
+    <canUseDeflectMetalEffect>true</canUseDeflectMetalEffect>
+    <buildingDamageFactor>1.0</buildingDamageFactor>
+    <plantDamageFactor>1.5</plantDamageFactor>
+    <bluntInnerHitChance>0.25</bluntInnerHitChance>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+  </DamageDef>
+
+  <DamageDef>
+    <defName>TemporalShock</defName>
+    <label>temporal shock</label>
+    <workerClass>DeathStrandingMod.DamageWorkers.DamageWorker_TemporalShock</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} was aged to dust by temporal forces.</deathMessage>
+    <hediff>TemporalShock</hediff>
+    <hediffLayerSolid>false</hediffLayerSolid>
+    <canInterruptJobs>true</canInterruptJobs>
+    <makesBlood>false</makesBlood>
+    <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+    <buildingDamageFactor>0.8</buildingDamageFactor>
+    <plantDamageFactor>3.0</plantDamageFactor>
+    <bluntInnerHitChance>0.1</bluntInnerHitChance>
+    <harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
+    <impactSoundType>Blunt</impactSoundType>
+    <armorCategory>Heat</armorCategory>
+  </DamageDef>
+
+</Defs>

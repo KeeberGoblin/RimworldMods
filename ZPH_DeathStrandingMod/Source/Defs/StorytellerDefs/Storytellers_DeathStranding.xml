@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- ==================== DEATH STRANDING STORYTELLERS ==================== -->
+  
+  <!-- Sam Porter Bridges Storyteller -->
+  <StorytellerDef>
+    <defName>SamPorterBridges</defName>
+    <label>Sam Porter Bridges</label>
+    <description>Like the legendary porter who reconnected America, this storyteller focuses on gradual progress through perseverance and connection. Challenges are manageable but persistent, emphasizing the importance of building bridges between isolated communities.\n\nMedium difficulty with emphasis on gradual expansion and meaningful connections.</description>
+    <portraitLarge>UI/HeroArt/Storytellers/Cassandra</portraitLarge>
+    <portraitTiny>UI/HeroArt/Storytellers/CassandraSmall</portraitTiny>
+    <listOrder>40</listOrder>
+    <comps>
+      <li Class="StorytellerCompProperties_ClassicIntro">
+        <introPart>A porter who carried hope across a fractured continent. Sam Porter Bridges understood that true strength comes not from avoiding hardship, but from connecting with others to overcome it.\n\nThrough countless deliveries across dangerous terrain, Sam proved that even the most isolated settlements could be brought together. Every package delivered was a thread in the web that would reunite humanity.\n\nProgress through persistence. Connect to survive.</introPart>
+      </li>
+      <li Class="StorytellerCompProperties_CategoryMTB">
+        <category>ThreatBig</category>
+        <allowedTargetTags>
+          <li>Map_PlayerHome</li>
+        </allowedTargetTags>
+        <mtbDays>14</mtbDays>
+        <minSpacingDays>3</minSpacingDays>
+      </li>
+      <li Class="StorytellerCompProperties_CategoryMTB">
+        <category>ThreatSmall</category>
+        <allowedTargetTags>
+          <li>Map_PlayerHome</li>
+        </allowedTargetTags>
+        <mtbDays>6</mtbDays>
+        <minSpacingDays>1.5</minSpacingDays>
+      </li>
+      <li Class="StorytellerCompProperties_CategoryMTB">
+        <category>Misc</category>
+        <allowedTargetTags>
+          <li>Map_PlayerHome</li>
+        </allowedTargetTags>
+        <mtbDays>4</mtbDays>
+        <minSpacingDays>1</minSpacingDays>
+      </li>
+      <li Class="StorytellerCompProperties_CategoryMTB">
+        <category>FactionArrival</category>
+        <allowedTargetTags>
+          <li>Map_PlayerHome</li>
+        </allowedTargetTags>
+        <mtbDays>18</mtbDays>
+        <minSpacingDays>4</minSpacingDays>
+      </li>
+      <li Class="DeathStrandingMod.StorytellerCompProperties_ConnectionFocus">
+        <networkExpansionBonus>1.3</networkExpansionBonus>
+        <deliveryRewards>true</deliveryRewards>
+        <cooperationBenefits>1.2</cooperationBenefits>
+      </li>
+      <li Class="DeathStrandingMod.StorytellerCompProperties_TimefallCycles">
+        <timefallFrequency>0.8</timefallFrequency>
+        <stormIntensityMultiplier>0.9</stormIntensityMultiplier>
+        <btManifestationChance>0.5</btManifestationChance>
+      </li>
+    </comps>
+  </StorytellerDef>
+
+  <!-- Higgs Storyteller -->
+  <StorytellerDef>
+    <defName>Higgs</defName>
+    <label>Higgs</label>
+    <description>Like the man in the golden mask who embraced extinction, this storyteller delights in chaos and destruction. Reality bends around catastrophic events, and order constantly gives way to supernatural mayhem.\n\nVery high difficulty with emphasis on dimensional chaos and reality distortions.</description>
+    <portraitLarge>UI/HeroArt/Storytellers/Igor</portraitLarge>
+    <portraitTiny>UI/HeroArt/Storytellers/IgorSmall</portraitTiny>
+    <listOrder>41</listOrder>
+    <comps>
+      <li Class="StorytellerCompProperties_ClassicIntro">
+        <introPart>The particle of God that permeates all things. Higgs, the man in the golden mask, sought to accelerate the inevitable extinction of humanity through dimensional manipulation and supernatural chaos.\n\nWith the power to control matter itself and bend reality to his will, Higgs represented the ultimate embrace of entropy and destruction. Where he walked, order collapsed into beautiful chaos.\n\nWelcome to the apocalypse. Extinction is evolution.</introPart>
+      </li>
+      <li Class="StorytellerCompProperties_CategoryMTB">
+        <category>ThreatBig</category>
+        <allowedTargetTags>
+          <li>Map_PlayerHome</li>
+        </allowedTargetTags>
+        <mtbDays>6</mtbDays>
+        <minSpacingDays>1</minSpacingDays>
+      </li>
+      <li Class="StorytellerCompProperties_CategoryMTB">
+        <category>ThreatSmall</category>
+        <allowedTargetTags>
+          <li>Map_PlayerHome</li>
+        </allowedTargetTags>
+        <mtbDays>2.5</mtbDays>
+        <minSpacingDays>0.3</minSpacingDays>
+      </li>
+      <li Class="StorytellerCompProperties_CategoryMTB">
+        <category>Misc</category>
+        <allowedTargetTags>
+          <li>Map_PlayerHome</li>
+        </allowedTargetTags>
+        <mtbDays>1.5</mtbDays>
+        <minSpacingDays>0.2</minSpacingDays>
+      </li>
+      <li Class="DeathStrandingMod.StorytellerCompProperties_DimensionalChaos">
+        <realityDistortionFrequency>2.0</realityDistortionFrequency>
+        <voidoutRiskMultiplier>1.8</voidoutRiskMultiplier>
+        <matterManipulationEvents>true</matterManipulationEvents>
+        <gravityAnomalies>true</gravityAnomalies>
+      </li>
+      <li Class="DeathStrandingMod.StorytellerCompProperties_ExtinctionAcceleration">
+        <catastrophicEventChance>0.4</catastrophicEventChance>
+        <cascadeFailures>true</cascadeFailures>
+        <chaosAmplification>1.6</chaosAmplification>
+      </li>
+    </comps>
+  </StorytellerDef>
+
+  <!-- Cliff Storyteller -->
+  <StorytellerDef>
+    <defName>Cliff</defName>
+    <label>Cliff</label>
+    <description>Like the soldier lost between dimensions searching for his son, this storyteller brings persistent pursuit and tragic determination. Challenges are relentless but personal, driven by deep emotional connections and unfinished business.\n\nHigh difficulty with emphasis on persistent threats and emotional storytelling.</description>
+    <portraitLarge>UI/HeroArt/Storytellers/Igor</portraitLarge>
+    <portraitTiny>UI/HeroArt/Storytellers/IgorSmall</portraitTiny>
+    <listOrder>42</listOrder>
+    <comps>
+      <li Class="StorytellerCompProperties_ClassicIntro">
+        <introPart>A soldier trapped between worlds, searching endlessly for what was taken from him. Cliff's love transcended death itself, binding him to the Beach dimension where he became both guardian and hunter.\n\nDriven by paternal devotion and military discipline, Cliff represents the power of connection that refuses to be broken, even by death. His war spans dimensions, and his mission never ends.\n\nSome bonds cannot be severed. Some searches never end.</introPart>
+      </li>
+      <li Class="StorytellerCompProperties_CategoryMTB">
+        <category>ThreatBig</category>
+        <allowedTargetTags>
+          <li>Map_PlayerHome</li>
+        </allowedTargetTags>
+        <mtbDays>8</mtbDays>
+        <minSpacingDays>1.5</minSpacingDays>
+      </li>
+      <li Class="StorytellerCompProperties_CategoryMTB">
+        <category>ThreatSmall</category>
+        <allowedTargetTags>
+          <li>Map_PlayerHome</li>
+        </allowedTargetTags>
+        <mtbDays>3</mtbDays>
+        <minSpacingDays>0.5</minSpacingDays>
+      </li>
+      <li Class="StorytellerCompProperties_CategoryMTB">
+        <category>Misc</category>
+        <allowedTargetTags>
+          <li>Map_PlayerHome</li>
+        </allowedTargetTags>
+        <mtbDays>3</mtbDays>
+        <minSpacingDays>0.8</minSpacingDays>
+      </li>
+      <li Class="DeathStrandingMod.StorytellerCompProperties_PersistentPursuit">
+        <huntingIntensity>1.4</huntingIntensity>
+        <emotionalResonance>true</emotionalResonance>
+        <familialConnections>1.3</familialConnections>
+        <militaryPrecision>1.2</militaryPrecision>
+      </li>
+      <li Class="DeathStrandingMod.StorytellerCompProperties_DimensionalWarfare">
+        <combatThroughDimensions>true</combatThroughDimensions>
+        <phantomSoldiers>true</phantomSoldiers>
+        <battlefieldMemories>true</battlefieldMemories>
+        <protectiveInstincts>1.5</protectiveInstincts>
+      </li>
+    </comps>
+  </StorytellerDef>
+
+  <!-- Die-Hardman Storyteller -->
+  <StorytellerDef>
+    <defName>DieHardman</defName>
+    <label>Die-Hardman</label>
+    <description>Like the masked director who bore the weight of impossible decisions, this storyteller balances order and chaos through careful management. Challenges are strategic and purposeful, requiring both sacrifice and leadership.\n\nMedium-high difficulty with emphasis on strategic decisions and leadership challenges.</description>
+    <portraitLarge>UI/HeroArt/Storytellers/Cassandra</portraitLarge>
+    <portraitTiny>UI/HeroArt/Storytellers/CassandraSmall</portraitTiny>
+    <listOrder>43</listOrder>
+    <comps>
+      <li Class="StorytellerCompProperties_ClassicIntro">
+        <introPart>The man behind the mask who carried the burden of leadership through humanity's darkest hour. Die-Hardman understood that sometimes the greatest sacrifice is making the decisions others cannot.\n\nBetween duty and compassion, between order and chaos, he stood as the steady hand that guided Bridges through impossible choices. Leadership means bearing the weight of consequences.\n\nThe hardest decisions require the strongest resolve.</introPart>
+      </li>
+      <li Class="StorytellerCompProperties_CategoryMTB">
+        <category>ThreatBig</category>
+        <allowedTargetTags>
+          <li>Map_PlayerHome</li>
+        </allowedTargetTags>
+        <mtbDays>11</mtbDays>
+        <minSpacingDays>2.5</minSpacingDays>
+      </li>
+      <li Class="StorytellerCompProperties_CategoryMTB">
+        <category>ThreatSmall</category>
+        <allowedTargetTags>
+          <li>Map_PlayerHome</li>
+        </allowedTargetTags>
+        <mtbDays>5</mtbDays>
+        <minSpacingDays>1</minSpacingDays>
+      </li>
+      <li Class="StorytellerCompProperties_CategoryMTB">
+        <category>Misc</category>
+        <allowedTargetTags>
+          <li>Map_PlayerHome</li>
+        </allowedTargetTags>
+        <mtbDays>3.5</mtbDays>
+        <minSpacingDays>0.8</minSpacingDays>
+      </li>
+      <li Class="StorytellerCompProperties_CategoryMTB">
+        <category>FactionArrival</category>
+        <allowedTargetTags>
+          <li>Map_PlayerHome</li>
+        </allowedTargetTags>
+        <mtbDays>15</mtbDays>
+        <minSpacingDays>3</minSpacingDays>
+      </li>
+      <li Class="DeathStrandingMod.StorytellerCompProperties_StrategicLeadership">
+        <decisionPointFrequency>0.8</decisionPointFrequency>
+        <leadershipChallenges>true</leadershipChallenges>
+        <organizationalStress>1.1</organizationalStress>
+        <moralComplexity>1.3</moralComplexity>
+      </li>
+      <li Class="DeathStrandingMod.StorytellerCompProperties_OrderVsChaos">
+        <balanceAttempts>true</balanceAttempts>
+        <institutionalPressure>1.2</institutionalPressure>
+        <necessarySacrifices>true</necessarySacrifices>
+        <burdenOfCommand>1.4</burdenOfCommand>
+      </li>
+    </comps>
+  </StorytellerDef>
+
+</Defs>

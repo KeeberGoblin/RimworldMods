@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- ==================== CHIRAL NETWORK MAINTENANCE JOBS ==================== -->
+  
+  <!-- Operate Chiral Network Node -->
+  <JobDef>
+    <defName>OperateChiralNetworkNode</defName>
+    <driverClass>DeathStrandingMod.JobDriver_OperateChiralNetworkNode</driverClass>
+    <reportString>operating chiral network node.</reportString>
+    <joyDuration>4000</joyDuration>
+    <joyMaxParticipants>1</joyMaxParticipants>
+    <joySkill>Intellectual</joySkill>
+    <joyXpPerTick>2</joyXpPerTick>
+    <workTags>
+      <li>Intellectual</li>
+    </workTags>
+  </JobDef>
+
+  <!-- Maintain Chiral Equipment -->
+  <JobDef>
+    <defName>MaintainChiralEquipment</defName>
+    <driverClass>DeathStrandingMod.JobDriver_MaintainChiralEquipment</driverClass>
+    <reportString>maintaining chiral equipment.</reportString>
+    <workTags>
+      <li>Crafting</li>
+    </workTags>
+  </JobDef>
+
+  <!-- Calibrate BT Detector -->
+  <JobDef>
+    <defName>CalibrateBTDetector</defName>
+    <driverClass>DeathStrandingMod.JobDriver_CalibrateBTDetector</driverClass>
+    <reportString>calibrating BT detector.</reportString>
+    <workTags>
+      <li>Intellectual</li>
+      <li>Crafting</li>
+    </workTags>
+  </JobDef>
+
+  <!-- Process Chiral Crystals -->
+  <JobDef>
+    <defName>ProcessChiralCrystals</defName>
+    <driverClass>DeathStrandingMod.JobDriver_ProcessChiralCrystals</driverClass>
+    <reportString>processing chiral crystals.</reportString>
+    <workTags>
+      <li>Crafting</li>
+    </workTags>
+  </JobDef>
+
+  <!-- Monitor Dimensional Stability -->
+  <JobDef>
+    <defName>MonitorDimensionalStability</defName>
+    <driverClass>DeathStrandingMod.JobDriver_MonitorDimensionalStability</driverClass>
+    <reportString>monitoring dimensional stability.</reportString>
+    <joyDuration>6000</joyDuration>
+    <joyMaxParticipants>1</joyMaxParticipants>
+    <joySkill>Intellectual</joySkill>
+    <joyXpPerTick>1</joyXpPerTick>
+    <workTags>
+      <li>Intellectual</li>
+    </workTags>
+  </JobDef>
+
+  <!-- Align Chiral Transmitter -->
+  <JobDef>
+    <defName>AlignChiralTransmitter</defName>
+    <driverClass>DeathStrandingMod.JobDriver_AlignChiralTransmitter</driverClass>
+    <reportString>aligning chiral transmitter.</reportString>
+    <workTags>
+      <li>Intellectual</li>
+      <li>Crafting</li>
+    </workTags>
+  </JobDef>
+
+  <!-- Harvest Timefall Residue -->
+  <JobDef>
+    <defName>HarvestTimefallResidue</defName>
+    <driverClass>DeathStrandingMod.JobDriver_HarvestTimefallResidue</driverClass>
+    <reportString>harvesting timefall residue.</reportString>
+    <workTags>
+      <li>PlantWork</li>
+    </workTags>
+  </JobDef>
+
+  <!-- Synchronize Network Connection -->
+  <JobDef>
+    <defName>SynchronizeNetworkConnection</defName>
+    <driverClass>DeathStrandingMod.JobDriver_SynchronizeNetworkConnection</driverClass>
+    <reportString>synchronizing network connection.</reportString>
+    <workTags>
+      <li>Intellectual</li>
+    </workTags>
+  </JobDef>
+
+  <!-- Purge Chiral Contamination -->
+  <JobDef>
+    <defName>PurgeChiralContamination</defName>
+    <driverClass>DeathStrandingMod.JobDriver_PurgeChiralContamination</driverClass>
+    <reportString>purging chiral contamination.</reportString>
+    <workTags>
+      <li>Cleaning</li>
+      <li>Intellectual</li>
+    </workTags>
+  </JobDef>
+
+  <!-- Upload Data Package -->
+  <JobDef>
+    <defName>UploadDataPackage</defName>
+    <driverClass>DeathStrandingMod.JobDriver_UploadDataPackage</driverClass>
+    <reportString>uploading data package.</reportString>
+    <workTags>
+      <li>Intellectual</li>
+    </workTags>
+  </JobDef>
+
+  <!-- Download Network Resources -->
+  <JobDef>
+    <defName>DownloadNetworkResources</defName>
+    <driverClass>DeathStrandingMod.JobDriver_DownloadNetworkResources</driverClass>
+    <reportString>downloading network resources.</reportString>
+    <joyDuration>3000</joyDuration>
+    <joyMaxParticipants>1</joyMaxParticipants>
+    <joySkill>Intellectual</joySkill>
+    <joyXpPerTick>3</joyXpPerTick>
+    <workTags>
+      <li>Intellectual</li>
+    </workTags>
+  </JobDef>
+
+  <!-- Stabilize Dimensional Rift -->
+  <JobDef>
+    <defName>StabilizeDimensionalRift</defName>
+    <driverClass>DeathStrandingMod.JobDriver_StabilizeDimensionalRift</driverClass>
+    <reportString>stabilizing dimensional rift.</reportString>
+    <workTags>
+      <li>Intellectual</li>
+      <li>Violent</li>
+    </workTags>
+  </JobDef>
+
+  <!-- Recalibrate Temporal Sensors -->
+  <JobDef>
+    <defName>RecalibrateTemporalSensors</defName>
+    <driverClass>DeathStrandingMod.JobDriver_RecalibrateTemporalSensors</driverClass>
+    <reportString>recalibrating temporal sensors.</reportString>
+    <workTags>
+      <li>Intellectual</li>
+      <li>Crafting</li>
+    </workTags>
+  </JobDef>
+
+  <!-- Perform DOOMS Training -->
+  <JobDef>
+    <defName>PerformDOOMSTraining</defName>
+    <driverClass>DeathStrandingMod.JobDriver_PerformDOOMSTraining</driverClass>
+    <reportString>performing DOOMS training.</reportString>
+    <joyDuration>8000</joyDuration>
+    <joyMaxParticipants>1</joyMaxParticipants>
+    <joySkill>Intellectual</joySkill>
+    <joyXpPerTick>1</joyXpPerTick>
+    <workTags>
+      <li>Intellectual</li>
+      <li>Caring</li>
+    </workTags>
+  </JobDef>
+
+  <!-- Archive Memory Data -->
+  <JobDef>
+    <defName>ArchiveMemoryData</defName>
+    <driverClass>DeathStrandingMod.JobDriver_ArchiveMemoryData</driverClass>
+    <reportString>archiving memory data.</reportString>
+    <workTags>
+      <li>Intellectual</li>
+    </workTags>
+  </JobDef>
+
+</Defs>

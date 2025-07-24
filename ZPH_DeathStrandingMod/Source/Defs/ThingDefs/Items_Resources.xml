@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- ==================== CHIRAL CRYSTALS ==================== -->
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>ChiralCrystal</defName>
+    <label>chiral crystal</label>
+    <description>A crystalline structure formed from concentrated chiral matter. These crystals contain traces of the Beach dimension and are essential for building chiral network infrastructure. They emit a faint otherworldly glow and feel cold to the touch.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/ChiralCrystal</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <stackLimit>75</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <MarketValue>12</MarketValue>
+      <Mass>0.8</Mass>
+      <Flammability>0</Flammability>
+      <DeteriorationRate>0.5</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <burnableByRecipe>false</burnableByRecipe>
+    <minRewardCount>10</minRewardCount>
+    <deepCommonality>0.3</deepCommonality>
+    <deepCountPerPortion>4</deepCountPerPortion>
+    <deepLumpSizeRange>2~8</deepLumpSizeRange>
+  </ThingDef>
+
+  <!-- ==================== CHIRAL ALLOY ==================== -->
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>ChiralAlloy</defName>
+    <label>chiral alloy</label>
+    <description>An advanced metallic alloy infused with chiral matter. This material exhibits unusual properties, appearing to exist partially in both normal space and the Beach dimension. Essential for constructing advanced chiral technology.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/ChiralAlloy</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <stackLimit>75</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <MarketValue>25</MarketValue>
+      <Mass>1.2</Mass>
+      <Flammability>0</Flammability>
+      <DeteriorationRate>0.3</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>true</smeltable>
+    <smeltProducts>
+      <ChiralCrystal>3</ChiralCrystal>
+      <Steel>2</Steel>
+    </smeltProducts>
+  </ThingDef>
+
+  <!-- ==================== TIMEFALL RESIDUE ==================== -->
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>TimefallResidue</defName>
+    <label>timefall residue</label>
+    <description>A viscous, dark substance left behind after timefall events. This residue contains temporal anomalies and can be processed into useful materials, though handling it requires care due to its aging effects.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/TimefallResidue</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <stackLimit>25</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>8</MarketValue>
+      <Mass>0.5</Mass>
+      <Flammability>0.2</Flammability>
+      <DeteriorationRate>2.0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>15</daysToRotStart>
+        <daysToDessicated>30</daysToDessicated>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- ==================== BEACH MATTER ==================== -->
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>BeachMatter</defName>
+    <label>beach matter</label>
+    <description>A strange, ethereal substance that exists between dimensions. This matter appears to shift and phase, sometimes barely visible. It's incredibly rare and valuable for advanced chiral research, but prolonged exposure can have unpredictable effects.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/BeachMatter</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <stackLimit>10</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>25</MaxHitPoints>
+      <MarketValue>150</MarketValue>
+      <Mass>0.1</Mass>
+      <Flammability>0</Flammability>
+      <DeteriorationRate>0.1</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <burnableByRecipe>false</burnableByRecipe>
+  </ThingDef>
+
+  <!-- ==================== PORTER EQUIPMENT ==================== -->
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>PorterContainer</defName>
+    <label>porter container</label>
+    <description>A specialized storage container designed for porter expeditions. These containers are built to protect their contents from timefall and other environmental hazards while maintaining optimal weight distribution for carrying.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/PorterContainer</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <stackLimit>10</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <MarketValue>75</MarketValue>
+      <Mass>3.0</Mass>
+      <Flammability>0.1</Flammability>
+      <DeteriorationRate>0.5</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+  </ThingDef>
+
+  <!-- ==================== RESEARCH DATA ==================== -->
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>ChiralResearchData</defName>
+    <label>chiral research data</label>
+    <description>Encrypted data drives containing research on chiral phenomena, Beach dimension studies, and DOOMS analysis. This information is invaluable for advancing understanding of the supernatural threats facing humanity.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/ResearchData</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <stackLimit>50</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <MarketValue>45</MarketValue>
+      <Mass>0.2</Mass>
+      <Flammability>0.8</Flammability>
+      <DeteriorationRate>1.0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+  </ThingDef>
+
+  <!-- ==================== CRYPTOBIOTE CULTURE ==================== -->
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>CryptobioteCulture</defName>
+    <label>cryptobiote culture</label>
+    <description>A living culture of cryptobiotes - microscopic organisms from the Beach dimension. These strange life forms can be cultivated and used in advanced biotechnology. They seem to respond to emotional states and dimensional fluctuations.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CryptobioteCulture</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <stackLimit>20</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>30</MaxHitPoints>
+      <MarketValue>65</MarketValue>
+      <Mass>0.3</Mass>
+      <Flammability>0.5</Flammability>
+      <DeteriorationRate>1.5</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>10</daysToRotStart>
+        <daysToDessicated>20</daysToDessicated>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>-10</minSafeTemperature>
+        <maxSafeTemperature>50</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- ==================== CHIRAL PRINTER MATERIALS ==================== -->
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>ChiralPrintMaterial</defName>
+    <label>chiral print material</label>
+    <description>Specialized material cartridges used in chiral 3D printers. This substance can be programmed at the molecular level to create complex structures that exist partially in normal space and the Beach dimension.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/ChiralPrintMaterial</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <stackLimit>50</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <MarketValue>30</MarketValue>
+      <Mass>0.6</Mass>
+      <Flammability>0.3</Flammability>
+      <DeteriorationRate>0.8</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+  </ThingDef>
+
+  <!-- ==================== QUANTUM ENTANGLEMENT DEVICE ==================== -->
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>QuantumEntanglementDevice</defName>
+    <label>quantum entanglement device</label>
+    <description>A small but incredibly complex device that maintains quantum entanglement across vast distances. These devices are essential for long-range chiral network communication and can bridge connections across dimensional barriers.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/QuantumDevice</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <stackLimit>5</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>500</MarketValue>
+      <Mass>1.5</Mass>
+      <Flammability>0</Flammability>
+      <DeteriorationRate>0.2</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <burnableByRecipe>false</burnableByRecipe>
+  </ThingDef>
+
+  <!-- ==================== HOLOGRAPHIC STORAGE ==================== -->
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>HolographicStorage</defName>
+    <label>holographic storage unit</label>
+    <description>An advanced data storage device that uses holographic principles to store vast amounts of information in crystalline matrices. These units can contain entire databases of chiral research, delivery routes, and dimensional mapping data.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/HolographicStorage</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <stackLimit>25</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <MarketValue>120</MarketValue>
+      <Mass>0.4</Mass>
+      <Flammability>0.1</Flammability>
+      <DeteriorationRate>0.3</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+  </ThingDef>
+
+  <!-- ==================== RECIPE DEFINITIONS ==================== -->
+  
+  <RecipeDef>
+    <defName>MakeChiralAlloy</defName>
+    <label>make chiral alloy</label>
+    <description>Process chiral crystals with steel to create chiral alloy.</description>
+    <jobString>Making chiral alloy.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <workAmount>1600</workAmount>
+    <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ChiralCrystal</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <products>
+      <ChiralAlloy>2</ChiralAlloy>
+    </products>
+    <skillRequirements>
+      <Crafting>6</Crafting>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+    <recipeUsers>
+      <li>ElectricSmelter</li>
+      <li>FueledSmelter</li>
+    </recipeUsers>
+    <researchPrerequisite>ChiralTechnology</researchPrerequisite>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>ProcessTimefallResidue</defName>
+    <label>process timefall residue</label>
+    <description>Process timefall residue to extract useful materials.</description>
+    <jobString>Processing timefall residue.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <workAmount>1200</workAmount>
+    <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>TimefallResidue</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <products>
+      <ChiralCrystal>1</ChiralCrystal>
+      <Chemfuel>3</Chemfuel>
+    </products>
+    <skillRequirements>
+      <Crafting>4</Crafting>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+    <recipeUsers>
+      <li>ElectricSmelter</li>
+      <li>FueledSmelter</li>
+    </recipeUsers>
+    <researchPrerequisite>TimefallStudies</researchPrerequisite>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>CraftPorterContainer</defName>
+    <label>craft porter container</label>
+    <description>Craft a specialized container for porter expeditions.</description>
+    <jobString>Crafting porter container.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>ConstructMetal</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workAmount>8000</workAmount>
+    <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ChiralAlloy</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <products>
+      <PorterContainer>1</PorterContainer>
+    </products>
+    <skillRequirements>
+      <Crafting>8</Crafting>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+    <recipeUsers>
+      <li>FabricationBench</li>
+    </recipeUsers>
+    <researchPrerequisite>PorterTechnology</researchPrerequisite>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>CreateQuantumDevice</defName>
+    <label>create quantum entanglement device</label>
+    <description>Assemble a quantum entanglement device for long-range chiral communication.</description>
+    <jobString>Creating quantum device.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>ConstructMetal</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workAmount>15000</workAmount>
+    <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentSpacer</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ChiralAlloy</li>
+          </thingDefs>
+        </filter>
+        <count>8</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>BeachMatter</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <products>
+      <QuantumEntanglementDevice>1</QuantumEntanglementDevice>
+    </products>
+    <skillRequirements>
+      <Crafting>12</Crafting>
+      <Intellectual>10</Intellectual>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+    <recipeUsers>
+      <li>FabricationBench</li>
+    </recipeUsers>
+    <researchPrerequisite>QuantumEntanglement</researchPrerequisite>
+  </RecipeDef>
+
+</Defs>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- ==================== CHIRAL TECHNOLOGY RESEARCH ==================== -->
+  
+  <!-- Basic Chiral Understanding -->
+  <ResearchProjectDef>
+    <defName>BasicChiralUnderstanding</defName>
+    <label>basic chiral understanding</label>
+    <description>Study the fundamental properties of chiral matter and energy. This research forms the foundation for all advanced supernatural technologies.\n\nUnlocks: Basic chiral detection equipment, chiral crystal processing.</description>
+    <baseCost>1200</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>DeathStrandingMod_ChiralTech</tab>
+    <researchViewX>0</researchViewX>
+    <researchViewY>0</researchViewY>
+    <prerequisites>
+      <li>Electricity</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
+  <!-- Chiral Crystal Processing -->
+  <ResearchProjectDef>
+    <defName>ChiralCrystalProcessing</defName>
+    <label>chiral crystal processing</label>
+    <description>Learn to safely harvest and process chiral crystals formed by timefall exposure. These crystallized temporal energies serve as power sources for advanced technology.\n\nUnlocks: Chiral crystal refinery, chiral batteries, improved energy storage.</description>
+    <baseCost>1800</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>DeathStrandingMod_ChiralTech</tab>
+    <researchViewX>1</researchViewX>
+    <researchViewY>0</researchViewY>
+    <prerequisites>
+      <li>BasicChiralUnderstanding</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
+  <!-- BT Detection Systems -->
+  <ResearchProjectDef>
+    <defName>BTDetectionSystems</defName>
+    <label>BT detection systems</label>
+    <description>Develop technology to detect Beach Things and other supernatural entities. Early warning systems can prevent dangerous encounters.\n\nUnlocks: BT detectors, odradek scanners, supernatural entity alerts.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>DeathStrandingMod_ChiralTech</tab>
+    <researchViewX>0</researchViewX>
+    <researchViewY>1</researchViewY>
+    <prerequisites>
+      <li>BasicChiralUnderstanding</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
+  <!-- Timefall Protection -->
+  <ResearchProjectDef>
+    <defName>TimefallProtection</defName>
+    <label>timefall protection</label>
+    <description>Design shelter and equipment to protect against temporal rain. Proper protection is essential for survival in the post-Death Stranding world.\n\nUnlocks: Timefall shelters, protective clothing, temporal shielding.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>DeathStrandingMod_ChiralTech</tab>
+    <researchViewX>1</researchViewX>
+    <researchViewY>1</researchViewY>
+    <prerequisites>
+      <li>BasicChiralUnderstanding</li>
+      <li>ComplexClothing</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
+  <!-- Chiral Network Basics -->
+  <ResearchProjectDef>
+    <defName>ChiralNetworkBasics</defName>
+    <label>chiral network basics</label>
+    <description>Understand the fundamentals of the chiral communication network. This supernatural system enables faster-than-light information transfer.\n\nUnlocks: Basic chiral communicators, network connection protocols.</description>
+    <baseCost>2500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>DeathStrandingMod_ChiralTech</tab>
+    <researchViewX>2</researchViewX>
+    <researchViewY>0</researchViewY>
+    <prerequisites>
+      <li>ChiralCrystalProcessing</li>
+      <li>MicroelectronicsBasics</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
+  <!-- Advanced BT Countermeasures -->
+  <ResearchProjectDef>
+    <defName>AdvancedBTCountermeasures</defName>
+    <label>advanced BT countermeasures</label>
+    <description>Develop weapons and defensive systems specifically designed to combat Beach Things. Standard weapons are largely ineffective against supernatural entities.\n\nUnlocks: Hematic weapons, chiral grenades, BT repulsion fields.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>DeathStrandingMod_ChiralTech</tab>
+    <researchViewX>1</researchViewX>
+    <researchViewY>2</researchViewY>
+    <prerequisites>
+      <li>BTDetectionSystems</li>
+      <li>PrecisionRifling</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
+  <!-- Chiral Fabrication -->
+  <ResearchProjectDef>
+    <defName>ChiralFabrication</defName>
+    <label>chiral fabrication</label>
+    <description>Master the art of using chiral matter as a fabrication medium. Objects created from chiral matter have unique properties and enhanced durability.\n\nUnlocks: Chiral printers, matter assembly systems, advanced manufacturing.</description>
+    <baseCost>3500</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>DeathStrandingMod_ChiralTech</tab>
+    <researchViewX>3</researchViewX>
+    <researchViewY>0</researchViewY>
+    <prerequisites>
+      <li>ChiralNetworkBasics</li>
+      <li>Fabrication</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
+  <!-- DOOMS Enhancement -->
+  <ResearchProjectDef>
+    <defName>DOOMSEnhancement</defName>
+    <label>DOOMS enhancement</label>
+    <description>Research methods to safely enhance and control DOOMS abilities. Proper training can reduce the risks while amplifying the benefits of supernatural perception.\n\nUnlocks: DOOMS training facilities, ability enhancement procedures, strain reduction techniques.</description>
+    <baseCost>4000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>DeathStrandingMod_ChiralTech</tab>
+    <researchViewX>2</researchViewX>
+    <researchViewY>2</researchViewY>
+    <prerequisites>
+      <li>AdvancedBTCountermeasures</li>
+      <li>VitalsMonitor</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
+  <!-- Dimensional Manipulation -->
+  <ResearchProjectDef>
+    <defName>DimensionalManipulation</defName>
+    <label>dimensional manipulation</label>
+    <description>Learn to manipulate the boundaries between dimensions. This dangerous research can provide immense power but risks catastrophic consequences.\n\nUnlocks: Dimensional anchors, reality stabilizers, void containment systems.</description>
+    <baseCost>5000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>DeathStrandingMod_ChiralTech</tab>
+    <researchViewX>3</researchViewX>
+    <researchViewY>1</researchViewY>
+    <prerequisites>
+      <li>ChiralFabrication</li>
+      <li>DOOMSEnhancement</li>
+    </prerequisites>
+    <discoveredLetterTitle>Dimensional breakthrough achieved</discoveredLetterTitle>
+    <discoveredLetterText>Your researchers have successfully manipulated dimensional boundaries. This technology offers incredible possibilities but also poses extreme risks. Use with caution.</discoveredLetterText>
+  </ResearchProjectDef>
+
+  <!-- Voidout Prevention -->
+  <ResearchProjectDef>
+    <defName>VoidoutPrevention</defName>
+    <label>voidout prevention</label>
+    <description>Develop systems to detect and prevent voidout events. These reality-annihilating explosions represent the ultimate supernatural threat.\n\nUnlocks: Voidout prediction systems, dimensional stabilizers, emergency evacuation protocols.</description>
+    <baseCost>6000</baseCost>
+    <techLevel>Ultra</techLevel>
+    <tab>DeathStrandingMod_ChiralTech</tab>
+    <researchViewX>4</researchViewX>
+    <researchViewY>1</researchViewY>
+    <prerequisites>
+      <li>DimensionalManipulation</li>
+    </prerequisites>
+    <discoveredLetterTitle>Voidout prevention mastered</discoveredLetterTitle>
+    <discoveredLetterText>Your colony has achieved the ultimate goal: the ability to prevent voidout events. This knowledge could save countless lives and preserve entire regions from annihilation.</discoveredLetterText>
+  </ResearchProjectDef>
+
+  <!-- Chiral Network Mastery -->
+  <ResearchProjectDef>
+    <defName>ChiralNetworkMastery</defName>
+    <label>chiral network mastery</label>
+    <description>Achieve complete understanding of the chiral network's deeper functions. This research unlocks the network's true potential for reconnecting humanity.\n\nUnlocks: Network administration tools, long-range communication arrays, data preservation systems.</description>
+    <baseCost>4500</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>DeathStrandingMod_ChiralTech</tab>
+    <researchViewX>4</researchViewX>
+    <researchViewY>0</researchViewY>
+    <prerequisites>
+      <li>ChiralFabrication</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
+  <!-- Beach Exploration -->
+  <ResearchProjectDef>
+    <defName>BeachExploration</defName>
+    <label>Beach exploration</label>
+    <description>Research methods to safely explore the Beach dimension. This otherworldly realm holds secrets that could revolutionize understanding of life and death.\n\nUnlocks: Dimensional suits, Beach navigation equipment, consciousness projection technology.</description>
+    <baseCost>7000</baseCost>
+    <techLevel>Ultra</techLevel>
+    <tab>DeathStrandingMod_ChiralTech</tab>
+    <researchViewX>3</researchViewX>
+    <researchViewY>3</researchViewY>
+    <prerequisites>
+      <li>DOOMSEnhancement</li>
+      <li>DimensionalManipulation</li>
+    </prerequisites>
+    <discoveredLetterTitle>Beach exploration achieved</discoveredLetterTitle>
+    <discoveredLetterText>Your researchers have developed methods to safely explore the Beach dimension. This breakthrough opens new frontiers in understanding the nature of consciousness and reality itself.</discoveredLetterText>
+  </ResearchProjectDef>
+
+  <!-- Temporal Engineering -->
+  <ResearchProjectDef>
+    <defName>TemporalEngineering</defName>
+    <label>temporal engineering</label>
+    <description>Master the manipulation of time itself through advanced chiral technology. This ultimate research allows control over temporal flow and aging processes.\n\nUnlocks: Time dilation fields, aging reversal chambers, temporal stasis systems.</description>
+    <baseCost>8000</baseCost>
+    <techLevel>Ultra</techLevel>
+    <tab>DeathStrandingMod_ChiralTech</tab>
+    <researchViewX>5</researchViewX>
+    <researchViewY>2</researchViewY>
+    <prerequisites>
+      <li>VoidoutPrevention</li>
+      <li>BeachExploration</li>
+    </prerequisites>
+    <discoveredLetterTitle>Temporal mastery achieved</discoveredLetterTitle>
+    <discoveredLetterText>Your colony has achieved mastery over time itself. The ability to manipulate temporal flow represents the pinnacle of chiral technology and opens possibilities beyond imagination.</discoveredLetterText>
+  </ResearchProjectDef>
+
+  <!-- ==================== SPECIALIZED RESEARCH BRANCHES ==================== -->
+
+  <!-- Porter Equipment -->
+  <ResearchProjectDef>
+    <defName>PorterEquipment</defName>
+    <label>porter equipment</label>
+    <description>Design specialized equipment for surviving in the post-Death Stranding world. Porter gear emphasizes mobility, protection, and cargo capacity.\n\nUnlocks: Porter backpacks, climbing equipment, load-balancing systems.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>DeathStrandingMod_ChiralTech</tab>
+    <researchViewX>0</researchViewX>
+    <researchViewY>3</researchViewY>
+    <prerequisites>
+      <li>ComplexClothing</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
+  <!-- Biometric Security -->
+  <ResearchProjectDef>
+    <defName>BiometricSecurity</defName>
+    <label>biometric security</label>
+    <description>Develop security systems based on biological identification. In a world of supernatural entities, distinguishing between human and non-human becomes critical.\n\nUnlocks: Biometric scanners, human verification systems, imposter detection.</description>
+    <baseCost>2200</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>DeathStrandingMod_ChiralTech</tab>
+    <researchViewX>2</researchViewX>
+    <researchViewY>3</researchViewY>
+    <prerequisites>
+      <li>PorterEquipment</li>
+      <li>MicroelectronicsBasics</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
+</Defs>
